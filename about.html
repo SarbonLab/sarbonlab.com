@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О нас — SarbonLab</title>
+<meta name="description" content="SarbonLab — digital-агентство из Казахстана. Специализируемся на внедрении amoCRM и автоматизации продаж для малого и среднего бизнеса.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #F7F5F0;
+  --surface:   #FFFFFF;
+  --warm:      #F0EDE6;
+  --ink:       #111118;
+  --ink2:      #3A3A48;
+  --muted:     #8A8A9A;
+  --muted2:    #C4C4D0;
+  --border:    #E4E2DC;
+  --border-h:  #C8C6C0;
+  --accent:    #1A56DB;
+  --accent-bg: #EEF3FF;
+  --font-head: 'DM Serif Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --r:         12px;
+  --r-lg:      20px;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-weight: 400; line-height: 1.6; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; padding: 0 52px; display: flex; align-items: center; justify-content: space-between; background: rgba(247,245,240,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+.nav-logo { font-family: var(--font-head); font-size: 22px; color: var(--ink); text-decoration: none; }
+.nav-logo em { font-style: normal; color: var(--accent); }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-cta { font-size: 14px !important; font-weight: 500 !important; color: #fff !important; background: var(--accent); padding: 9px 20px; border-radius: 8px; transition: opacity 0.2s !important; }
+.nav-cta:hover { opacity: 0.88; }
+
+/* PAGE HERO */
+.page-hero { padding: 140px 52px 80px; background: var(--surface); border-bottom: 1px solid var(--border); }
+.page-hero-inner { max-width: 1100px; margin: 0 auto; }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--ink); }
+.breadcrumb-sep { color: var(--muted2); }
+.page-tag { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+.hero-grid { display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: end; margin-top: 0; }
+.page-hero h1 { font-family: var(--font-head); font-size: clamp(36px, 4.5vw, 60px); line-height: 1.08; color: var(--ink); margin-bottom: 20px; }
+.page-hero h1 em { font-style: italic; color: var(--accent); }
+.page-hero-sub { font-size: 17px; color: var(--ink2); font-weight: 300; line-height: 1.75; max-width: 500px; }
+
+/* QUICK FACTS */
+.quick-facts { display: flex; flex-direction: column; gap: 0; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+.qf-item { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+.qf-item:last-child { border-bottom: none; }
+.qf-label { font-size: 13px; color: var(--muted); font-weight: 300; }
+.qf-val { font-size: 13px; font-weight: 500; color: var(--ink); text-align: right; }
+.qf-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #22C55E; margin-right: 6px; }
+
+/* SECTIONS */
+section { padding: 80px 52px; }
+.inner { max-width: 1100px; margin: 0 auto; }
+.section-tag { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+.section-title { font-family: var(--font-head); font-size: clamp(28px, 3.5vw, 44px); color: var(--ink); line-height: 1.1; margin-bottom: 14px; }
+.section-sub { font-size: 16px; color: var(--ink2); font-weight: 300; max-width: 460px; line-height: 1.75; }
+.section-head { margin-bottom: 56px; }
+
+/* FOUNDER */
+.founder-section { background: var(--surface); border-bottom: 1px solid var(--border); }
+.founder-layout { display: grid; grid-template-columns: 400px 1fr; gap: 80px; align-items: start; }
+
+.founder-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+.founder-photo { width: 100%; aspect-ratio: 4/3; background: var(--warm); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+.founder-photo-placeholder { font-family: var(--font-head); font-size: 72px; color: var(--muted2); user-select: none; }
+.founder-photo-label { position: absolute; bottom: 12px; right: 12px; font-size: 11px; color: var(--muted); background: rgba(255,255,255,0.8); padding: 4px 10px; border-radius: 100px; backdrop-filter: blur(4px); }
+.founder-info { padding: 24px; }
+.founder-name { font-family: var(--font-head); font-size: 22px; color: var(--ink); margin-bottom: 4px; }
+.founder-role { font-size: 13px; color: var(--muted); font-weight: 300; margin-bottom: 20px; }
+.founder-contacts { display: flex; flex-direction: column; gap: 8px; }
+.founder-contact { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ink2); text-decoration: none; transition: color 0.2s; font-weight: 300; }
+.founder-contact:hover { color: var(--accent); }
+.fc-icon { width: 28px; height: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
+
+.founder-story {}
+.story-lead { font-family: var(--font-head); font-size: 22px; color: var(--ink); line-height: 1.4; margin-bottom: 24px; }
+.story-body { display: flex; flex-direction: column; gap: 16px; }
+.story-body p { font-size: 15px; color: var(--ink2); font-weight: 300; line-height: 1.8; }
+.story-body p strong { font-weight: 500; color: var(--ink); }
+
+.story-highlight { background: var(--accent-bg); border: 1px solid #C7D9FF; border-radius: var(--r-lg); padding: 20px 24px; margin-top: 8px; }
+.story-highlight p { font-size: 14px; color: var(--ink2); font-weight: 300; line-height: 1.7; margin: 0; }
+.story-highlight strong { font-weight: 500; color: var(--accent); }
+
+/* VALUES */
+.values-section { background: var(--bg); }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.value-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 32px; transition: box-shadow 0.2s; }
+.value-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.06); }
+.value-num { font-family: var(--font-head); font-size: 40px; color: var(--muted2); line-height: 1; margin-bottom: 16px; }
+.value-card h3 { font-family: var(--font-head); font-size: 20px; color: var(--ink); margin-bottom: 10px; }
+.value-card p { font-size: 14px; color: var(--ink2); font-weight: 300; line-height: 1.7; }
+
+/* PARTNERS */
+.partners-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.partners-layout { display: grid; grid-template-columns: 360px 1fr; gap: 80px; align-items: center; }
+.partners-left {}
+.partners-grid { display: flex; flex-direction: column; gap: 12px; }
+.partner-row { display: flex; align-items: center; gap: 16px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r); padding: 16px 20px; transition: border-color 0.2s; }
+.partner-row:hover { border-color: var(--border-h); }
+.partner-logo { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 16px; flex-shrink: 0; }
+.logo-amo { background: #E8F1FF; color: #1A56DB; }
+.logo-waz { background: #E8FFF0; color: #15803D; }
+.logo-sip { background: #FFF4E8; color: #C45A00; }
+.partner-row-info {}
+.partner-row-name { font-family: var(--font-head); font-size: 16px; color: var(--ink); line-height: 1.2; }
+.partner-row-desc { font-size: 12px; color: var(--muted); font-weight: 300; margin-top: 2px; }
+.partner-badge { margin-left: auto; font-size: 11px; font-weight: 500; color: var(--accent); background: var(--accent-bg); border: 1px solid #C7D9FF; padding: 3px 9px; border-radius: 100px; white-space: nowrap; }
+
+/* WHY US */
+.whyus-section { background: var(--bg); }
+.whyus-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+.whyus-card { background: var(--surface); padding: 36px; transition: background 0.2s; }
+.whyus-card:hover { background: var(--warm); }
+.whyus-icon { font-size: 24px; margin-bottom: 16px; }
+.whyus-card h3 { font-family: var(--font-head); font-size: 20px; color: var(--ink); margin-bottom: 10px; }
+.whyus-card p { font-size: 14px; color: var(--ink2); font-weight: 300; line-height: 1.7; }
+
+/* CTA */
+.cta-section { background: var(--ink); padding: 100px 52px; text-align: center; position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 56px 56px; }
+.cta-section h2 { font-family: var(--font-head); font-size: clamp(30px, 4vw, 52px); color: #fff; line-height: 1.1; margin-bottom: 16px; position: relative; }
+.cta-section h2 em { font-style: italic; color: #93C5FD; }
+.cta-section p { font-size: 16px; color: rgba(255,255,255,0.45); font-weight: 300; max-width: 400px; margin: 0 auto 36px; line-height: 1.75; position: relative; }
+.btn-white { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 15px; font-weight: 500; color: var(--ink); background: #fff; padding: 14px 28px; border-radius: var(--r); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,255,255,0.15); }
+.cta-note { display: block; margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.25); position: relative; }
+
+/* FOOTER */
+footer { background: var(--surface); border-top: 1px solid var(--border); padding: 36px 52px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-logo { font-family: var(--font-head); font-size: 18px; color: var(--ink); text-decoration: none; }
+.footer-logo em { font-style: normal; color: var(--accent); }
+.footer-links { display: flex; gap: 24px; list-style: none; }
+.footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--ink); }
+.footer-copy { font-size: 13px; color: var(--muted2); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .page-hero { padding: 120px 24px 60px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  section { padding: 64px 24px; }
+  .founder-layout { grid-template-columns: 1fr; gap: 40px; }
+  .values-grid { grid-template-columns: 1fr; }
+  .partners-layout { grid-template-columns: 1fr; gap: 40px; }
+  .whyus-grid { grid-template-columns: 1fr; }
+  .cta-section { padding: 80px 24px; }
+  footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Sarbon<em>Lab</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="cases.html">Кейсы</a></li>
+    <li><a href="about.html" class="active">О нас</a></li>
+    <li><a href="https://wa.me/77075213922" class="nav-cta">Получить аудит</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb reveal">
+      <a href="index.html">Главная</a>
+      <span class="breadcrumb-sep">→</span>
+      <span>О нас</span>
+    </div>
+    <div class="hero-grid">
+      <div class="reveal">
+        <div class="page-tag">О нас</div>
+        <h1>Агентство,<br>которое говорит<br><em>фактами</em></h1>
+        <p class="page-hero-sub">SarbonLab — это команда из Казахстана, которая специализируется на внедрении amoCRM и построении систем продаж для малого и среднего бизнеса.</p>
+      </div>
+      <div class="reveal">
+        <div class="quick-facts">
+          <div class="qf-item">
+            <span class="qf-label">Основан</span>
+            <span class="qf-val">2024</span>
+          </div>
+          <div class="qf-item">
+            <span class="qf-label">Локация</span>
+            <span class="qf-val">Казахстан</span>
+          </div>
+          <div class="qf-item">
+            <span class="qf-label">Специализация</span>
+            <span class="qf-val">amoCRM · Автоматизация</span>
+          </div>
+          <div class="qf-item">
+            <span class="qf-label">Рынок</span>
+            <span class="qf-val">Казахстан · СНГ</span>
+          </div>
+          <div class="qf-item">
+            <span class="qf-label">Партнёрства</span>
+            <span class="qf-val">amoCRM · Wazzup · Sipuni</span>
+          </div>
+          <div class="qf-item">
+            <span class="qf-label">Статус</span>
+            <span class="qf-val"><span class="qf-dot"></span>Принимаем проекты</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOUNDER -->
+<section class="founder-section">
+  <div class="inner">
+    <div class="founder-layout">
+      <div class="founder-card reveal">
+        <div class="founder-photo">
+          <img src="images/founder.webp" alt="Сарбон — основатель SarbonLab" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+          <span class="founder-photo-label">Основатель</span>
+        </div>
+        <div class="founder-info">
+          <div class="founder-name">Сарбон</div>
+          <div class="founder-role">Основатель · SarbonLab</div>
+          <div class="founder-contacts">
+            <a href="https://wa.me/77075213922" class="founder-contact">
+              <span class="fc-icon">💬</span>
+              WhatsApp
+            </a>
+            <a href="https://t.me/sarbonlab" class="founder-contact">
+              <span class="fc-icon">✈️</span>
+              Telegram
+            </a>
+            <a href="mailto:sarbonlab@gmail.com" class="founder-contact">
+              <span class="fc-icon">✉️</span>
+              sarbonlab@gmail.com
+            </a>
+            <a href="https://instagram.com/sarbon_digital" class="founder-contact">
+              <span class="fc-icon">📷</span>
+              @sarbon_digital
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="founder-story reveal">
+        <p class="story-lead">Начинал с нуля — и именно поэтому понимаю, с какими задачами сталкивается малый бизнес.</p>
+        <div class="story-body">
+          <p>SarbonLab вырос из личного опыта работы с бизнесами, где заявки терялись в WhatsApp, менеджеры забывали перезванивать, а владелец держал всё в голове. Я видел, как правильно выстроенная CRM меняет ситуацию — и решил сделать это профессией.</p>
+          <p>Мы работаем с <strong>малым и средним бизнесом в Казахстане и СНГ</strong> — сервисы, обучение, локальные бренды, B2B-компании. Не берёмся за всё подряд: специализация на amoCRM позволяет делать это хорошо, а не средне.</p>
+          <p>Официальные партнёрства с <strong>amoCRM, Wazzup и Sipuni</strong> — это не просто строчка в резюме. Это доступ к технической поддержке платформ, ранним обновлениям и лучшим условиям для клиентов.</p>
+          <div class="story-highlight">
+            <p><strong>Наш подход:</strong> сначала разобраться в бизнесе клиента, потом предложить решение. Не продавать CRM всем подряд — а честно говорить, поможет ли это в конкретной ситуации.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="inner">
+    <div class="section-head reveal">
+      <span class="section-tag">Принципы</span>
+      <h2 class="section-title">Как мы работаем</h2>
+      <p class="section-sub">Не декларации — конкретные правила, которые определяют каждый проект.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-num">01</div>
+        <h3>Сначала диагностика</h3>
+        <p>Не предлагаем решение до того, как поняли проблему. Первый разговор — это разбор ситуации клиента, а не презентация наших услуг.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-num">02</div>
+        <h3>Говорим честно</h3>
+        <p>Если amoCRM не решит вашу задачу — скажем об этом прямо. Долгосрочная репутация важнее одной сделки.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-num">03</div>
+        <h3>Без скрытых работ</h3>
+        <p>Клиент понимает, что происходит на каждом этапе и за что платит. Никаких сюрпризов в финальном счёте.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-num">04</div>
+        <h3>Результат, не отчёты</h3>
+        <p>Ориентируемся на заявки, скорость ответа и конверсию — а не на красивые слайды о проделанной работе.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-num">05</div>
+        <h3>Обучаем, не привязываем</h3>
+        <p>После внедрения команда клиента умеет работать в системе самостоятельно. Зависимость от нас — не наша цель.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-num">06</div>
+        <h3>На связи после запуска</h3>
+        <p>Не исчезаем после сдачи проекта. Корректируем систему под изменения в бизнесе и отвечаем на вопросы команды.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners-section">
+  <div class="inner">
+    <div class="partners-layout">
+      <div class="reveal">
+        <span class="section-tag">Партнёрства</span>
+        <h2 class="section-title">Официальные партнёры платформ</h2>
+        <p class="section-sub">Партнёрский статус — это проверка знаний платформы и гарантия качества внедрения. Для клиентов это лучшие тарифы и приоритетная поддержка.</p>
+      </div>
+      <div class="partners-grid reveal">
+        <div class="partner-row">
+          <div class="partner-logo logo-amo"><img src="images/logo-amo.png" alt="amoCRM" style="width:36px;height:36px;object-fit:contain;"></div>
+          <div class="partner-row-info">
+            <div class="partner-row-name">amoCRM</div>
+            <div class="partner-row-desc">CRM-система и воронки продаж</div>
+          </div>
+          <span class="partner-badge">Партнёр</span>
+        </div>
+        <div class="partner-row">
+          <div class="partner-logo logo-waz" style="background:#E8F9E8"><img src="images/logo-wazzup.png" alt="Wazzup" style="width:36px;height:20px;object-fit:contain;"></div>
+          <div class="partner-row-info">
+            <div class="partner-row-name">Wazzup</div>
+            <div class="partner-row-desc">Интеграция мессенджеров с CRM</div>
+          </div>
+          <span class="partner-badge">Партнёр</span>
+        </div>
+        <div class="partner-row">
+          <div class="partner-logo logo-sip" style="background:#F0EEFF"><img src="images/logo-sipuni.png" alt="Sipuni" style="width:36px;height:20px;object-fit:contain;"></div>
+          <div class="partner-row-info">
+            <div class="partner-row-name">Sipuni</div>
+            <div class="partner-row-desc">IP-телефония и запись звонков</div>
+          </div>
+          <span class="partner-badge">Партнёр</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="whyus-section">
+  <div class="inner">
+    <div class="section-head reveal">
+      <span class="section-tag">Почему SarbonLab</span>
+      <h2 class="section-title">Чем отличаемся</h2>
+      <p class="section-sub">Не общие слова — конкретные отличия от типичных агентств на рынке.</p>
+    </div>
+    <div class="whyus-grid">
+      <div class="whyus-card reveal">
+        <div class="whyus-icon">🎯</div>
+        <h3>Узкая специализация</h3>
+        <p>Мы не делаем всё для всех. amoCRM и экосистема вокруг него — наша единственная область. Это значит глубокое знание платформы, а не поверхностное.</p>
+      </div>
+      <div class="whyus-card reveal">
+        <div class="whyus-icon">🇰🇿</div>
+        <h3>Понимаем локальный рынок</h3>
+        <p>Работаем с казахстанским бизнесом — знаем специфику коммуникаций, WhatsApp-культуру продаж и особенности SMB в регионе.</p>
+      </div>
+      <div class="whyus-card reveal">
+        <div class="whyus-icon">⚡</div>
+        <h3>Быстрый старт</h3>
+        <p>Без долгих согласований и корпоративной бюрократии. От первого разговора до запуска системы — 7–14 дней.</p>
+      </div>
+      <div class="whyus-card reveal">
+        <div class="whyus-icon">🤝</div>
+        <h3>Партнёрский доступ</h3>
+        <p>Официальный статус у трёх платформ — лучшие тарифы на amoCRM, Wazzup и Sipuni для наших клиентов напрямую.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="reveal">Хотите познакомиться<br>и <em>обсудить задачу?</em></h2>
+  <p class="reveal">Напишите — проведём короткий разбор вашей ситуации и честно скажем, чем можем помочь.</p>
+  <a href="https://wa.me/77075213922?text=Привет!+Хочу+познакомиться+и+обсудить+задачу." class="btn-white reveal">
+    Написать в WhatsApp
+    <svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <span class="cta-note reveal">+7 (707) 521-39-22 · sarbonlab@gmail.com</span>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="footer-logo">Sarbon<em>Lab</em></a>
+  <ul class="footer-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="cases.html">Кейсы</a></li>
+    <li><a href="about.html">О нас</a></li>
+    <li><a href="https://wa.me/77075213922">WhatsApp</a></li>
+    <li><a href="https://t.me/sarbonlab">Telegram</a></li>
+  </ul>
+  <div class="footer-copy">© 2025 SarbonLab</div>
+</footer>
+
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 70);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
