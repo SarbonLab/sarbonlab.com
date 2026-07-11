@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Внедрение Битрикс24 в Казахстане | Официальный партнёр SarbonLab</title>
+<meta name="description" content="Внедряем Битрикс24: CRM, задачи, процессы. Настройка под ваш бизнес, обучение сотрудников, сопровождение. Официальный партнёр Битрикс24 в Казахстане.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;600;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Внедрение Битрикс24",
+  "description": "Внедрение Битрикс24 под ключ: CRM, задачи, автоматизация процессов, обучение сотрудников. Официальный партнёр Битрикс24 в Казахстане",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "SarbonLab",
+    "telephone": "+77075213922",
+    "email": "Sarbonlab@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Алматы", "addressCountry": "KZ" }
+  },
+  "areaServed": "Казахстан"
+}
+</script>
+<style>
+:root{
+  --paper:#EEF2F4;
+  --panel:#FFFFFF;
+  --ink:#0B161F;
+  --ink2:#4C5D6B;
+  --green:#00A860;
+  --green-deep:#008A4F;
+  --red:#DE3B3B;
+  --line:#D5DEE4;
+  --line-dark:#22323F;
+  --r:6px;
+  --display:'Tektur',sans-serif;
+  --body:'Golos Text',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+::selection{background:var(--green);color:#fff}
+
+/* ---------- Статус-бар ---------- */
+.statusbar{background:var(--ink);color:#8FA3B2;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em}
+.statusbar .wrap{display:flex;justify-content:space-between;padding-top:7px;padding-bottom:7px;gap:16px}
+.statusbar b{color:#fff;font-weight:500}
+.live{color:var(--green)}
+.live::before{content:"●";margin-right:6px;animation:blink 2.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ---------- Шапка ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(238,242,244,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+.logo i{font-style:normal;color:var(--green)}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink2);font-family:var(--mono)}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:var(--r);font-weight:600;font-size:15px;text-decoration:none;border:none;cursor:pointer;transition:background .15s,transform .12s}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-deep)}
+.btn-ghost{border:1.5px solid var(--ink);background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-sm{padding:10px 18px;font-size:14px}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
+
+/* ---------- Общее ---------- */
+section{padding:78px 0}
+.sec-label{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.sec-label::before{content:"";width:34px;height:2px;background:var(--green)}
+h1,h2{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.15}
+h1{font-size:clamp(26px,4.2vw,44px)}
+h2{font-size:clamp(21px,2.8vw,30px);margin-bottom:14px}
+.sec-sub{color:var(--ink2);max-width:38em;margin-bottom:42px;font-size:17.5px}
+.crumbs{font-family:var(--mono);font-size:12px;color:var(--ink2);margin-bottom:20px}
+.crumbs a{text-decoration:none;color:var(--ink2)}
+.crumbs a:hover{color:var(--ink)}
+
+/* ---------- Hero ---------- */
+.hero{padding:60px 0 50px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}
+.hero p.lead{font-size:19px;color:var(--ink2);margin:22px 0 32px;max-width:30em}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.partners{margin-top:30px;font-family:var(--mono);font-size:12.5px;color:var(--ink2);letter-spacing:.03em}
+.partners b{color:var(--ink);font-weight:500}
+
+/* ---------- Рабочее пространство (hero) ---------- */
+.ws{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);box-shadow:14px 14px 0 -4px var(--ink)}
+.ws-top{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:11px 16px;font-family:var(--mono);font-size:11.5px;color:var(--ink2);letter-spacing:.04em}
+.ws-top b{color:var(--ink);font-weight:500}
+.ws-body{padding:16px;display:grid;gap:12px}
+.mod{border:1px solid var(--line);border-radius:4px;padding:13px 15px}
+.mod .m-label{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);display:flex;justify-content:space-between;margin-bottom:10px}
+.mod .m-label em{font-style:normal;color:var(--green)}
+.task{display:flex;gap:10px;align-items:baseline;font-size:13.5px;padding:5px 0;opacity:0;animation:rowIn .4s ease forwards}
+.task .cb{font-family:var(--mono);font-size:12px;color:var(--ink2)}
+.task .cb.done{color:var(--green);font-weight:700}
+.task .done-text{color:var(--ink2);text-decoration:line-through}
+.task:nth-child(3){animation-delay:.15s}
+.task:nth-child(4){animation-delay:.3s}
+.proc{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;flex-wrap:wrap}
+.proc span{padding:5px 9px;border-radius:4px;border:1px solid var(--line);color:var(--ink2)}
+.proc span.ok{border-color:var(--green);color:var(--green-deep);font-weight:700}
+.proc i{font-style:normal;color:var(--ink2)}
+.crm-line{display:flex;justify-content:space-between;font-size:13.5px;padding:5px 0;opacity:0;animation:rowIn .4s ease forwards}
+.crm-line b{font-family:var(--mono);font-size:12.5px;color:var(--green-deep)}
+.crm-line:nth-child(3){animation-delay:.15s}
+@keyframes rowIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .task,.crm-line{animation:none;opacity:1}
+  .live::before{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- Результаты ---------- */
+.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.spec{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.spec .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green-deep);margin-bottom:10px}
+.spec b{display:block;font-size:17px;margin-bottom:6px}
+.spec p{font-size:15px;color:var(--ink2)}
+
+/* ---------- Состав внедрения ---------- */
+.compose{border-top:1.5px solid var(--ink)}
+.cmp-row{display:grid;grid-template-columns:64px 1fr;gap:22px;padding:19px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.cmp-row .idx{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--green-deep)}
+.cmp-row p{font-size:16.5px}
+.cmp-row p b{font-weight:600}
+
+/* ---------- Сравнение ---------- */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+.vs-col{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.vs-col.dark{background:var(--ink);border-color:var(--ink);color:#E8F0F5}
+.vs-col .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green-deep);margin-bottom:12px}
+.vs-col.dark .k{color:#2BD98A}
+.vs-col h3{font-family:var(--display);font-weight:600;font-size:19px;text-transform:uppercase;margin-bottom:10px}
+.vs-col p{font-size:15.5px;color:var(--ink2)}
+.vs-col.dark p{color:#9FB1BE}
+.vs-note{background:var(--panel);border:1px dashed var(--line);border-radius:var(--r);padding:22px 26px;font-size:16px;color:var(--ink2)}
+.vs-note b{color:var(--ink)}
+
+/* ---------- CTA ---------- */
+.cta-box{background:var(--ink);color:#fff;border-radius:var(--r);padding:54px 48px;display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center;position:relative;overflow:hidden}
+.cta-box::before{content:"БИТРИКС24 / БИТРИКС24 / БИТРИКС24";position:absolute;top:14px;left:0;white-space:nowrap;font-family:var(--mono);font-size:11px;letter-spacing:.35em;color:#22323F;pointer-events:none}
+.cta-box h2{color:#fff}
+.cta-box p{color:#9FB1BE;font-size:17px}
+.cta-box .btn{justify-self:end;padding:17px 32px;font-size:16px}
+
+/* ---------- Подвал ---------- */
+footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);font-size:12.5px;color:var(--ink2)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- WhatsApp FAB ---------- */
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:54px;height:54px;border-radius:var(--r);background:var(--green);box-shadow:6px 6px 0 -2px var(--ink);align-items:center;justify-content:center;text-decoration:none}
+.fab svg{width:26px;height:26px;fill:#fff}
+
+/* ---------- Адаптив ---------- */
+@media (max-width:940px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .vs{grid-template-columns:1fr}
+  .cta-box{grid-template-columns:1fr;padding:40px 28px}
+  .cta-box .btn{justify-self:start}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:54px 0}
+  .hero{padding:38px 0 28px}
+  .statusbar .wrap span:nth-child(2){display:none}
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{display:none}
+  .hero-ctas .btn{width:100%}
+  .ws{box-shadow:8px 8px 0 -3px var(--ink)}
+  .specs{grid-template-columns:1fr}
+  .cmp-row{grid-template-columns:44px 1fr;gap:14px}
+  .fab{display:flex}
+}
+</style>
+</head>
+<body>
+
+<!-- Статус-бар -->
+<div class="statusbar">
+  <div class="wrap">
+    <span><b>SARBONLAB</b> // система продаж</span>
+    <span>Алматы / Казахстан</span>
+    <span class="live">принимаем заявки</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/">Sarbon<i>Lab</i></a>
+    <ul class="nav-links" id="menu">
+      <li><a href="/#services">/услуги</a></li>
+      <li><a href="/#why">/почему-мы</a></li>
+      <li><a href="/#steps">/этапы</a></li>
+      <li><a href="/contacts.html">/контакты</a></li>
+    </ul>
+    <a class="btn btn-green btn-sm" href="https://wa.me/77075213922" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/#services">Услуги</a> / Битрикс24</nav>
+      <div class="sec-label">Услуга 02 · внедрение</div>
+      <h1>Внедрение Битрикс24 — официальный партнёр</h1>
+      <p class="lead">Битрикс24 — это не только CRM, но и задачи, проекты и процессы всей компании в одной системе. Настроим так, чтобы система работала на вас, а не наоборот.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-green" href="https://wa.me/77075213922" target="_blank" rel="noopener">Обсудить внедрение</a>
+        <a class="btn btn-ghost" href="#compose">Что входит</a>
+      </div>
+      <p class="partners">Официальный партнёр <b>Битрикс24</b> в Казахстане — поможем подобрать тариф</p>
+    </div>
+
+    <!-- Рабочее пространство -->
+    <div class="ws" aria-hidden="true">
+      <div class="ws-top">
+        <span><b>КОМПАНИЯ</b> — вид из Битрикс24</span>
+        <span>онлайн: 12 сотрудников</span>
+      </div>
+      <div class="ws-body">
+        <div class="mod">
+          <div class="m-label">CRM · сделки за сегодня <em>+3</em></div>
+          <div class="crm-line"><span>ТОО «АгроПром» — переговоры</span><b>2 400 000 ₸</b></div>
+          <div class="crm-line"><span>ИП Сериков — счёт выставлен</span><b>560 000 ₸</b></div>
+        </div>
+        <div class="mod">
+          <div class="m-label">Задачи · отдел продаж <em>7 активных</em></div>
+          <div class="task"><span class="cb done">[✓]</span><span class="done-text">Отправить КП — ТОО «Дала Трейд»</span></div>
+          <div class="task"><span class="cb">[&nbsp;]</span><span>Позвонить по счёту — ИП Сериков, до 15:00</span></div>
+          <div class="task"><span class="cb">[&nbsp;]</span><span>Подготовить договор — ТОО «АгроПром»</span></div>
+        </div>
+        <div class="mod">
+          <div class="m-label">Процесс · согласование договора</div>
+          <div class="proc">
+            <span class="ok">Менеджер</span><i>→</i>
+            <span class="ok">Юрист</span><i>→</i>
+            <span>Директор</span><i>→</i>
+            <span>Подписание</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- РЕЗУЛЬТАТЫ -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">Результат</div>
+    <h2>Что вы получите</h2>
+    <div class="specs" style="margin-top:38px">
+      <div class="spec"><div class="k">crm</div><b>Отдел продаж под контролем</b><p>Заявки, сделки, клиентская база — всё в системе. Ни одно обращение не теряется.</p></div>
+      <div class="spec"><div class="k">задачи</div><b>Задачи и проекты</b><p>Вся компания работает в одной системе: сроки, ответственные, контроль. Ничего не забывается.</p></div>
+      <div class="spec"><div class="k">процессы</div><b>Автоматизация процессов</b><p>Согласования, документы и рутина идут по заданному маршруту — без ручного труда и напоминаний.</p></div>
+      <div class="spec"><div class="k">пространство</div><b>Всё в одном месте</b><p>Чаты, диски, календари — вместо десяти разных сервисов и вечного «скинь ссылку».</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- СОСТАВ ВНЕДРЕНИЯ -->
+<section id="compose">
+  <div class="wrap">
+    <div class="sec-label">Состав работ</div>
+    <h2>Что входит во внедрение</h2>
+    <p class="sec-sub">Полный цикл — от разбора процессов компании до сотрудников, которые уверенно работают в системе.</p>
+    <div class="compose">
+      <div class="cmp-row"><span class="idx">01</span><p><b>Аудит процессов компании</b> — как устроены продажи, задачи, согласования</p></div>
+      <div class="cmp-row"><span class="idx">02</span><p><b>Настройка CRM</b>: воронки, поля, права доступа</p></div>
+      <div class="cmp-row"><span class="idx">03</span><p><b>Подключение каналов</b>: WhatsApp, Instagram, телефония, почта</p></div>
+      <div class="cmp-row"><span class="idx">04</span><p><b>Настройка задач, проектов</b> и автоматизации процессов</p></div>
+      <div class="cmp-row"><span class="idx">05</span><p><b>Обучение сотрудников</b> — менеджеров и руководителей</p></div>
+      <div class="cmp-row"><span class="idx">06</span><p><b>Сопровождение после запуска</b> — поддержка и доработки</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- СРАВНЕНИЕ -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">Выбор системы</div>
+    <h2>amoCRM или Битрикс24?</h2>
+    <p class="sec-sub">Короткий честный ответ — без притягивания к одной системе.</p>
+    <div class="vs">
+      <div class="vs-col">
+        <div class="k">вариант 01</div>
+        <h3>amoCRM</h3>
+        <p>Если нужен только сильный отдел продаж: заявки, сделки, WhatsApp, звонки. Проще, быстрее внедряется, менеджеры осваивают за пару дней.</p>
+      </div>
+      <div class="vs-col dark">
+        <div class="k">вариант 02</div>
+        <h3>Битрикс24</h3>
+        <p>Если хотите завести в систему всю компанию: продажи, задачи, процессы, документы, внутренние коммуникации. Один инструмент вместо десяти.</p>
+      </div>
+    </div>
+    <div class="vs-note"><b>Мы внедряем обе системы</b> — поэтому на консультации поможем выбрать честно, под вашу задачу, а не под нашу выгоду. <a href="/amocrm.html">Страница про внедрение amoCRM →</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2>Подберём тариф и настроим под ваши процессы</h2>
+        <p style="margin-top:10px">Как официальный партнёр Битрикс24 поможем с выбором тарифа и лицензиями.</p>
+      </div>
+      <a class="btn btn-green" href="https://wa.me/77075213922" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 SARBONLAB // внедрение CRM и автоматизация // Алматы, Казахстан</div>
+    <div><a href="tel:+77075213922">+7 707 521 39 22</a> · <a href="mailto:Sarbonlab@gmail.com">Sarbonlab@gmail.com</a></div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/77075213922" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.4 2 11.9c0 2.1.6 4 1.7 5.7L2 22l4.5-1.6c1.6 1 3.5 1.5 5.5 1.5 5.5 0 10-4.4 10-9.9S17.5 2 12 2zm5.7 14c-.2.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.4 0 .1 0 .7-.2 1.5z"/></svg>
+</a>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  menu.classList.remove('open');burger.setAttribute('aria-expanded','false');
+}));
+</script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Интеграция WhatsApp с amoCRM и Битрикс24 | Официально через Wazzup</title>
+<meta name="description" content="Подключим WhatsApp к вашей CRM официально через Wazzup: вся переписка в системе, без банов и потери заявок. Настройка за 1 день. Официальный партнёр Wazzup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;600;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Интеграция WhatsApp с CRM",
+  "description": "Подключение WhatsApp к amoCRM и Битрикс24 через официальную интеграцию Wazzup: переписка в CRM, автосоздание сделок, рассылки",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "SarbonLab",
+    "telephone": "+77075213922",
+    "email": "Sarbonlab@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Алматы", "addressCountry": "KZ" }
+  },
+  "areaServed": "Казахстан"
+}
+</script>
+<style>
+:root{
+  --paper:#EEF2F4;
+  --panel:#FFFFFF;
+  --ink:#0B161F;
+  --ink2:#4C5D6B;
+  --green:#00A860;
+  --green-deep:#008A4F;
+  --red:#DE3B3B;
+  --line:#D5DEE4;
+  --line-dark:#22323F;
+  --r:6px;
+  --display:'Tektur',sans-serif;
+  --body:'Golos Text',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+::selection{background:var(--green);color:#fff}
+
+/* ---------- Статус-бар ---------- */
+.statusbar{background:var(--ink);color:#8FA3B2;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em}
+.statusbar .wrap{display:flex;justify-content:space-between;padding-top:7px;padding-bottom:7px;gap:16px}
+.statusbar b{color:#fff;font-weight:500}
+.live{color:var(--green)}
+.live::before{content:"●";margin-right:6px;animation:blink 2.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ---------- Шапка ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(238,242,244,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+.logo i{font-style:normal;color:var(--green)}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink2);font-family:var(--mono)}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:var(--r);font-weight:600;font-size:15px;text-decoration:none;border:none;cursor:pointer;transition:background .15s,transform .12s}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-deep)}
+.btn-ghost{border:1.5px solid var(--ink);background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-sm{padding:10px 18px;font-size:14px}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
+
+/* ---------- Общее ---------- */
+section{padding:78px 0}
+.sec-label{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.sec-label::before{content:"";width:34px;height:2px;background:var(--green)}
+h1,h2{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.15}
+h1{font-size:clamp(25px,4vw,42px)}
+h2{font-size:clamp(21px,2.8vw,30px);margin-bottom:14px}
+.sec-sub{color:var(--ink2);max-width:38em;margin-bottom:42px;font-size:17.5px}
+.crumbs{font-family:var(--mono);font-size:12px;color:var(--ink2);margin-bottom:20px}
+.crumbs a{text-decoration:none;color:var(--ink2)}
+.crumbs a:hover{color:var(--ink)}
+
+/* ---------- Hero ---------- */
+.hero{padding:60px 0 50px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}
+.hero p.lead{font-size:19px;color:var(--ink2);margin:22px 0 32px;max-width:30em}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.partners{margin-top:30px;font-family:var(--mono);font-size:12.5px;color:var(--ink2);letter-spacing:.03em}
+.partners b{color:var(--ink);font-weight:500}
+
+/* ---------- Поток чатов (hero) ---------- */
+.inbox{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);box-shadow:14px 14px 0 -4px var(--ink)}
+.inbox-top{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:11px 16px;font-family:var(--mono);font-size:11.5px;color:var(--ink2);letter-spacing:.04em}
+.inbox-top b{color:var(--ink);font-weight:500}
+.chat-row{display:grid;grid-template-columns:1fr auto;gap:6px 14px;padding:13px 16px;border-bottom:1px solid var(--line);opacity:0;animation:chatIn .45s ease forwards}
+.chat-row:last-child{border-bottom:none}
+.chat-row:nth-child(3){animation-delay:.18s}
+.chat-row:nth-child(4){animation-delay:.36s}
+.chat-row:nth-child(5){animation-delay:.54s}
+.chat-row .who{font-weight:600;font-size:14.5px}
+.chat-row .snippet{grid-column:1;font-size:13.5px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chat-row .meta{grid-row:1/3;grid-column:2;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.chat-row .mgr{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);border:1px solid var(--line);border-radius:4px;padding:3px 8px}
+.chat-row .st{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.05em;color:var(--green-deep)}
+@keyframes chatIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .chat-row{animation:none;opacity:1}
+  .live::before{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- Что это даёт ---------- */
+.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.spec{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.spec .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green-deep);margin-bottom:10px}
+.spec b{display:block;font-size:17px;margin-bottom:6px}
+.spec p{font-size:15px;color:var(--ink2)}
+.spec.wide{grid-column:1/-1}
+
+/* ---------- Почему Wazzup ---------- */
+.wz{background:var(--ink);color:#E8F0F5;border-radius:var(--r);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.wz h2{color:#fff}
+.wz p{color:#9FB1BE;font-size:16.5px}
+.wz-facts{display:grid;gap:10px}
+.wz-fact{border:1px solid var(--line-dark);border-radius:4px;padding:14px 18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.03em}
+.wz-fact b{color:#2BD98A;font-weight:700}
+
+/* ---------- Как подключаем ---------- */
+.pipeline{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--line);gap:1px}
+.stage{background:var(--panel);padding:26px 22px}
+.stage .n{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--green-deep);letter-spacing:.06em;display:block;margin-bottom:12px}
+.stage b{display:block;font-size:16.5px;margin-bottom:6px}
+.stage p{font-size:14.5px;color:var(--ink2)}
+.speed-note{margin-top:16px;background:var(--panel);border:1px dashed var(--line);border-radius:var(--r);padding:20px 26px;font-size:16px;color:var(--ink2)}
+.speed-note b{color:var(--ink)}
+.speed-note .mono-tag{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--green-deep);letter-spacing:.05em;margin-right:10px}
+
+/* ---------- CTA ---------- */
+.cta-box{background:var(--ink);color:#fff;border-radius:var(--r);padding:54px 48px;display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center;position:relative;overflow:hidden}
+.cta-box::before{content:"WHATSAPP / WHATSAPP / WHATSAPP";position:absolute;top:14px;left:0;white-space:nowrap;font-family:var(--mono);font-size:11px;letter-spacing:.35em;color:#22323F;pointer-events:none}
+.cta-box h2{color:#fff}
+.cta-box p{color:#9FB1BE;font-size:17px}
+.cta-box .btn{justify-self:end;padding:17px 32px;font-size:16px}
+
+/* ---------- Подвал ---------- */
+footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);font-size:12.5px;color:var(--ink2)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- WhatsApp FAB ---------- */
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:54px;height:54px;border-radius:var(--r);background:var(--green);box-shadow:6px 6px 0 -2px var(--ink);align-items:center;justify-content:center;text-decoration:none}
+.fab svg{width:26px;height:26px;fill:#fff}
+
+/* ---------- Адаптив ---------- */
+@media (max-width:940px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .wz{grid-template-columns:1fr;padding:32px 26px}
+  .pipeline{grid-template-columns:1fr}
+  .cta-box{grid-template-columns:1fr;padding:40px 28px}
+  .cta-box .btn{justify-self:start}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:54px 0}
+  .hero{padding:38px 0 28px}
+  .statusbar .wrap span:nth-child(2){display:none}
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{display:none}
+  .hero-ctas .btn{width:100%}
+  .inbox{box-shadow:8px 8px 0 -3px var(--ink)}
+  .specs{grid-template-columns:1fr}
+  .fab{display:flex}
+}
+</style>
+</head>
+<body>
+
+<!-- Статус-бар -->
+<div class="statusbar">
+  <div class="wrap">
+    <span><b>SARBONLAB</b> // система продаж</span>
+    <span>Алматы / Казахстан</span>
+    <span class="live">принимаем заявки</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/">Sarbon<i>Lab</i></a>
+    <ul class="nav-links" id="menu">
+      <li><a href="/#services">/услуги</a></li>
+      <li><a href="/#why">/почему-мы</a></li>
+      <li><a href="/#steps">/этапы</a></li>
+      <li><a href="/contacts.html">/контакты</a></li>
+    </ul>
+    <a class="btn btn-green btn-sm" href="https://wa.me/77075213922" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/#services">Услуги</a> / WhatsApp в CRM</nav>
+      <div class="sec-label">Услуга 03 · интеграция</div>
+      <h1>WhatsApp в вашей CRM — вся переписка в&nbsp;одном окне</h1>
+      <p class="lead">В Казахстане клиенты пишут в WhatsApp. Если переписка идёт с личных телефонов менеджеров — вы не контролируете ни заявки, ни базу. Подключим WhatsApp к CRM официально: каждое сообщение — в системе.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-green" href="https://wa.me/77075213922" target="_blank" rel="noopener">Подключить WhatsApp к CRM</a>
+        <a class="btn btn-ghost" href="#how">Как подключаем</a>
+      </div>
+      <p class="partners">Официальный партнёр <b>Wazzup</b> — самой стабильной интеграции WhatsApp с CRM</p>
+    </div>
+
+    <!-- Поток чатов -->
+    <div class="inbox" aria-hidden="true">
+      <div class="inbox-top">
+        <span><b>ВХОДЯЩИЕ WHATSAPP</b> — все в CRM</span>
+        <span>новых: 4</span>
+      </div>
+      <div class="chat-row">
+        <span class="who">Асель М.</span>
+        <span class="snippet">Здравствуйте! Ещё актуально предложение?</span>
+        <span class="meta"><span class="mgr">→ Айдана</span><span class="st">[ СДЕЛКА СОЗДАНА ]</span></span>
+      </div>
+      <div class="chat-row">
+        <span class="who">ТОО «Дала Трейд»</span>
+        <span class="snippet">Отправьте счёт на 10 пользователей, пожалуйста</span>
+        <span class="meta"><span class="mgr">→ Ерлан</span><span class="st">[ СЧЁТ ВЫСТАВЛЕН ]</span></span>
+      </div>
+      <div class="chat-row">
+        <span class="who">Руслан К.</span>
+        <span class="snippet">Сколько будет стоить с установкой?</span>
+        <span class="meta"><span class="mgr">→ Айдана</span><span class="st">[ ЗАДАЧА: ОТВЕТИТЬ ]</span></span>
+      </div>
+      <div class="chat-row">
+        <span class="who">ИП Сериков</span>
+        <span class="snippet">Оплатил, проверьте пожалуйста</span>
+        <span class="meta"><span class="mgr">→ Ерлан</span><span class="st">[ ОПЛАТА ]</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ЧТО ЭТО ДАЁТ -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">Результат</div>
+    <h2>Что это даёт</h2>
+    <div class="specs" style="margin-top:38px">
+      <div class="spec"><div class="k">переписка</div><b>Вся переписка в CRM</b><p>Менеджер отвечает из системы, история сохраняется в сделке. Ничего не остаётся в личных телефонах.</p></div>
+      <div class="spec"><div class="k">заявки</div><b>Заявки не теряются</b><p>Новое сообщение автоматически создаёт сделку. Каждое обращение — под контролем.</p></div>
+      <div class="spec"><div class="k">база</div><b>База принадлежит вам</b><p>Менеджер уволился — клиенты остались в системе, вместе со всей историей общения.</p></div>
+      <div class="spec"><div class="k">контроль</div><b>Контроль качества</b><p>Руководитель видит, как менеджеры общаются с клиентами: скорость ответа, тон, дожим.</p></div>
+      <div class="spec wide"><div class="k">автоматизация</div><b>Рассылки и авто-сообщения</b><p>Приветствия новым клиентам, напоминания о встречах, догрев тех, кто «думает», — система отправляет сама, без рук менеджера.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ПОЧЕМУ WAZZUP -->
+<section>
+  <div class="wrap">
+    <div class="wz">
+      <div>
+        <div class="sec-label" style="color:#8FA3B2">Технология</div>
+        <h2>Почему через Wazzup</h2>
+        <p style="margin-top:12px">Мы официальный партнёр Wazzup — самой стабильной интеграции WhatsApp с CRM. Подключаем так, чтобы работало годами, а не до первого сбоя.</p>
+      </div>
+      <div class="wz-facts">
+        <div class="wz-fact">Работает с обычным WhatsApp и <b>WhatsApp Business API</b></div>
+        <div class="wz-fact"><b>Минимальный риск блокировок</b> — официальное подключение</div>
+        <div class="wz-fact">Поддержка <b>на русском языке</b></div>
+        <div class="wz-fact">Интеграция с <b>amoCRM и Битрикс24</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КАК ПОДКЛЮЧАЕМ -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-label">Процесс</div>
+    <h2>Как подключаем</h2>
+    <p class="sec-sub">Три шага — и переписка с клиентами идёт через CRM.</p>
+    <div class="pipeline">
+      <div class="stage"><span class="n">ШАГ 01</span><b>Консультация</b><p>Определяем, какой вариант подключения вам нужен.</p></div>
+      <div class="stage"><span class="n">ШАГ 02</span><b>Настройка</b><p>Подключаем номер, настраиваем распределение чатов по менеджерам.</p></div>
+      <div class="stage"><span class="n">ШАГ 03</span><b>Обучение</b><p>Команда работает с перепиской из CRM.</p></div>
+    </div>
+    <div class="speed-note"><span class="mono-tag">СРОК: 1 ДЕНЬ</span> Подключение занимает один день, если CRM уже настроена. Если CRM ещё нет — <b>внедрим под ключ вместе с WhatsApp</b>: <a href="/amocrm.html">amoCRM</a> или <a href="/bitrix24.html">Битрикс24</a>.</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2>Покажем на живом примере</h2>
+        <p style="margin-top:10px">Напишите нам в WhatsApp — вы сами увидите, как ваше сообщение превращается в сделку в CRM.</p>
+      </div>
+      <a class="btn btn-green" href="https://wa.me/77075213922" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 SARBONLAB // внедрение CRM и автоматизация // Алматы, Казахстан</div>
+    <div><a href="tel:+77075213922">+7 707 521 39 22</a> · <a href="mailto:Sarbonlab@gmail.com">Sarbonlab@gmail.com</a></div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/77075213922" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.4 2 11.9c0 2.1.6 4 1.7 5.7L2 22l4.5-1.6c1.6 1 3.5 1.5 5.5 1.5 5.5 0 10-4.4 10-9.9S17.5 2 12 2zm5.7 14c-.2.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.4 0 .1 0 .7-.2 1.5z"/></svg>
+</a>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  menu.classList.remove('open');burger.setAttribute('aria-expanded','false');
+}));
+</script>
+</body>
+</html>

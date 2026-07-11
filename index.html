@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Внедрение CRM и автоматизация бизнеса в Казахстане | SarbonLab</title>
+<meta name="description" content="Внедряем amoCRM и Битрикс24, подключаем WhatsApp и телефонию, автоматизируем продажи. Официальный партнёр amoCRM, Битрикс24, Wazzup и SIPUNI. Работаем по всему Казахстану.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;600;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SarbonLab",
+  "description": "Внедрение CRM (amoCRM, Битрикс24), интеграция WhatsApp и телефонии, автоматизация продаж",
+  "url": "https://sarbonlab.com",
+  "telephone": "+77075213922",
+  "email": "Sarbonlab@gmail.com",
+  "areaServed": "Казахстан",
+  "address": { "@type": "PostalAddress", "addressLocality": "Алматы", "addressCountry": "KZ" }
+}
+</script>
+<style>
+:root{
+  --paper:#EEF2F4;
+  --panel:#FFFFFF;
+  --ink:#0B161F;
+  --ink2:#4C5D6B;
+  --green:#00A860;
+  --green-deep:#008A4F;
+  --red:#DE3B3B;
+  --line:#D5DEE4;
+  --line-dark:#22323F;
+  --r:6px;
+  --display:'Tektur',sans-serif;
+  --body:'Golos Text',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+::selection{background:var(--green);color:#fff}
+
+.mono{font-family:var(--mono)}
+
+/* ---------- Статус-бар ---------- */
+.statusbar{background:var(--ink);color:#8FA3B2;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em}
+.statusbar .wrap{display:flex;justify-content:space-between;padding-top:7px;padding-bottom:7px;gap:16px}
+.statusbar b{color:#fff;font-weight:500}
+.live{color:var(--green)}
+.live::before{content:"●";margin-right:6px;animation:blink 2.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ---------- Шапка ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(238,242,244,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+.logo i{font-style:normal;color:var(--green)}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink2);font-family:var(--mono)}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:var(--r);font-weight:600;font-size:15px;text-decoration:none;border:none;cursor:pointer;transition:background .15s,transform .12s}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-deep)}
+.btn-ghost{border:1.5px solid var(--ink);background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-sm{padding:10px 18px;font-size:14px}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
+
+/* ---------- Общее для секций ---------- */
+section{padding:78px 0}
+.sec-label{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.sec-label::before{content:"";width:34px;height:2px;background:var(--green)}
+h1,h2{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.15}
+h1{font-size:clamp(27px,4.4vw,48px)}
+h2{font-size:clamp(21px,2.8vw,30px);margin-bottom:14px}
+.sec-sub{color:var(--ink2);max-width:38em;margin-bottom:42px;font-size:17.5px}
+
+/* ---------- Hero ---------- */
+.hero{padding:70px 0 50px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}
+.hero p.lead{font-size:19px;color:var(--ink2);margin:22px 0 32px;max-width:30em}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.partners{margin-top:30px;font-family:var(--mono);font-size:12.5px;color:var(--ink2);letter-spacing:.03em}
+.partners b{color:var(--ink);font-weight:500}
+
+/* ---------- Панель CRM (hero) ---------- */
+.board{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);box-shadow:14px 14px 0 -4px var(--ink)}
+.board-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:11px 16px;font-family:var(--mono);font-size:11.5px;color:var(--ink2);letter-spacing:.04em}
+.board-top b{color:var(--ink);font-weight:500}
+.board-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.col{background:var(--panel);padding:12px;min-height:230px}
+.col-title{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);display:flex;justify-content:space-between;padding-bottom:12px}
+.col-title em{font-style:normal;color:var(--green)}
+.card{border:1px solid var(--line);border-left:3px solid var(--green);border-radius:4px;padding:10px 12px;margin-bottom:8px;opacity:0;animation:cardIn .45s ease forwards}
+.card h4{font-size:13.5px;font-weight:600;margin-bottom:2px}
+.card .sum{font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--green-deep)}
+.card .src{font-family:var(--mono);font-size:10.5px;color:var(--ink2);text-transform:uppercase;letter-spacing:.05em;margin-top:6px;display:block}
+.card:nth-child(2){animation-delay:.12s}
+.card:nth-child(3){animation-delay:.24s}
+.card:nth-child(4){animation-delay:.36s}
+.col:nth-child(2) .card{animation-delay:.45s}
+.col:nth-child(2) .card:nth-child(3){animation-delay:.57s}
+.col:nth-child(3) .card{animation-delay:.7s}
+@keyframes cardIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .card{animation:none;opacity:1}
+  .live::before{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- Журнал потерь ---------- */
+.log-wrap{background:var(--ink);color:#C7D3DC;border-radius:var(--r);padding:34px 34px 28px;overflow-x:auto}
+.log-title{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8FA3B2;margin-bottom:20px}
+.log{font-family:var(--mono);font-size:13.5px;line-height:1.5;min-width:640px}
+.log-row{display:grid;grid-template-columns:58px 1.1fr 1.2fr 190px;gap:18px;padding:11px 0;border-bottom:1px solid var(--line-dark);align-items:baseline}
+.log-row:last-child{border-bottom:none}
+.log-row .t{color:#6E8494}
+.log-row .st{font-weight:700;text-align:right}
+.st-red{color:#FF6B6B}
+.st-green{color:#2BD98A}
+.log-div{margin:20px 0 14px;color:#6E8494;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:14px}
+.log-div::before,.log-div::after{content:"";flex:1;height:1px;background:var(--line-dark)}
+.log-after{color:#E8F0F5}
+.log-note{margin-top:26px;font-size:16.5px;color:#E8F0F5;max-width:36em;font-family:var(--body)}
+
+/* ---------- Реестр услуг ---------- */
+.registry{border-top:1.5px solid var(--ink)}
+.reg-row{display:grid;grid-template-columns:64px 1fr 1.4fr 40px;gap:22px;align-items:center;padding:24px 4px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .15s,padding-left .15s}
+.reg-row:hover{background:var(--panel);padding-left:14px}
+.reg-row .idx{font-family:var(--mono);font-size:13px;color:var(--ink2)}
+.reg-row h3{font-family:var(--display);font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:.02em}
+.reg-row p{font-size:15px;color:var(--ink2)}
+.reg-row .arr{font-family:var(--mono);font-size:18px;color:var(--green);text-align:right;transition:transform .15s}
+.reg-row:hover .arr{transform:translateX(5px)}
+
+/* ---------- Характеристики ---------- */
+.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.spec{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.spec .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green-deep);margin-bottom:10px}
+.spec b{display:block;font-size:17px;margin-bottom:6px}
+.spec p{font-size:15px;color:var(--ink2)}
+
+/* ---------- Этапы ---------- */
+.pipeline{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--line);gap:1px}
+.stage{background:var(--panel);padding:24px 20px}
+.stage .n{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--green-deep);letter-spacing:.06em;display:block;margin-bottom:12px}
+.stage b{display:block;font-size:16px;margin-bottom:6px}
+.stage p{font-size:14px;color:var(--ink2)}
+
+/* ---------- CTA ---------- */
+.cta-box{background:var(--ink);color:#fff;border-radius:var(--r);padding:54px 48px;display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center;position:relative;overflow:hidden}
+.cta-box::before{content:"SARBONLAB / SARBONLAB / SARBONLAB";position:absolute;top:14px;left:0;white-space:nowrap;font-family:var(--mono);font-size:11px;letter-spacing:.35em;color:#22323F;pointer-events:none}
+.cta-box h2{color:#fff}
+.cta-box p{color:#9FB1BE;font-size:17px}
+.cta-box .btn{justify-self:end;padding:17px 32px;font-size:16px}
+
+/* ---------- Подвал ---------- */
+footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);font-size:12.5px;color:var(--ink2)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- WhatsApp FAB (моб.) ---------- */
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:54px;height:54px;border-radius:var(--r);background:var(--green);box-shadow:6px 6px 0 -2px var(--ink);align-items:center;justify-content:center;text-decoration:none}
+.fab svg{width:26px;height:26px;fill:#fff}
+
+/* ---------- Адаптив ---------- */
+@media (max-width:940px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .reg-row{grid-template-columns:44px 1fr 40px}
+  .reg-row p{display:none}
+  .pipeline{grid-template-columns:1fr}
+  .cta-box{grid-template-columns:1fr;padding:40px 28px}
+  .cta-box .btn{justify-self:start}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:54px 0}
+  .hero{padding:42px 0 28px}
+  .statusbar .wrap span:nth-child(2){display:none}
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{display:none}
+  .hero-ctas .btn{width:100%}
+  .board{box-shadow:8px 8px 0 -3px var(--ink)}
+  .board-cols{grid-template-columns:1fr 1fr}
+  .col:nth-child(3){display:none}
+  .log-wrap{padding:24px 18px}
+  .specs{grid-template-columns:1fr}
+  .fab{display:flex}
+}
+</style>
+</head>
+<body>
+
+<!-- Статус-бар -->
+<div class="statusbar">
+  <div class="wrap">
+    <span><b>SARBONLAB</b> // система продаж</span>
+    <span>Алматы / Казахстан</span>
+    <span class="live">принимаем заявки</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/">Sarbon<i>Lab</i></a>
+    <ul class="nav-links" id="menu">
+      <li><a href="#services">/услуги</a></li>
+      <li><a href="#why">/почему-мы</a></li>
+      <li><a href="#steps">/этапы</a></li>
+      <li><a href="/contacts.html">/контакты</a></li>
+    </ul>
+    <a class="btn btn-green btn-sm" href="https://wa.me/77075213922" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="sec-label">Внедрение CRM · автоматизация продаж</div>
+      <h1>Наведём порядок в&nbsp;продажах вашего бизнеса</h1>
+      <p class="lead">Внедряем CRM, подключаем WhatsApp и телефонию, автоматизируем отдел продаж. Заявки перестанут теряться, а вы будете видеть каждую сделку.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-green" href="https://wa.me/77075213922" target="_blank" rel="noopener">Получить консультацию</a>
+        <a class="btn btn-ghost" href="#services">Смотреть услуги</a>
+      </div>
+      <p class="partners">Официальный партнёр: <b>amoCRM</b> / <b>Битрикс24</b> / <b>Wazzup</b> / <b>SIPUNI</b></p>
+    </div>
+
+    <!-- Панель CRM -->
+    <div class="board" aria-hidden="true">
+      <div class="board-top">
+        <span><b>ВОРОНКА ПРОДАЖ</b> — вид из CRM</span>
+        <span>сделок: 7</span>
+      </div>
+      <div class="board-cols">
+        <div class="col">
+          <div class="col-title">Новая заявка <em>3</em></div>
+          <div class="card"><h4>Асель М.</h4><div class="sum">850 000 ₸</div><span class="src">whatsapp</span></div>
+          <div class="card"><h4>ТОО «Дала Трейд»</h4><div class="sum">1 200 000 ₸</div><span class="src">звонок</span></div>
+          <div class="card"><h4>Руслан К.</h4><div class="sum">340 000 ₸</div><span class="src">instagram</span></div>
+        </div>
+        <div class="col">
+          <div class="col-title">В работе <em>2</em></div>
+          <div class="card"><h4>ИП Сериков</h4><div class="sum">560 000 ₸</div><span class="src">whatsapp</span></div>
+          <div class="card"><h4>ТОО «АгроПром»</h4><div class="sum">2 400 000 ₸</div><span class="src">звонок</span></div>
+        </div>
+        <div class="col">
+          <div class="col-title">Оплачено <em>2</em></div>
+          <div class="card"><h4>ТОО «Восток»</h4><div class="sum">795 000 ₸</div><span class="src">whatsapp</span></div>
+          <div class="card"><h4>Школа «Білім»</h4><div class="sum">250 000 ₸</div><span class="src">звонок</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ЖУРНАЛ ПОТЕРЬ -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">Диагностика</div>
+    <h2>Так теряются деньги — каждый день</h2>
+    <p class="sec-sub">Типичный день отдела продаж без системы. Узнаёте себя?</p>
+    <div class="log-wrap">
+      <div class="log-title">// журнал_потерь.log — без CRM</div>
+      <div class="log">
+        <div class="log-row"><span class="t">09:12</span><span>Заявка из WhatsApp</span><span>менеджер не ответил</span><span class="st st-red">[ ПОТЕРЯНА ]</span></div>
+        <div class="log-row"><span class="t">11:47</span><span>Звонок, новый клиент</span><span>записан в блокнот</span><span class="st st-red">[ ЗАБЫТ ]</span></div>
+        <div class="log-row"><span class="t">14:03</span><span>Заявка из Instagram</span><span>увидели через два дня</span><span class="st st-red">[ УШЛА К КОНКУРЕНТУ ]</span></div>
+        <div class="log-row"><span class="t">17:30</span><span>Постоянный клиент</span><span>менеджер уволился — база в его телефоне</span><span class="st st-red">[ ПОТЕРЯН ]</span></div>
+        <div class="log-div">тот же день — с CRM</div>
+        <div class="log-row log-after"><span class="t">09:12</span><span>Заявка из WhatsApp</span><span>сделка создана, задача менеджеру</span><span class="st st-green">[ В РАБОТЕ ]</span></div>
+        <div class="log-row log-after"><span class="t">09:14</span><span>Менеджер ответил из CRM</span><span>руководитель видит переписку</span><span class="st st-green">[ ПОД КОНТРОЛЕМ ]</span></div>
+      </div>
+      <p class="log-note">CRM закрывает эти дыры. Мы настраиваем её под ваш бизнес — так, чтобы отдел продаж реально в ней работал.</p>
+    </div>
+  </div>
+</section>
+
+<!-- РЕЕСТР УСЛУГ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-label">Реестр услуг</div>
+    <h2>Что мы внедряем</h2>
+    <p class="sec-sub">От внедрения CRM до полной автоматизации отдела продаж — под ключ, с обучением команды.</p>
+    <div class="registry">
+      <a class="reg-row" href="/amocrm.html">
+        <span class="idx">01</span>
+        <h3>Внедрение amoCRM</h3>
+        <p>Воронки, автоматизация, обучение менеджеров. Все заявки — в одной системе.</p>
+        <span class="arr">→</span>
+      </a>
+      <a class="reg-row" href="/bitrix24.html">
+        <span class="idx">02</span>
+        <h3>Внедрение Битрикс24</h3>
+        <p>CRM, задачи и процессы всей компании в одной системе. Официальный партнёр.</p>
+        <span class="arr">→</span>
+      </a>
+      <a class="reg-row" href="/whatsapp.html">
+        <span class="idx">03</span>
+        <h3>WhatsApp в CRM</h3>
+        <p>Вся переписка с клиентами в одном окне. Официально, через Wazzup, без банов.</p>
+        <span class="arr">→</span>
+      </a>
+      <a class="reg-row" href="#contact">
+        <span class="idx">04</span>
+        <h3>Телефония</h3>
+        <p>Запись звонков, распределение по менеджерам, аналитика разговоров. SIPUNI.</p>
+        <span class="arr">→</span>
+      </a>
+      <a class="reg-row" href="#contact">
+        <span class="idx">05</span>
+        <h3>Чат-боты и автоматизация</h3>
+        <p>Рутину делает система, а не менеджер: автоответы, напоминания, рассылки.</p>
+        <span class="arr">→</span>
+      </a>
+      <a class="reg-row" href="#contact">
+        <span class="idx">06</span>
+        <h3>Сайты и посадочные</h3>
+        <p>Сайт, который передаёт заявки прямо в вашу CRM — без ручного переноса.</p>
+        <span class="arr">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ХАРАКТЕРИСТИКИ -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-label">Почему SarbonLab</div>
+    <h2>Характеристики подрядчика</h2>
+    <div class="specs" style="margin-top:38px">
+      <div class="spec"><div class="k">статус</div><b>Официальный партнёр</b><p>amoCRM, Битрикс24, Wazzup и SIPUNI — работаем напрямую с вендорами, помогаем с тарифами.</p></div>
+      <div class="spec"><div class="k">формат</div><b>Внедрение под ключ</b><p>От аудита продаж до обучения команды. Вам не нужно разбираться в настройках.</p></div>
+      <div class="spec"><div class="k">после запуска</div><b>Сопровождение</b><p>Дорабатываем, отвечаем на вопросы, развиваем систему вместе с вашим бизнесом.</p></div>
+      <div class="spec"><div class="k">язык общения</div><b>Язык бизнеса</b><p>Не грузим терминами. Обсуждаем заявки, сделки и деньги — а не технические детали.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ЭТАПЫ -->
+<section id="steps">
+  <div class="wrap">
+    <div class="sec-label">Процесс</div>
+    <h2>Пять этапов до работающей системы</h2>
+    <p class="sec-sub">От первого разговора до отдела продаж, который работает в CRM каждый день.</p>
+    <div class="pipeline">
+      <div class="stage"><span class="n">ЭТАП 01</span><b>Консультация</b><p>Разбираем, как устроены ваши продажи и где теряются деньги.</p></div>
+      <div class="stage"><span class="n">ЭТАП 02</span><b>Предложение</b><p>Конкретный план внедрения под ваши задачи.</p></div>
+      <div class="stage"><span class="n">ЭТАП 03</span><b>Внедрение</b><p>Настраиваем систему, подключаем каналы, автоматизируем.</p></div>
+      <div class="stage"><span class="n">ЭТАП 04</span><b>Обучение</b><p>Менеджеры и руководитель умеют работать в системе.</p></div>
+      <div class="stage"><span class="n">ЭТАП 05</span><b>Сопровождение</b><p>Поддержка и доработки после запуска.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2>Расскажите, как у вас устроены продажи</h2>
+        <p style="margin-top:10px">Предложим решение под вашу задачу. Честно скажем, что нужно внедрять, а что — нет.</p>
+      </div>
+      <a class="btn btn-green" href="https://wa.me/77075213922" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 SARBONLAB // внедрение CRM и автоматизация // Алматы, Казахстан</div>
+    <div><a href="tel:+77075213922">+7 707 521 39 22</a> · <a href="mailto:Sarbonlab@gmail.com">Sarbonlab@gmail.com</a></div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/77075213922" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.4 2 11.9c0 2.1.6 4 1.7 5.7L2 22l4.5-1.6c1.6 1 3.5 1.5 5.5 1.5 5.5 0 10-4.4 10-9.9S17.5 2 12 2zm5.7 14c-.2.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.4 0 .1 0 .7-.2 1.5z"/></svg>
+</a>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  menu.classList.remove('open');burger.setAttribute('aria-expanded','false');
+}));
+</script>
+</body>
+</html>
