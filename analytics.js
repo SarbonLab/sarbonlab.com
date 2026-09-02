@@ -15,6 +15,19 @@
   'use strict';
 
   var YM_ID = 112184697;
+  var GA_ID = 'G-8T0C5TFS6K';
+
+  /* ---------- Google Analytics 4 ---------- */
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+  (function () {
+    var s = document.createElement('script');
+    s.async = 1;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    (document.head || document.getElementsByTagName('head')[0]).appendChild(s);
+  })();
 
   /* ---------- Яндекс.Метрика ---------- */
   (function (m, e, t, r, i, k, a) {
@@ -41,7 +54,6 @@
   /* ---------- Отправка цели ---------- */
   function goal(name, params) {
     try { if (window.ym) { ym(YM_ID, 'reachGoal', name, params); } } catch (e) {}
-    // Сюда же добавится gtag, когда появится идентификатор GA4.
     try { if (window.gtag) { window.gtag('event', name, params); } } catch (e) {}
   }
 
