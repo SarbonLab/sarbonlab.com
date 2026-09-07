@@ -16,12 +16,14 @@
 
   var YM_ID = 112184697;
   var GA_ID = 'G-8T0C5TFS6K';
+  var AW_ID = 'AW-18425048791';   // Google Ads
 
   /* ---------- Google Analytics 4 ---------- */
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { window.dataLayer.push(arguments); };
   gtag('js', new Date());
   gtag('config', GA_ID);
+  gtag('config', AW_ID);
   (function () {
     var s = document.createElement('script');
     s.async = 1;
