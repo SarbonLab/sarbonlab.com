@@ -17,6 +17,11 @@
   var YM_ID = 112184697;
   var GA_ID = 'G-8T0C5TFS6K';
   var AW_ID = 'AW-18425048791';   // Google Ads
+  // Метки конверсий Google Ads: какие цели считаются конверсиями в рекламе
+  var AW_LABELS = {
+    form_whatsapp: 'AW-18425048791/k5QZCMSZ5vAcENfd39FE',
+    phone_click:   'AW-18425048791/Ec5cCMeZ5vAcENfd39FE'
+  };
 
   /* ---------- Google Analytics 4 ---------- */
   window.dataLayer = window.dataLayer || [];
@@ -57,6 +62,7 @@
   function goal(name, params) {
     try { if (window.ym) { ym(YM_ID, 'reachGoal', name, params); } } catch (e) {}
     try { if (window.gtag) { window.gtag('event', name, params); } } catch (e) {}
+    try { if (window.gtag && AW_LABELS[name]) { window.gtag('event', 'conversion', { send_to: AW_LABELS[name] }); } } catch (e) {}
   }
 
   /* ---------- Клики ---------- */
