@@ -10,6 +10,7 @@
      whatsapp_click — любая другая кнопка WhatsApp
      phone_click    — клик по номеру телефона
      email_click    — клик по почте
+     instagram_click — клик по ссылке на Instagram
 */
 (function () {
   'use strict';
@@ -91,6 +92,8 @@
       goal('phone_click', params);
     } else if (href.indexOf('mailto:') === 0) {
       goal('email_click', params);
+    } else if (href.indexOf('instagram.com') !== -1) {
+      goal('instagram_click', params);
     }
   }, true);
 })();
