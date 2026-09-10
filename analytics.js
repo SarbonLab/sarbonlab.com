@@ -11,6 +11,7 @@
      phone_click    — клик по номеру телефона
      email_click    — клик по почте
      instagram_click — клик по ссылке на Instagram
+     telegram_click — клик по ссылке на Telegram-канал
 */
 (function () {
   'use strict';
@@ -94,6 +95,8 @@
       goal('email_click', params);
     } else if (href.indexOf('instagram.com') !== -1) {
       goal('instagram_click', params);
+     else if (href.indexOf('t.me/') !== -1) {
+      goal('telegram_click', params);
     }
   }, true);
 })();
