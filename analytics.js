@@ -95,7 +95,7 @@
       goal('email_click', params);
     } else if (href.indexOf('instagram.com') !== -1) {
       goal('instagram_click', params);
-     else if (href.indexOf('t.me/') !== -1) {
+    } else if (href.indexOf('t.me/') !== -1) {
       goal('telegram_click', params);
     }
   }, true);
