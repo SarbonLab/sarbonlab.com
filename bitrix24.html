@@ -201,7 +201,58 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   .cmp-row{grid-template-columns:44px 1fr;gap:14px}
   .fab{display:flex}
 }
+
+/* ---------- FAQ ---------- */
+.faq{border-top:1.5px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 32px;gap:18px;align-items:center;padding:20px 4px;font-family:var(--display);font-weight:600;font-size:16px;text-transform:uppercase;letter-spacing:.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);font-size:22px;color:var(--green);text-align:right;transition:transform .15s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{background:var(--panel)}
+.faq .a{padding:0 4px 22px;color:var(--ink2);font-size:15.5px;max-width:46em}
+.faq .a b{color:var(--ink)}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Сколько стоит внедрение Битрикс24?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Внедрение начинается от 250 000 ₸ за CRM с одной воронкой, WhatsApp и обучением. Проекты с задачами, документооборотом и несколькими отделами считаем после бесплатного аудита. Лицензия Битрикс24 оплачивается вендору отдельно."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Сколько времени занимает внедрение?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "CRM-часть запускаем за 2–5 недель. Если подключаем задачи, процессы и документы всей компании, проект идёт поэтапно, по отделам."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Битрикс24 или amoCRM?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Если задача только продажи, чаще советуем amoCRM, она проще. Битрикс24 берут, когда нужны задачи, проекты, документы и внутренние процессы в одной системе. На аудите скажем честно."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Есть ли бесплатный тариф?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Да, у Битрикс24 есть бесплатный тариф с ограничениями. Для небольшой команды его часто хватает на старт, дальше помогаем выбрать платный тариф под реальные задачи."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -329,6 +380,32 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       </div>
     </div>
     <div class="vs-note"><b>Мы внедряем обе системы</b> — поэтому на консультации поможем выбрать честно, под вашу задачу, а не под нашу выгоду. <a href="/amocrm.html">Страница про внедрение amoCRM →</a></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-label">Вопросы</div>
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details>
+        <summary>Сколько стоит внедрение Битрикс24?</summary>
+        <div class="a">Внедрение начинается <b>от 250 000 ₸</b> за CRM с одной воронкой, WhatsApp и обучением. Проекты с задачами, документооборотом и несколькими отделами считаем после бесплатного аудита. Лицензия Битрикс24 оплачивается вендору отдельно.</div>
+      </details>
+      <details>
+        <summary>Сколько времени занимает внедрение?</summary>
+        <div class="a">CRM-часть запускаем <b>за 2–5 недель</b>. Если подключаем задачи, процессы и документы всей компании, проект идёт поэтапно, по отделам.</div>
+      </details>
+      <details>
+        <summary>Битрикс24 или amoCRM?</summary>
+        <div class="a">Если задача только продажи, чаще советуем amoCRM, она проще. <b>Битрикс24</b> берут, когда нужны задачи, проекты, документы и внутренние процессы в одной системе. На аудите скажем честно.</div>
+      </details>
+      <details>
+        <summary>Есть ли бесплатный тариф?</summary>
+        <div class="a">Да, у Битрикс24 есть бесплатный тариф с ограничениями. Для небольшой команды его часто хватает на старт, дальше помогаем выбрать платный тариф под реальные задачи.</div>
+      </details>
+    </div>
   </div>
 </section>
 

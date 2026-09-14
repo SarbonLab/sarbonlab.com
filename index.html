@@ -211,7 +211,129 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   .specs{grid-template-columns:1fr}
   .fab{display:flex}
 }
+
+/* ---------- FAQ ---------- */
+.faq{border-top:1.5px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 32px;gap:18px;align-items:center;padding:20px 4px;font-family:var(--display);font-weight:600;font-size:16px;text-transform:uppercase;letter-spacing:.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);font-size:22px;color:var(--green);text-align:right;transition:transform .15s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{background:var(--panel)}
+.faq .a{padding:0 4px 22px;color:var(--ink2);font-size:15.5px;max-width:46em}
+.faq .a b{color:var(--ink)}
+
+/* ---------- Цены ---------- */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px 26px 24px;display:flex;flex-direction:column}
+.plan.hot{border-color:var(--ink);box-shadow:10px 10px 0 -3px var(--ink)}
+.plan .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green-deep);margin-bottom:10px;display:flex;justify-content:space-between}
+.plan h3{font-family:var(--display);font-weight:600;font-size:19px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:6px}
+.plan .price{font-family:var(--mono);font-size:22px;font-weight:700;margin-bottom:2px}
+.plan .term{font-family:var(--mono);font-size:12.5px;color:var(--ink2);margin-bottom:18px}
+.plan ul{list-style:none;font-size:14.5px;color:var(--ink2);flex:1}
+.plan li{padding:7px 0 7px 18px;border-top:1px solid var(--line);position:relative}
+.plan li::before{content:"—";position:absolute;left:0;color:var(--green);font-family:var(--mono)}
+.plan li b{color:var(--ink);font-weight:500}
+.plan .btn{margin-top:20px;width:100%}
+.plans-note{margin-top:18px;font-family:var(--mono);font-size:12.5px;color:var(--ink2);max-width:60em}
+.support-line{margin-top:14px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 26px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;font-size:15px}
+.support-line b{font-family:var(--mono);font-size:17px}
+
+/* ---------- Интеграции ---------- */
+.integr{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:38px}
+.integr div{background:var(--panel);padding:22px 20px}
+.integr b{display:block;font-family:var(--display);font-weight:600;font-size:16px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:4px}
+.integr span{font-family:var(--mono);font-size:12px;color:var(--ink2)}
+
+/* ---------- Аудит ---------- */
+.audit-note{margin-top:14px;font-size:14.5px;color:var(--ink2);max-width:30em}
+.audit-note b{color:var(--ink);font-weight:500}
+.cta-list{list-style:none;margin-top:16px;font-size:15.5px;color:#C7D3DC}
+.cta-list li{padding:5px 0 5px 20px;position:relative}
+.cta-list li::before{content:"→";position:absolute;left:0;color:var(--green);font-family:var(--mono)}
+@media (max-width:940px){.plans{grid-template-columns:1fr}.integr{grid-template-columns:repeat(2,1fr)}}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Сколько стоит внедрение CRM?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Внедрение начинается от 250 000 ₸: одна воронка, WhatsApp, перенос базы и обучение. Точную сумму называем после бесплатного аудита, когда понятно, сколько каналов, интеграций и людей нужно подключить. Лицензия amoCRM или Битрикс24 оплачивается вендору отдельно, с тарифом поможем."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Сколько времени занимает внедрение?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Типовой проект занимает от 2 до 5 недель. Первую неделю разбираем процессы и настраиваем воронку, дальше подключаем каналы и автоматизации, в конце обучаем команду. Менеджеры начинают работать в системе ещё до окончания проекта."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "amoCRM или Битрикс24, что выбрать?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "amoCRM подходит, когда главная задача продажи: заявки, переписки, звонки, воронка. Она проще и быстрее заходит в команду. Битрикс24 берут, когда кроме продаж нужны задачи, документы и процессы всей компании. На аудите скажем честно, что подойдёт именно вам."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Можно ли подключить WhatsApp официально, без блокировок?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Да. Подключаем через Wazzup, официального партнёра WhatsApp. Переписка ведётся из CRM с номера компании, история сохраняется в карточке клиента, а при увольнении менеджера база остаётся у вас."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Вы работаете только в Алматы?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "База в Алматы, но внедрение и обучение проходят онлайн, поэтому работаем по всему Казахстану: Астана, Шымкент, Караганда, Актобе и другие города. При необходимости приезжаем."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Что если менеджеры не станут работать в CRM?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Это главный риск любого внедрения, и мы закладываем его в проект. Настраиваем систему так, чтобы в ней было проще, чем в блокноте, обучаем на реальных сделках, пишем короткий регламент и даём руководителю отчёты, по которым видно, кто работает в системе, а кто нет."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Нужно ли отдельно платить за лицензию amoCRM?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Да, лицензия оплачивается вендору, помесячно за каждого пользователя. Как официальный партнёр мы помогаем выбрать тариф и оформить оплату, чтобы вы не переплачивали за ненужные функции."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "У нас база в Excel или в другой CRM. Перенесёте?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Перенесём. Excel, Google Таблицы, выгрузки из других CRM и даже контакты из телефонов менеджеров. Перед переносом чистим дубли и приводим поля к единому виду."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Что происходит после запуска?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Не исчезаем. В каждый пакет входит сопровождение: отвечаем на вопросы, дорабатываем воронку, добавляем автоматизации по мере роста. Дальше можно продлить сопровождение помесячно."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -232,6 +354,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <li><a href="#industries">/отрасли</a></li>
       <li><a href="#why">/почему-мы</a></li>
       <li><a href="#steps">/этапы</a></li>
+      <li><a href="#pricing">/цены</a></li>
+      <li><a href="#faq">/вопросы</a></li>
       <li><a href="/contacts.html">/контакты</a></li>
     </ul>
     <a class="btn btn-green btn-sm" href="https://wa.me/77075213922" target="_blank" rel="noopener">Написать в WhatsApp</a>
@@ -250,7 +374,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <h1>Наведём порядок в&nbsp;продажах вашего бизнеса</h1>
       <p class="lead">Внедряем CRM, подключаем WhatsApp и телефонию, автоматизируем отдел продаж. Заявки перестанут теряться, а вы будете видеть каждую сделку.</p>
       <div class="hero-ctas">
-        <a class="btn btn-green" href="https://wa.me/77075213922" target="_blank" rel="noopener">Получить консультацию</a>
+        <a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Хочу%20бесплатный%20аудит%20продаж" target="_blank" rel="noopener">Бесплатный аудит продаж</a>
         <a class="btn btn-ghost" href="#services">Смотреть услуги</a>
       </div>
       <p class="partners">Официальный партнёр: <b>amoCRM</b> / <b>Битрикс24</b> / <b>Wazzup</b> / <b>SIPUNI</b></p>
@@ -457,11 +581,139 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
     <h2>Пять этапов до работающей системы</h2>
     <p class="sec-sub">От первого разговора до отдела продаж, который работает в CRM каждый день.</p>
     <div class="pipeline">
-      <div class="stage"><span class="n">ЭТАП 01</span><b>Консультация</b><p>Разбираем, как устроены ваши продажи и где теряются деньги.</p></div>
-      <div class="stage"><span class="n">ЭТАП 02</span><b>Предложение</b><p>Конкретный план внедрения под ваши задачи.</p></div>
-      <div class="stage"><span class="n">ЭТАП 03</span><b>Внедрение</b><p>Настраиваем систему, подключаем каналы, автоматизируем.</p></div>
-      <div class="stage"><span class="n">ЭТАП 04</span><b>Обучение</b><p>Менеджеры и руководитель умеют работать в системе.</p></div>
-      <div class="stage"><span class="n">ЭТАП 05</span><b>Сопровождение</b><p>Поддержка и доработки после запуска.</p></div>
+      <div class="stage"><span class="n">ЭТАП 01 · 1 день</span><b>Консультация</b><p>Разбираем, как устроены ваши продажи и где теряются деньги.</p></div>
+      <div class="stage"><span class="n">ЭТАП 02 · 1–2 дня</span><b>Предложение</b><p>Конкретный план внедрения под ваши задачи.</p></div>
+      <div class="stage"><span class="n">ЭТАП 03 · 2–4 недели</span><b>Внедрение</b><p>Настраиваем систему, подключаем каналы, автоматизируем.</p></div>
+      <div class="stage"><span class="n">ЭТАП 04 · 2–3 дня</span><b>Обучение</b><p>Менеджеры и руководитель умеют работать в системе.</p></div>
+      <div class="stage"><span class="n">ЭТАП 05 · от 1 месяца</span><b>Сопровождение</b><p>Поддержка и доработки после запуска.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ИНТЕГРАЦИИ -->
+<section id="integrations">
+  <div class="wrap">
+    <div class="sec-label">Совместимость</div>
+    <h2>С чем связываем CRM</h2>
+    <p class="sec-sub">Заявки из всех каналов попадают в одну систему, а данные не переносятся руками.</p>
+    <div class="integr">
+      <div><b>amoCRM</b><span>официальный партнёр</span></div>
+      <div><b>Битрикс24</b><span>официальный партнёр</span></div>
+      <div><b>WhatsApp</b><span>через Wazzup, официально</span></div>
+      <div><b>Instagram</b><span>Direct в одном окне</span></div>
+      <div><b>Telegram</b><span>личные и бизнес-чаты</span></div>
+      <div><b>SIPUNI</b><span>телефония, запись звонков</span></div>
+      <div><b>1С</b><span>счета, оплаты, номенклатура</span></div>
+      <div><b>Крыша</b><span>заявки по объектам, API</span></div>
+      <div><b>Сайт и формы</b><span>заявки сразу в CRM</span></div>
+      <div><b>Google Таблицы</b><span>отчёты и выгрузки</span></div>
+      <div><b>Почта</b><span>письма в карточке сделки</span></div>
+      <div><b>Чат-боты</b><span>автоответы и напоминания</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ЦЕНЫ -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-label">Цены и сроки</div>
+    <h2>Сколько стоит внедрение</h2>
+    <p class="sec-sub">Три типовых пакета. Точную сумму называем после бесплатного аудита, когда понятно, сколько каналов, людей и интеграций нужно подключить.</p>
+    <div class="plans">
+      <div class="plan">
+        <div class="k"><span>пакет 01</span><span></span></div>
+        <h3>Старт</h3>
+        <div class="price">от 250 000 ₸</div>
+        <div class="term">срок: 2–3 недели</div>
+        <ul>
+          <li><b>Аудит продаж</b> и план внедрения</li>
+          <li>amoCRM: <b>одна воронка</b> под ваш процесс</li>
+          <li>WhatsApp в CRM через Wazzup</li>
+          <li>Перенос базы из Excel и телефонов</li>
+          <li>Обучение команды, 1 сессия</li>
+          <li>2 недели поддержки после запуска</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/77075213922?text=Здравствуйте!%20Интересует%20пакет%20«Старт»" target="_blank" rel="noopener">Обсудить пакет</a>
+      </div>
+      <div class="plan hot">
+        <div class="k"><span>пакет 02</span><span>чаще всего</span></div>
+        <h3>Стандарт</h3>
+        <div class="price">от 450 000 ₸</div>
+        <div class="term">срок: 3–5 недель</div>
+        <ul>
+          <li>Всё из пакета «Старт»</li>
+          <li><b>Телефония SIPUNI</b> с записью звонков</li>
+          <li>Instagram и Telegram в одном окне</li>
+          <li><b>Автоматизации:</b> напоминания, задачи, автоответы</li>
+          <li>Отраслевая настройка: поля, документы, отчёты</li>
+          <li>Обучение, 2 сессии, и месяц сопровождения</li>
+        </ul>
+        <a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Интересует%20пакет%20«Стандарт»" target="_blank" rel="noopener">Обсудить пакет</a>
+      </div>
+      <div class="plan">
+        <div class="k"><span>пакет 03</span><span></span></div>
+        <h3>Под ключ</h3>
+        <div class="price">от 800 000 ₸</div>
+        <div class="term">срок: от 6 недель</div>
+        <ul>
+          <li>Всё из пакета «Стандарт»</li>
+          <li><b>Интеграции:</b> сайт, 1С, Крыша, другие системы</li>
+          <li>Чат-боты и рассылки</li>
+          <li>Регламенты и контроль для руководителя</li>
+          <li>Несколько воронок и отделов</li>
+          <li>3 месяца сопровождения</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/77075213922?text=Здравствуйте!%20Интересует%20пакет%20«Под%20ключ»" target="_blank" rel="noopener">Обсудить пакет</a>
+      </div>
+    </div>
+    <div class="support-line"><span>Сопровождение после проекта: ответы команде, доработки, новые автоматизации</span><b>от 60 000 ₸ / мес</b></div>
+    <p class="plans-note">// Лицензии amoCRM, Битрикс24, Wazzup и SIPUNI оплачиваются вендорам отдельно, помесячно. Как партнёр помогаем выбрать тариф без переплаты.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-label">Вопросы</div>
+    <h2>Частые вопросы</h2>
+    <p class="sec-sub">Коротко о деньгах, сроках и о том, что будет после запуска.</p>
+    <div class="faq">
+      <details>
+        <summary>Сколько стоит внедрение CRM?</summary>
+        <div class="a">Внедрение начинается <b>от 250 000 ₸</b>: одна воронка, WhatsApp, перенос базы и обучение. Точную сумму называем после бесплатного аудита, когда понятно, сколько каналов, интеграций и людей нужно подключить. Лицензия amoCRM или Битрикс24 оплачивается вендору отдельно, с тарифом поможем.</div>
+      </details>
+      <details>
+        <summary>Сколько времени занимает внедрение?</summary>
+        <div class="a">Типовой проект занимает <b>от 2 до 5 недель</b>. Первую неделю разбираем процессы и настраиваем воронку, дальше подключаем каналы и автоматизации, в конце обучаем команду. Менеджеры начинают работать в системе ещё до окончания проекта.</div>
+      </details>
+      <details>
+        <summary>amoCRM или Битрикс24, что выбрать?</summary>
+        <div class="a"><b>amoCRM</b> подходит, когда главная задача продажи: заявки, переписки, звонки, воронка. Она проще и быстрее заходит в команду. <b>Битрикс24</b> берут, когда кроме продаж нужны задачи, документы и процессы всей компании. На аудите скажем честно, что подойдёт именно вам.</div>
+      </details>
+      <details>
+        <summary>Можно ли подключить WhatsApp официально, без блокировок?</summary>
+        <div class="a">Да. Подключаем через <b>Wazzup</b>, официального партнёра WhatsApp. Переписка ведётся из CRM с номера компании, история сохраняется в карточке клиента, а при увольнении менеджера база остаётся у вас.</div>
+      </details>
+      <details>
+        <summary>Вы работаете только в Алматы?</summary>
+        <div class="a">База в Алматы, но внедрение и обучение проходят <b>онлайн</b>, поэтому работаем по всему Казахстану: Астана, Шымкент, Караганда, Актобе и другие города. При необходимости приезжаем.</div>
+      </details>
+      <details>
+        <summary>Что если менеджеры не станут работать в CRM?</summary>
+        <div class="a">Это главный риск любого внедрения, и мы закладываем его в проект. Настраиваем систему так, чтобы в ней было <b>проще, чем в блокноте</b>, обучаем на реальных сделках, пишем короткий регламент и даём руководителю отчёты, по которым видно, кто работает в системе, а кто нет.</div>
+      </details>
+      <details>
+        <summary>Нужно ли отдельно платить за лицензию amoCRM?</summary>
+        <div class="a">Да, лицензия оплачивается вендору, помесячно за каждого пользователя. Как официальный партнёр мы <b>помогаем выбрать тариф</b> и оформить оплату, чтобы вы не переплачивали за ненужные функции.</div>
+      </details>
+      <details>
+        <summary>У нас база в Excel или в другой CRM. Перенесёте?</summary>
+        <div class="a">Перенесём. Excel, Google Таблицы, выгрузки из других CRM и даже контакты из телефонов менеджеров. Перед переносом чистим дубли и приводим поля к единому виду.</div>
+      </details>
+      <details>
+        <summary>Что происходит после запуска?</summary>
+        <div class="a">Не исчезаем. В каждый пакет входит <b>сопровождение</b>: отвечаем на вопросы, дорабатываем воронку, добавляем автоматизации по мере роста. Дальше можно продлить сопровождение помесячно.</div>
+      </details>
     </div>
   </div>
 </section>
@@ -471,10 +723,15 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   <div class="wrap">
     <div class="cta-box">
       <div>
-        <h2>Расскажите, как у вас устроены продажи</h2>
-        <p style="margin-top:10px">Предложим решение под вашу задачу. Честно скажем, что нужно внедрять, а что — нет.</p>
+        <h2>Бесплатный аудит продаж за 30 минут</h2>
+        <p style="margin-top:10px">Созвон в WhatsApp или Zoom. Без обязательств и без навязывания.</p>
+        <ul class="cta-list">
+          <li>Найдём, где теряются заявки и повторные продажи</li>
+          <li>Скажем честно, нужна ли вам CRM и какая</li>
+          <li>Назовём стоимость и срок под вашу задачу</li>
+        </ul>
       </div>
-      <a class="btn btn-green" href="https://wa.me/77075213922" target="_blank" rel="noopener">Написать в WhatsApp</a>
+      <a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Хочу%20бесплатный%20аудит%20продаж" target="_blank" rel="noopener">Записаться на аудит</a>
     </div>
   </div>
 </section>

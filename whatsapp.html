@@ -194,7 +194,58 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   .specs{grid-template-columns:1fr}
   .fab{display:flex}
 }
+
+/* ---------- FAQ ---------- */
+.faq{border-top:1.5px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 32px;gap:18px;align-items:center;padding:20px 4px;font-family:var(--display);font-weight:600;font-size:16px;text-transform:uppercase;letter-spacing:.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);font-size:22px;color:var(--green);text-align:right;transition:transform .15s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{background:var(--panel)}
+.faq .a{padding:0 4px 22px;color:var(--ink2);font-size:15.5px;max-width:46em}
+.faq .a b{color:var(--ink)}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Это официальное подключение WhatsApp?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Да. Работаем через Wazzup, официального партнёра WhatsApp. Переписка ведётся с номера компании из CRM, риск блокировки минимальный, история сохраняется в карточке клиента."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Сколько стоит подключить WhatsApp к CRM?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Подключение входит в каждый пакет внедрения от 250 000 ₸. Если CRM уже есть, подключим WhatsApp отдельно, стоимость и срок назовём после короткого аудита. Подписка Wazzup оплачивается отдельно, помесячно."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Можно ли подключить несколько номеров и Instagram?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Да. Несколько номеров WhatsApp, Instagram Direct и Telegram сводятся в одно окно внутри CRM. Каждый диалог автоматически попадает к ответственному менеджеру."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Что будет с перепиской, если менеджер уволится?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Вся переписка остаётся в CRM у компании. Новый менеджер открывает карточку клиента и видит историю, клиент ничего не замечает."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -316,6 +367,32 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <div class="stage"><span class="n">ШАГ 03</span><b>Обучение</b><p>Команда работает с перепиской из CRM.</p></div>
     </div>
     <div class="speed-note"><span class="mono-tag">СРОК: 1 ДЕНЬ</span> Подключение занимает один день, если CRM уже настроена. Если CRM ещё нет — <b>внедрим под ключ вместе с WhatsApp</b>: <a href="/amocrm.html">amoCRM</a> или <a href="/bitrix24.html">Битрикс24</a>.</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-label">Вопросы</div>
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details>
+        <summary>Это официальное подключение WhatsApp?</summary>
+        <div class="a">Да. Работаем через <b>Wazzup</b>, официального партнёра WhatsApp. Переписка ведётся с номера компании из CRM, риск блокировки минимальный, история сохраняется в карточке клиента.</div>
+      </details>
+      <details>
+        <summary>Сколько стоит подключить WhatsApp к CRM?</summary>
+        <div class="a">Подключение входит в каждый пакет внедрения <b>от 250 000 ₸</b>. Если CRM уже есть, подключим WhatsApp отдельно, стоимость и срок назовём после короткого аудита. Подписка Wazzup оплачивается отдельно, помесячно.</div>
+      </details>
+      <details>
+        <summary>Можно ли подключить несколько номеров и Instagram?</summary>
+        <div class="a">Да. Несколько номеров WhatsApp, Instagram Direct и Telegram сводятся <b>в одно окно</b> внутри CRM. Каждый диалог автоматически попадает к ответственному менеджеру.</div>
+      </details>
+      <details>
+        <summary>Что будет с перепиской, если менеджер уволится?</summary>
+        <div class="a">Вся переписка остаётся в CRM у компании. Новый менеджер открывает карточку клиента и видит историю, клиент ничего не замечает.</div>
+      </details>
+    </div>
   </div>
 </section>
 

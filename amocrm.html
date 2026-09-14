@@ -197,7 +197,58 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   .cmp-row{grid-template-columns:44px 1fr;gap:14px}
   .fab{display:flex}
 }
+
+/* ---------- FAQ ---------- */
+.faq{border-top:1.5px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 32px;gap:18px;align-items:center;padding:20px 4px;font-family:var(--display);font-weight:600;font-size:16px;text-transform:uppercase;letter-spacing:.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);font-size:22px;color:var(--green);text-align:right;transition:transform .15s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{background:var(--panel)}
+.faq .a{padding:0 4px 22px;color:var(--ink2);font-size:15.5px;max-width:46em}
+.faq .a b{color:var(--ink)}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Сколько стоит внедрение amoCRM?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Внедрение начинается от 250 000 ₸ за одну воронку с WhatsApp, переносом базы и обучением. Проекты с телефонией, интеграциями и несколькими отделами считаем после бесплатного аудита. Лицензия amoCRM оплачивается вендору отдельно, помесячно за пользователя."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Сколько времени занимает внедрение amoCRM?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Типовой проект занимает от 2 до 5 недель. Менеджеры начинают работать в системе ещё до окончания проекта, на реальных сделках."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Чем вы отличаетесь от самостоятельной настройки?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "amoCRM можно настроить самому, и многие пробуют. Проблема не в кнопках, а в том, как устроить воронку, автоматизации и правила, чтобы команда реально работала в системе. Мы приносим готовые отраслевые схемы и учим на ваших сделках."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Что входит в сопровождение после запуска?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ответы на вопросы команды, доработка воронки и автоматизаций, подключение новых каналов. В каждый пакет входит от 2 недель до 3 месяцев сопровождения, дальше помесячно."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -321,6 +372,32 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
         <div class="k">Если у вас уже есть 1С</div>
         <p>Не проблема: <b>amoCRM берёт на себя продажи, 1С остаётся для учёта.</b> Системы работают параллельно, ничего ломать не нужно.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-label">Вопросы</div>
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details>
+        <summary>Сколько стоит внедрение amoCRM?</summary>
+        <div class="a">Внедрение начинается <b>от 250 000 ₸</b> за одну воронку с WhatsApp, переносом базы и обучением. Проекты с телефонией, интеграциями и несколькими отделами считаем после бесплатного аудита. Лицензия amoCRM оплачивается вендору отдельно, помесячно за пользователя.</div>
+      </details>
+      <details>
+        <summary>Сколько времени занимает внедрение amoCRM?</summary>
+        <div class="a">Типовой проект занимает <b>от 2 до 5 недель</b>. Менеджеры начинают работать в системе ещё до окончания проекта, на реальных сделках.</div>
+      </details>
+      <details>
+        <summary>Чем вы отличаетесь от самостоятельной настройки?</summary>
+        <div class="a">amoCRM можно настроить самому, и многие пробуют. Проблема не в кнопках, а в том, <b>как устроить воронку, автоматизации и правила</b>, чтобы команда реально работала в системе. Мы приносим готовые отраслевые схемы и учим на ваших сделках.</div>
+      </details>
+      <details>
+        <summary>Что входит в сопровождение после запуска?</summary>
+        <div class="a">Ответы на вопросы команды, доработка воронки и автоматизаций, подключение новых каналов. В каждый пакет входит от 2 недель до 3 месяцев сопровождения, дальше помесячно.</div>
+      </details>
     </div>
   </div>
 </section>

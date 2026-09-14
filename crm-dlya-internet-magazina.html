@@ -206,7 +206,58 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   .cmp-row{grid-template-columns:44px 1fr;gap:14px}
   .fab{display:flex}
 }
+
+/* ---------- FAQ ---------- */
+.faq{border-top:1.5px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 32px;gap:18px;align-items:center;padding:20px 4px;font-family:var(--display);font-weight:600;font-size:16px;text-transform:uppercase;letter-spacing:.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);font-size:22px;color:var(--green);text-align:right;transition:transform .15s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{background:var(--panel)}
+.faq .a{padding:0 4px 22px;color:var(--ink2);font-size:15.5px;max-width:46em}
+.faq .a b{color:var(--ink)}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Сколько стоит CRM для интернет-магазина?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Внедрение CRM для интернет-магазина начинается от 250 000 ₸. В базовый пакет входят воронка под ваш процесс, WhatsApp, перенос базы и обучение. Точную сумму называем после бесплатного аудита. Лицензия CRM оплачивается вендору отдельно, с тарифом поможем."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Сколько времени занимает внедрение?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Типовой проект занимает от 2 до 5 недель: неделя на разбор процессов и настройку воронки, дальше каналы и автоматизации, в конце обучение команды."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Какую CRM выбрать для интернет-магазина: amoCRM или Битрикс24?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "В большинстве проектов для интернет-магазина мы ставим amoCRM: она проще для сотрудников и заточена под заявки, переписки и звонки. Битрикс24 имеет смысл, если кроме продаж нужны задачи и документы всей компании. Скажем честно на аудите."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Что если сотрудники не станут работать в CRM?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Настраиваем систему так, чтобы в ней было проще, чем в блокноте и в личном телефоне, обучаем на реальных клиентах, пишем короткий регламент и даём руководителю отчёты, по которым видно, кто работает в системе."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -351,6 +402,32 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
         <div class="k">Если у вас уже есть сайт с корзиной</div>
         <p>Ничего ломать не нужно. <b>Сайт остаётся витриной, CRM берёт на себя работу с покупателем</b> — переписку, оплату, повторные продажи и всё, что происходит после нажатия «купить».</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-label">Вопросы</div>
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details>
+        <summary>Сколько стоит CRM для интернет-магазина?</summary>
+        <div class="a">Внедрение CRM для интернет-магазина начинается <b>от 250 000 ₸</b>. В базовый пакет входят воронка под ваш процесс, WhatsApp, перенос базы и обучение. Точную сумму называем после бесплатного аудита. Лицензия CRM оплачивается вендору отдельно, с тарифом поможем.</div>
+      </details>
+      <details>
+        <summary>Сколько времени занимает внедрение?</summary>
+        <div class="a">Типовой проект занимает <b>от 2 до 5 недель</b>: неделя на разбор процессов и настройку воронки, дальше каналы и автоматизации, в конце обучение команды.</div>
+      </details>
+      <details>
+        <summary>Какую CRM выбрать для интернет-магазина: amoCRM или Битрикс24?</summary>
+        <div class="a">В большинстве проектов для интернет-магазина мы ставим <b>amoCRM</b>: она проще для сотрудников и заточена под заявки, переписки и звонки. Битрикс24 имеет смысл, если кроме продаж нужны задачи и документы всей компании. Скажем честно на аудите.</div>
+      </details>
+      <details>
+        <summary>Что если сотрудники не станут работать в CRM?</summary>
+        <div class="a">Настраиваем систему так, чтобы в ней было <b>проще, чем в блокноте и в личном телефоне</b>, обучаем на реальных клиентах, пишем короткий регламент и даём руководителю отчёты, по которым видно, кто работает в системе.</div>
+      </details>
     </div>
   </div>
 </section>
