@@ -253,6 +253,15 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .cta-list li{padding:5px 0 5px 20px;position:relative}
 .cta-list li::before{content:"→";position:absolute;left:0;color:var(--green);font-family:var(--mono)}
 @media (max-width:940px){.plans{grid-template-columns:1fr}.integr{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- Мобильная полоса WhatsApp ---------- */
+.mbar{display:none}
+@media (max-width:640px){
+  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(238,242,244,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+  .mbar .btn{width:100%;padding:15px 20px;font-size:15.5px}
+  .fab{display:none}
+  body{padding-bottom:78px}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -744,6 +753,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   </div>
 </footer>
 
+<div class="mbar"><a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Хочу%20бесплатный%20аудит%20продаж" target="_blank" rel="noopener">Бесплатный аудит в WhatsApp</a></div>
 <a class="fab" href="https://wa.me/77075213922" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.4 2 11.9c0 2.1.6 4 1.7 5.7L2 22l4.5-1.6c1.6 1 3.5 1.5 5.5 1.5 5.5 0 10-4.4 10-9.9S17.5 2 12 2zm5.7 14c-.2.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.4 0 .1 0 .7-.2 1.5z"/></svg>
 </a>
