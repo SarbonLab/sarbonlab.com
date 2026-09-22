@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Этапы внедрения CRM: что происходит за 2–4 недели | SarbonLab</title>
+<meta name="description" content="Как проходит внедрение CRM по шагам: аудит, воронка, мессенджеры и телефония, перенос базы, обучение, сопровождение. Сроки и что нужно от вас.">
+<link rel="canonical" href="https://sarbonlab.kz/blog/etapy-vnedreniya-crm.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SarbonLab">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://sarbonlab.kz/blog/etapy-vnedreniya-crm.html">
+<meta property="og:title" content="Этапы внедрения CRM: что происходит за 2–4 недели | SarbonLab">
+<meta property="og:description" content="Как проходит внедрение CRM по шагам: аудит, воронка, мессенджеры и телефония, перенос базы, обучение, сопровождение. Сроки и что нужно от вас.">
+<meta property="og:image" content="https://sarbonlab.kz/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;600;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SarbonLab",
+  "description": "Внедрение CRM (amoCRM, Битрикс24), интеграция WhatsApp и телефонии, автоматизация продаж",
+  "url": "https://sarbonlab.kz",
+  "telephone": "+77075213922",
+  "email": "Sarbonlab@gmail.com",
+  "sameAs": ["https://www.instagram.com/sarbonlab/", "https://t.me/SarbonLab_channel"],
+  "areaServed": "Казахстан",
+  "address": { "@type": "PostalAddress", "addressLocality": "Алматы", "addressCountry": "KZ" }
+}
+</script>
+<style>
+:root{
+  --paper:#EEF2F4;
+  --panel:#FFFFFF;
+  --ink:#0B161F;
+  --ink2:#4C5D6B;
+  --green:#00A860;
+  --green-deep:#008A4F;
+  --line:#D5DEE4;
+  --line-dark:#22323F;
+  --r:6px;
+  --display:'Tektur',sans-serif;
+  --body:'Golos Text',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+::selection{background:var(--green);color:#fff}
+
+/* ---------- Статус-бар ---------- */
+.statusbar{background:var(--ink);color:#8FA3B2;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em}
+.statusbar .wrap{display:flex;justify-content:space-between;padding-top:7px;padding-bottom:7px;gap:16px}
+.statusbar b{color:#fff;font-weight:500}
+.live{color:var(--green)}
+.live::before{content:"●";margin-right:6px;animation:blink 2.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ---------- Шапка ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(238,242,244,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+.logo i{font-style:normal;color:var(--green)}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink2);font-family:var(--mono)}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:var(--r);font-weight:600;font-size:15px;text-decoration:none;border:none;cursor:pointer;transition:background .15s,transform .12s;font-family:var(--body)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-deep)}
+.btn-sm{padding:10px 18px;font-size:14px}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
+
+/* ---------- Общее ---------- */
+section{padding:70px 0}
+.sec-label{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.sec-label::before{content:"";width:34px;height:2px;background:var(--green)}
+h1{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.15;font-size:clamp(26px,4.2vw,44px)}
+.crumbs{font-family:var(--mono);font-size:12px;color:var(--ink2);margin-bottom:20px}
+.crumbs a{text-decoration:none;color:var(--ink2)}
+.crumbs a:hover{color:var(--ink)}
+.lead{font-size:18.5px;color:var(--ink2);margin-top:20px;max-width:34em}
+
+/* ---------- Каналы связи ---------- */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:50px}
+.channels{border-top:1.5px solid var(--ink)}
+.ch-row{display:grid;grid-template-columns:120px 1fr 40px;gap:18px;align-items:center;padding:24px 4px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .15s,padding-left .15s}
+.ch-row:hover{background:var(--panel);padding-left:14px}
+.ch-row .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+.ch-row b{font-family:var(--mono);font-size:17px;font-weight:700;word-break:break-all}
+.ch-row .note{display:block;word-break:normal;font-family:var(--body);font-size:13.5px;font-weight:400;color:var(--ink2);margin-top:3px}
+.ch-row .arr{font-family:var(--mono);font-size:18px;color:var(--green);text-align:right;transition:transform .15s}
+.ch-row:hover .arr{transform:translateX(5px)}
+.geo{margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--ink2);letter-spacing:.03em}
+.geo b{color:var(--ink);font-weight:500}
+
+/* ---------- Форма ---------- */
+.form-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);box-shadow:14px 14px 0 -4px var(--ink);padding:30px}
+.form-top{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--ink2);border-bottom:1px solid var(--line);margin:-30px -30px 24px;padding:11px 16px}
+.form-top b{color:var(--ink);font-weight:500}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:7px}
+.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:4px;padding:13px 14px;font-family:var(--body);font-size:16px;color:var(--ink);background:var(--paper);transition:border-color .15s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--green)}
+.field textarea{resize:vertical;min-height:90px}
+.form-panel .btn{width:100%;margin-top:6px}
+.form-hint{margin-top:14px;font-size:13.5px;color:var(--ink2);text-align:center}
+
+/* ---------- Подвал ---------- */
+footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);font-size:12.5px;color:var(--ink2)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- WhatsApp FAB ---------- */
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:54px;height:54px;border-radius:var(--r);background:var(--green);box-shadow:6px 6px 0 -2px var(--ink);align-items:center;justify-content:center;text-decoration:none}
+.fab svg{width:26px;height:26px;fill:#fff}
+
+/* ---------- Адаптив ---------- */
+@media (max-width:940px){
+  .grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:48px 0}
+  .statusbar .wrap span:nth-child(2){display:none}
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{display:none}
+  .ch-row{grid-template-columns:90px 1fr 30px;gap:12px}
+  .form-panel{box-shadow:8px 8px 0 -3px var(--ink)}
+  .fab{display:flex}
+}
+@media (prefers-reduced-motion:reduce){
+  .live::before{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- Документ ---------- */
+.doc{max-width:46em;margin-top:40px}
+.doc h2{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.02em;font-size:19px;margin:44px 0 14px;padding-top:22px;border-top:1px solid var(--line)}
+.doc h2:first-child{border-top:none;padding-top:0;margin-top:0}
+.doc p{margin:0 0 14px;color:var(--ink)}
+.doc p.muted{color:var(--ink2)}
+.doc ul{margin:0 0 14px 0;padding:0;list-style:none}
+.doc li{padding:6px 0 6px 20px;position:relative;color:var(--ink)}
+.doc li::before{content:"—";position:absolute;left:0;color:var(--green);font-family:var(--mono)}
+.doc b{font-weight:600}
+.doc .req{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;font-family:var(--mono);font-size:14px;line-height:1.7;margin:0 0 18px}
+.doc .req a{color:var(--ink)}
+.doc-meta{font-family:var(--mono);font-size:12.5px;color:var(--ink2);margin-top:14px}
+.doc-links{margin-top:40px;font-family:var(--mono);font-size:13px}
+
+/* ---------- Мобильная полоса WhatsApp ---------- */
+.mbar{display:none}
+@media (max-width:640px){
+  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(238,242,244,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+  .mbar .btn{width:100%;padding:15px 20px;font-size:15.5px}
+  .fab{display:none}
+  body{padding-bottom:78px}
+}
+
+/* ---------- Статьи ---------- */
+.doc h2{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.02em;font-size:19px;margin:40px 0 14px}
+.doc a{color:var(--green-deep)}
+.tbl{overflow-x:auto;margin:6px 0 20px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel)}
+.tbl table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+.tbl th,.tbl td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);font-weight:500;background:var(--paper)}
+.tbl tr:last-child td{border-bottom:none}
+.art-meta{font-family:var(--mono);font-size:12.5px;color:var(--ink2);margin-top:14px}
+.posts{border-top:1.5px solid var(--ink);margin-top:34px}
+.post{display:grid;grid-template-columns:1fr 40px;gap:18px;align-items:center;padding:24px 4px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .15s,padding-left .15s}
+.post:hover{background:var(--panel);padding-left:14px}
+.post h3{font-family:var(--display);font-weight:600;font-size:18px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:6px}
+.post p{font-size:15px;color:var(--ink2)}
+.post .arr{font-family:var(--mono);font-size:18px;color:var(--green);text-align:right}
+.related{margin-top:44px}
+.related .k{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.btn-ghost{border:1.5px solid var(--ink);background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.cta-box{background:var(--ink);color:#fff;border-radius:var(--r);padding:48px 44px;display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center}
+.cta-box h2{color:#fff;font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(20px,2.6vw,28px);line-height:1.15}
+.cta-box p{color:#9FB1BE;font-size:17px}
+.cta-box .btn{justify-self:end;padding:17px 32px;font-size:16px}
+@media (max-width:940px){.cta-box{grid-template-columns:1fr;padding:36px 24px}.cta-box .btn{justify-self:start}.post{grid-template-columns:1fr 24px}}
+@media (max-width:640px){.hero-ctas .btn{width:100%}}
+
+/* ---------- Лид-магнит ---------- */
+.lm{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:var(--r);padding:30px 32px;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}
+.lm .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green-deep);margin-bottom:10px}
+.lm h3{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.4vw,24px);text-transform:uppercase;letter-spacing:.01em;line-height:1.2;margin-bottom:10px}
+.lm p{font-size:15.5px;color:var(--ink2)}
+.lm .acts{display:flex;flex-direction:column;gap:10px}
+.lm .acts .btn{width:100%}
+.lm .acts a.more{font-family:var(--mono);font-size:12.5px;color:var(--ink2);text-align:center}
+@media (max-width:940px){.lm{grid-template-columns:1fr;padding:26px 22px}}
+</style>
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Этапы внедрения CRM: что происходит за 2–4 недели",
+  "description": "Как проходит внедрение CRM по шагам: аудит, воронка, мессенджеры и телефония, перенос базы, обучение, сопровождение. Сроки и что нужно от вас.",
+  "datePublished": "2026-09-23",
+  "dateModified": "2026-09-23",
+  "inLanguage": "ru",
+  "mainEntityOfPage": "https://sarbonlab.kz/blog/etapy-vnedreniya-crm.html",
+  "image": "https://sarbonlab.kz/og-cover.jpg",
+  "author": {
+   "@type": "Organization",
+   "name": "SarbonLab",
+   "url": "https://sarbonlab.kz"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "SarbonLab",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://sarbonlab.kz/apple-touch-icon.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Главная",
+    "item": "https://sarbonlab.kz/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Статьи",
+    "item": "https://sarbonlab.kz/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Этапы внедрения CRM"
+   }
+  ]
+ }
+]
+</script>
+</head>
+<body>
+
+<!-- Статус-бар -->
+<div class="statusbar">
+  <div class="wrap">
+    <span><b>SARBONLAB</b> // система продаж</span>
+    <span>Алматы / Казахстан</span>
+    <span class="live">принимаем заявки</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/">Sarbon<i>Lab</i></a>
+    <ul class="nav-links" id="menu">
+      <li><a href="/#services">/услуги</a></li>
+      <li><a href="/#industries">/отрасли</a></li>
+      <li><a href="/#why">/почему-мы</a></li>
+      <li><a href="/#steps">/этапы</a></li>
+      <li><a href="/blog/">/статьи</a></li>
+      <li><a href="/contacts.html">/контакты</a></li>
+    </ul>
+    <a class="btn btn-green btn-sm" href="https://wa.me/77075213922" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/blog/">Статьи</a> / Этапы внедрения CRM</nav>
+    <div class="sec-label">Статья</div>
+    <h1>Этапы внедрения CRM: что происходит за 2–4 недели</h1>
+    <p class="lead">Слово «внедрение» звучит расплывчато и дорого. На деле это понятная последовательность шагов, которая у небольшой компании занимает от двух до четырёх недель. Расскажем, что происходит на каждом этапе и что потребуется от вас.</p>
+    <p class="art-meta">23 сентября 2026 · 3 мин чтения · SarbonLab, официальный партнёр amoCRM</p>
+    <div class="doc">
+<h2>Этап 1. Аудит продаж, 1–2 дня</h2>
+<p>Разбираем, как у вас сейчас устроены продажи: откуда приходят заявки, кто и как их обрабатывает, где они теряются, какие отчёты нужны руководителю. На выходе понятный план: какая система, какие этапы воронки, что подключаем.</p>
+<p><b>От вас:</b> час на созвон с руководителем и полчаса с одним из менеджеров.</p>
+
+<h2>Этап 2. Настройка воронки, 3–5 дней</h2>
+<p>Создаём этапы сделки под ваш процесс, поля карточки клиента, права доступа, типовые задачи. Добавляем автоматизации: напоминания менеджеру, смену этапа по событию, автоответы.</p>
+<p><b>От вас:</b> согласовать воронку и список полей.</p>
+
+<h2>Этап 3. Подключение каналов, 2–5 дней</h2>
+<p>Подключаем WhatsApp, Instagram, Telegram, телефонию и формы сайта. Проверяем, что каждое обращение создаёт сделку и попадает нужному менеджеру.</p>
+<p><b>От вас:</b> доступ к номерам и аккаунтам, решение по телефонии.</p>
+
+<h2>Этап 4. Перенос базы, 1–3 дня</h2>
+<p>Переносим клиентов из Excel, Google Таблиц, старой CRM или телефонов менеджеров. Перед переносом чистим дубли и приводим данные к единому виду.</p>
+<p><b>От вас:</b> выгрузка текущей базы в любом виде.</p>
+
+<h2>Этап 5. Обучение, 1–2 дня</h2>
+<p>Обучаем команду на её реальных сделках, отдельно менеджеров и руководителя. Оставляем короткий регламент: кто, что и когда делает в системе.</p>
+<p><b>От вас:</b> собрать команду на 2–3 часа.</p>
+
+<h2>Этап 6. Сопровождение, от 2 недель</h2>
+<p>Первые недели после запуска команда задаёт вопросы, а мы донастраиваем то, что в жизни оказалось неудобным. Это нормальная часть процесса: идеально с первого раза не получается ни у кого.</p>
+
+<h2>Сколько это стоит</h2>
+<p>Внедрение с одной воронкой, WhatsApp, переносом базы и обучением у нас стоит <b>от 250 000 ₸</b> и занимает 2–3 недели. Проекты с телефонией, несколькими отделами и интеграциями дольше и дороже. Подробнее в разделе <a href="/#pricing">«Цены и сроки»</a> и в статье <a href="/blog/skolko-stoit-amocrm.html">«Сколько стоит amoCRM в Казахстане»</a>.</p>
+</div>
+  </div>
+</section>
+
+<!-- ЛИД-МАГНИТ -->
+<section class="lm-sec">
+  <div class="wrap">
+    <div class="lm">
+      <div>
+        <div class="k">Чек-лист · бесплатно</div>
+        <h3>10 признаков, что бизнес теряет заявки</h3>
+        <p>Проверьте свой отдел продаж за 5 минут. Для каждого признака в чек-листе есть простое решение, которое можно применить и без CRM.</p>
+      </div>
+      <div class="acts">
+        <a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Пришлите,%20пожалуйста,%20чек-лист%20%C2%AB10%20признаков,%20что%20вы%20теряете%20заявки%C2%BB" target="_blank" rel="noopener" data-goal="checklist_click" data-place="lead-magnet">Получить в WhatsApp</a>
+        <a class="more" href="/checklist.html">Первые 3 признака на сайте →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2>Бесплатный аудит продаж за 30 минут</h2>
+        <p style="margin-top:10px">Созвон в WhatsApp или Zoom. Разберём, где теряются заявки, и честно скажем, нужна ли вам CRM и какая.</p>
+      </div>
+      <a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Хочу%20бесплатный%20аудит%20продаж" target="_blank" rel="noopener">Записаться на аудит</a>
+    </div>
+    <div class="related">
+      <div class="k">Читайте также</div>
+      <div class="posts">
+      <a class="post" href="/blog/pochemu-menedzhery-ne-rabotayut-v-crm.html"><div><h3>Почему не работают в CRM</h3><p>CRM купили, а через месяц менеджеры снова в блокнотах и личных WhatsApp. Шесть причин, почему так происходит, и что с этим делать.</p></div><span class="arr">→</span></a>
+      <a class="post" href="/blog/skolko-stoit-amocrm.html"><div><h3>Сколько стоит amoCRM</h3><p>Цены на лицензии amoCRM в тенге, минимальный срок оплаты, пакет для микробизнеса и стоимость внедрения. Полный бюджет на команду из 3 менеджеров.</p></div><span class="arr">→</span></a>
+      <a class="post" href="/blog/kak-vybrat-crm.html"><div><h3>Как выбрать CRM</h3><p>Семь вопросов до выбора CRM: откуда приходят заявки, кто будет работать в системе, какие нужны интеграции и сколько вы готовы тратить.</p></div><span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 SARBONLAB // внедрение CRM и автоматизация // Алматы, Казахстан</div>
+    <div><a href="tel:+77075213922">+7 707 521 39 22</a> · <a href="mailto:Sarbonlab@gmail.com">Sarbonlab@gmail.com</a> · <a href="https://www.instagram.com/sarbonlab/" target="_blank" rel="noopener">Instagram</a> · <a href="https://t.me/SarbonLab_channel" target="_blank" rel="noopener">Telegram</a> · <a href="/privacy.html">Политика</a> · <a href="/terms.html">Соглашение</a></div>
+  </div>
+</footer>
+
+<div class="mbar"><a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Хочу%20бесплатный%20аудит%20продаж" target="_blank" rel="noopener">Бесплатный аудит в WhatsApp</a></div>
+<a class="fab" href="https://wa.me/77075213922" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.4 2 11.9c0 2.1.6 4 1.7 5.7L2 22l4.5-1.6c1.6 1 3.5 1.5 5.5 1.5 5.5 0 10-4.4 10-9.9S17.5 2 12 2zm5.7 14c-.2.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.4 0 .1 0 .7-.2 1.5z"/></svg>
+</a>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  menu.classList.remove('open');burger.setAttribute('aria-expanded','false');
+}));
+
+</script>
+<script src="/analytics.js" defer></script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112184697" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</body>
+</html>
