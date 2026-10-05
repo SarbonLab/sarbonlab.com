@@ -198,6 +198,10 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .cta-box .btn{justify-self:end;padding:17px 32px;font-size:16px}
 @media (max-width:940px){.cta-box{grid-template-columns:1fr;padding:36px 24px}.cta-box .btn{justify-self:start}.post{grid-template-columns:1fr 24px}}
 @media (max-width:640px){.hero-ctas .btn{width:100%}}
+.art-faq{margin-top:10px}
+.art-faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.art-faq summary{cursor:pointer;font-weight:600;font-size:17px}
+.art-faq .a{margin-top:10px;color:var(--ink2)}
 
 /* ---------- Лид-магнит ---------- */
 .lm{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:var(--r);padding:30px 32px;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}
@@ -216,8 +220,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   "@type": "Article",
   "headline": "Заявки с Krisha.kz в amoCRM: как не терять звонки и сообщения",
   "description": "Как собрать звонки и сообщения с объявлений на Krisha.kz в amoCRM: номер с записью звонков, WhatsApp в CRM, метка источника и воронка для агентства.",
-  "datePublished": "2026-09-23",
-  "dateModified": "2026-09-23",
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-06",
   "inLanguage": "ru",
   "mainEntityOfPage": "https://sarbonlab.kz/blog/zayavki-s-krishi-v-amocrm.html",
   "image": "https://sarbonlab.kz/og-cover.jpg",
@@ -255,6 +259,44 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
     "@type": "ListItem",
     "position": 3,
     "name": "Заявки с Крыши в amoCRM"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Есть ли интеграция Krisha.kz с amoCRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Официальной интеграции, которая сама переносит обращения с Krisha.kz в amoCRM, на момент написания мы не знаем. Звонки и сообщения с объявлений собираются в amoCRM через отдельный номер IP-телефонии и WhatsApp, подключённый к CRM."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Как посчитать, сколько заявок даёт Крыша?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Укажите в объявлениях на Крыше отдельный номер телефонии, подключённый к amoCRM. Все звонки с него получают источник «Крыша», и отчёт покажет количество обращений, показов и сделок именно с этой площадки."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Что делать с сообщениями во внутреннем чате Крыши?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Автоматически перенести их в amoCRM без интеграции нельзя. Работает правило: агент сразу заводит обращение в мобильном приложении amoCRM или переводит разговор в рабочий WhatsApp, который подключён к CRM."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Сколько стоит CRM для агентства недвижимости?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Внедрение amoCRM для агентства начинается от 250 000 ₸. С телефонией и записью звонков для объявлений — пакет «Стандарт» от 450 000 ₸."
+    }
    }
   ]
  }
@@ -297,7 +339,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
     <div class="sec-label">Статья</div>
     <h1>Заявки с Krisha.kz в amoCRM: как не терять звонки и сообщения</h1>
     <p class="lead">Для агентства недвижимости в Казахстане Крыша — главный источник клиентов. Звонки и сообщения по объявлениям приходят агентам на личные номера, и руководитель не знает, сколько их было и что с ними стало. Разберём, как сделать, чтобы каждое обращение с Крыши попадало в amoCRM и становилось сделкой.</p>
-    <p class="art-meta">23 сентября 2026 · 3 мин чтения · SarbonLab, официальный партнёр amoCRM</p>
+    <p class="art-meta">4 октября 2026 · 3 мин чтения · SarbonLab, официальный партнёр amoCRM</p>
     <div class="doc">
 <h2>Почему заявки с Крыши теряются</h2>
 <ul>
@@ -347,6 +389,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <li>Окупаются ли платные размещения: сколько стоила одна сделка с площадки.</li>
 </ul>
 <p>Настройку amoCRM для агентств недвижимости под ключ, с телефонией, WhatsApp и воронкой, мы делаем за 2–3 недели. Подробнее на странице <a href="/crm-dlya-nedvizhimosti.html">«CRM для агентства недвижимости»</a>.</p>
+
+<h2>Частые вопросы</h2>
+<div class="art-faq">
+<details><summary>Есть ли интеграция Krisha.kz с amoCRM?</summary><div class="a">Официальной интеграции, которая сама переносит обращения с Krisha.kz в amoCRM, на момент написания мы не знаем. Звонки и сообщения с объявлений собираются в amoCRM через отдельный номер IP-телефонии и WhatsApp, подключённый к CRM.</div></details>
+<details><summary>Как посчитать, сколько заявок даёт Крыша?</summary><div class="a">Укажите в объявлениях на Крыше отдельный номер телефонии, подключённый к amoCRM. Все звонки с него получают источник «Крыша», и отчёт покажет количество обращений, показов и сделок именно с этой площадки.</div></details>
+<details><summary>Что делать с сообщениями во внутреннем чате Крыши?</summary><div class="a">Автоматически перенести их в amoCRM без интеграции нельзя. Работает правило: агент сразу заводит обращение в мобильном приложении amoCRM или переводит разговор в рабочий WhatsApp, который подключён к CRM.</div></details>
+<details><summary>Сколько стоит CRM для агентства недвижимости?</summary><div class="a">Внедрение amoCRM для агентства начинается от 250 000 ₸. С телефонией и записью звонков для объявлений — пакет «Стандарт» от 450 000 ₸.</div></details>
+</div>
 </div>
   </div>
 </section>
@@ -363,6 +413,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <div class="acts">
         <a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Пришлите,%20пожалуйста,%20чек-лист%20%C2%AB10%20признаков,%20что%20вы%20теряете%20заявки%C2%BB" target="_blank" rel="noopener" data-goal="checklist_click" data-place="lead-magnet">Получить в WhatsApp</a>
         <a class="more" href="/checklist.html">Первые 3 признака на сайте →</a>
+        <a class="more" href="/kalkulyator.html">Посчитать, сколько вы теряете →</a>
       </div>
     </div>
   </div>

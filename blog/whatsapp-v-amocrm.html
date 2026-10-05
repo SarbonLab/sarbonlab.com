@@ -198,6 +198,10 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .cta-box .btn{justify-self:end;padding:17px 32px;font-size:16px}
 @media (max-width:940px){.cta-box{grid-template-columns:1fr;padding:36px 24px}.cta-box .btn{justify-self:start}.post{grid-template-columns:1fr 24px}}
 @media (max-width:640px){.hero-ctas .btn{width:100%}}
+.art-faq{margin-top:10px}
+.art-faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.art-faq summary{cursor:pointer;font-weight:600;font-size:17px}
+.art-faq .a{margin-top:10px;color:var(--ink2)}
 
 /* ---------- Лид-магнит ---------- */
 .lm{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:var(--r);padding:30px 32px;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}
@@ -217,7 +221,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   "headline": "Как подключить WhatsApp к amoCRM: способы, риски и настройка",
   "description": "Как вести WhatsApp прямо из amoCRM: подключение через Wazzup, обычный WhatsApp или Business API и как не получить блокировку номера.",
   "datePublished": "2026-09-23",
-  "dateModified": "2026-09-23",
+  "dateModified": "2026-10-06",
   "inLanguage": "ru",
   "mainEntityOfPage": "https://sarbonlab.kz/blog/whatsapp-v-amocrm.html",
   "image": "https://sarbonlab.kz/og-cover.jpg",
@@ -255,6 +259,52 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
     "@type": "ListItem",
     "position": 3,
     "name": "WhatsApp в amoCRM"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Как подключить WhatsApp к amoCRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Самый распространённый способ — через сервис Wazzup: номер подключается по QR-коду, как WhatsApp Web, и привязывается к нужной воронке. После этого каждое новое сообщение создаёт сделку, а менеджер отвечает прямо из карточки клиента. Настройка занимает около одного дня."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Нужен ли WhatsApp Business API?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Для большинства малых компаний нет: достаточно подключить обычный WhatsApp или WhatsApp Business. API нужен для массовых уведомлений, большого числа менеджеров на одном номере и особых требований к надёжности."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Сколько стоит подключение WhatsApp к amoCRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Подписка Wazzup оплачивается помесячно по тарифу сервиса, плюс разовая настройка. Подключение WhatsApp входит в каждый наш пакет внедрения от 250 000 ₸; если amoCRM уже есть, подключим отдельно."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Заблокируют ли номер после подключения к CRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Само подключение к CRM не причина блокировки. WhatsApp блокирует за спам: массовые рассылки незнакомым людям и жалобы. Пишите первыми только тем, кто сам оставлял контакт."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Можно ли подключить несколько номеров WhatsApp?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Да, через Wazzup можно подключить несколько номеров и распределять сообщения с каждого по своим менеджерам или воронкам."
+    }
    }
   ]
  }
@@ -332,6 +382,15 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <li><b>Обучаем команду</b> работать из CRM, а не из телефона.</li>
 </ul>
 <p>Подключение WhatsApp входит в каждый наш пакет внедрения. Если CRM у вас уже есть, подключим отдельно. Подробнее на странице <a href="/whatsapp.html">«WhatsApp в CRM»</a>.</p>
+
+<h2>Частые вопросы</h2>
+<div class="art-faq">
+<details><summary>Как подключить WhatsApp к amoCRM?</summary><div class="a">Самый распространённый способ — через сервис Wazzup: номер подключается по QR-коду, как WhatsApp Web, и привязывается к нужной воронке. После этого каждое новое сообщение создаёт сделку, а менеджер отвечает прямо из карточки клиента. Настройка занимает около одного дня.</div></details>
+<details><summary>Нужен ли WhatsApp Business API?</summary><div class="a">Для большинства малых компаний нет: достаточно подключить обычный WhatsApp или WhatsApp Business. API нужен для массовых уведомлений, большого числа менеджеров на одном номере и особых требований к надёжности.</div></details>
+<details><summary>Сколько стоит подключение WhatsApp к amoCRM?</summary><div class="a">Подписка Wazzup оплачивается помесячно по тарифу сервиса, плюс разовая настройка. Подключение WhatsApp входит в каждый наш пакет внедрения от 250 000 ₸; если amoCRM уже есть, подключим отдельно.</div></details>
+<details><summary>Заблокируют ли номер после подключения к CRM?</summary><div class="a">Само подключение к CRM не причина блокировки. WhatsApp блокирует за спам: массовые рассылки незнакомым людям и жалобы. Пишите первыми только тем, кто сам оставлял контакт.</div></details>
+<details><summary>Можно ли подключить несколько номеров WhatsApp?</summary><div class="a">Да, через Wazzup можно подключить несколько номеров и распределять сообщения с каждого по своим менеджерам или воронкам.</div></details>
+</div>
 </div>
   </div>
 </section>
@@ -348,6 +407,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <div class="acts">
         <a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Пришлите,%20пожалуйста,%20чек-лист%20%C2%AB10%20признаков,%20что%20вы%20теряете%20заявки%C2%BB" target="_blank" rel="noopener" data-goal="checklist_click" data-place="lead-magnet">Получить в WhatsApp</a>
         <a class="more" href="/checklist.html">Первые 3 признака на сайте →</a>
+        <a class="more" href="/kalkulyator.html">Посчитать, сколько вы теряете →</a>
       </div>
     </div>
   </div>

@@ -198,6 +198,10 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .cta-box .btn{justify-self:end;padding:17px 32px;font-size:16px}
 @media (max-width:940px){.cta-box{grid-template-columns:1fr;padding:36px 24px}.cta-box .btn{justify-self:start}.post{grid-template-columns:1fr 24px}}
 @media (max-width:640px){.hero-ctas .btn{width:100%}}
+.art-faq{margin-top:10px}
+.art-faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.art-faq summary{cursor:pointer;font-weight:600;font-size:17px}
+.art-faq .a{margin-top:10px;color:var(--ink2)}
 
 /* ---------- Лид-магнит ---------- */
 .lm{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:var(--r);padding:30px 32px;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}
@@ -217,7 +221,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   "headline": "Телефония в CRM: зачем записывать звонки и как подключить",
   "description": "Что даёт связка телефонии и CRM: автоматические сделки из звонков, записи разговоров, пропущенные под контролем. Как подключить и что нужно от вас.",
   "datePublished": "2026-09-23",
-  "dateModified": "2026-09-23",
+  "dateModified": "2026-10-06",
   "inLanguage": "ru",
   "mainEntityOfPage": "https://sarbonlab.kz/blog/telefoniya-v-crm.html",
   "image": "https://sarbonlab.kz/og-cover.jpg",
@@ -255,6 +259,52 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
     "@type": "ListItem",
     "position": 3,
     "name": "Телефония в CRM"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Как работают звонки через CRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "К amoCRM подключается IP-телефония — виртуальная АТС. Входящий звонок сразу создаёт сделку или открывает карточку клиента, исходящий набирается в один клик из CRM, запись разговора прикрепляется к карточке, а пропущенный звонок превращается в задачу перезвонить."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Какую телефонию подключить к amoCRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "У amoCRM есть готовые интеграции с разными операторами IP-телефонии. Мы подключаем SIPUNI и являемся его официальным партнёром: сервис работает с казахстанскими номерами, пишет звонки и умеет распределять их по менеджерам."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Сколько стоит телефония для CRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Складывается из тарифа телефонии, который платится оператору помесячно, и разовой настройки. У нас подключение телефонии с записью звонков входит в пакет внедрения «Стандарт» от 450 000 ₸."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Можно ли звонить из CRM с мобильного телефона?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Да. Менеджер может принимать и совершать звонки через мобильное приложение телефонии или через переадресацию на обычный мобильный, а звонок всё равно попадёт в amoCRM с записью."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Нужно ли менять номер телефона?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Обычно нет: текущий номер переадресуют на виртуальную АТС или переносят к оператору телефонии. Какой вариант подойдёт, зависит от вашего оператора — проверяем на этапе подготовки."
+    }
    }
   ]
  }
@@ -329,6 +379,15 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <li><b>Проверяем на реальных звонках</b> и обучаем команду.</li>
 </ul>
 <p>Подключение телефонии обычно занимает 2–5 рабочих дней и входит в пакет внедрения <a href="/#pricing">«Стандарт»</a> от 450 000 ₸. Если CRM у вас уже есть, подключим телефонию отдельно. Мессенджеры подключаются по той же логике, об этом в статье <a href="/blog/whatsapp-v-amocrm.html">«Как подключить WhatsApp к amoCRM»</a>.</p>
+
+<h2>Частые вопросы</h2>
+<div class="art-faq">
+<details><summary>Как работают звонки через CRM?</summary><div class="a">К amoCRM подключается IP-телефония — виртуальная АТС. Входящий звонок сразу создаёт сделку или открывает карточку клиента, исходящий набирается в один клик из CRM, запись разговора прикрепляется к карточке, а пропущенный звонок превращается в задачу перезвонить.</div></details>
+<details><summary>Какую телефонию подключить к amoCRM?</summary><div class="a">У amoCRM есть готовые интеграции с разными операторами IP-телефонии. Мы подключаем SIPUNI и являемся его официальным партнёром: сервис работает с казахстанскими номерами, пишет звонки и умеет распределять их по менеджерам.</div></details>
+<details><summary>Сколько стоит телефония для CRM?</summary><div class="a">Складывается из тарифа телефонии, который платится оператору помесячно, и разовой настройки. У нас подключение телефонии с записью звонков входит в пакет внедрения «Стандарт» от 450 000 ₸.</div></details>
+<details><summary>Можно ли звонить из CRM с мобильного телефона?</summary><div class="a">Да. Менеджер может принимать и совершать звонки через мобильное приложение телефонии или через переадресацию на обычный мобильный, а звонок всё равно попадёт в amoCRM с записью.</div></details>
+<details><summary>Нужно ли менять номер телефона?</summary><div class="a">Обычно нет: текущий номер переадресуют на виртуальную АТС или переносят к оператору телефонии. Какой вариант подойдёт, зависит от вашего оператора — проверяем на этапе подготовки.</div></details>
+</div>
 </div>
   </div>
 </section>
@@ -345,6 +404,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <div class="acts">
         <a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Пришлите,%20пожалуйста,%20чек-лист%20%C2%AB10%20признаков,%20что%20вы%20теряете%20заявки%C2%BB" target="_blank" rel="noopener" data-goal="checklist_click" data-place="lead-magnet">Получить в WhatsApp</a>
         <a class="more" href="/checklist.html">Первые 3 признака на сайте →</a>
+        <a class="more" href="/kalkulyator.html">Посчитать, сколько вы теряете →</a>
       </div>
     </div>
   </div>

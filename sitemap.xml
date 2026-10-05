@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sarbonlab.kz/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -122,37 +122,37 @@
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/amocrm-ili-bitrix24.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/skolko-stoit-amocrm.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/whatsapp-v-amocrm.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/kak-vybrat-crm.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/pochemu-menedzhery-ne-rabotayut-v-crm.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/etapy-vnedreniya-crm.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -164,32 +164,50 @@
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/voronka-prodazh-v-crm.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/telefoniya-v-crm.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/perenos-bazy-v-crm.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/kontrol-menedzherov-v-crm.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sarbonlab.kz/blog/zayavki-s-krishi-v-amocrm.html</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sarbonlab.kz/crm-dlya-kliniki.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sarbonlab.kz/crm-dlya-shkoly.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sarbonlab.kz/kalkulyator.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

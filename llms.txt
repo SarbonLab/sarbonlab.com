@@ -31,6 +31,8 @@
 - [CRM для юристов и бухгалтеров](https://sarbonlab.kz/crm-dlya-yuristov.html)
 - [CRM для кадрового агентства](https://sarbonlab.kz/crm-dlya-rekrutinga.html)
 - [CRM для турагентства](https://sarbonlab.kz/crm-dlya-turagentstva.html)
+- [CRM для клиники и стоматологии](https://sarbonlab.kz/crm-dlya-kliniki.html)
+- [CRM для языковой школы и курсов](https://sarbonlab.kz/crm-dlya-shkoly.html)
 
 ## Статьи
 
@@ -46,3 +48,4 @@
 - [Почему менеджеры не работают в CRM](https://sarbonlab.kz/blog/pochemu-menedzhery-ne-rabotayut-v-crm.html)
 - [Этапы внедрения CRM](https://sarbonlab.kz/blog/etapy-vnedreniya-crm.html)
 - [Чек-лист: 10 признаков, что бизнес теряет заявки](https://sarbonlab.kz/checklist.html)
+- [Калькулятор потерянных заявок](https://sarbonlab.kz/kalkulyator.html): сколько выручки теряет отдел продаж
