@@ -109,6 +109,7 @@ h2{font-size:clamp(21px,2.8vw,30px);margin-bottom:14px}
 
 /* ---------- Панель CRM (hero) ---------- */
 .board{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);box-shadow:14px 14px 0 -4px var(--ink)}
+.board-note{margin-top:22px;font-family:var(--mono);font-size:12.5px;color:var(--ink2);letter-spacing:.03em}
 .board-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:11px 16px;font-family:var(--mono);font-size:11.5px;color:var(--ink2);letter-spacing:.04em}
 .board-top b{color:var(--ink);font-weight:500}
 .board-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
@@ -410,6 +411,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
     </div>
 
     <!-- Панель CRM -->
+    <div>
     <div class="board" aria-hidden="true">
       <div class="board-top">
         <span><b>ВОРОНКА ПРОДАЖ</b> — вид из CRM</span>
@@ -418,21 +420,23 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <div class="board-cols">
         <div class="col">
           <div class="col-title">Новая заявка <em>3</em></div>
-          <div class="card"><h4>Асель М.</h4><div class="sum">850 000 ₸</div><span class="src">whatsapp</span></div>
-          <div class="card"><h4>ТОО «Дала Трейд»</h4><div class="sum">1 200 000 ₸</div><span class="src">звонок</span></div>
-          <div class="card"><h4>Руслан К.</h4><div class="sum">340 000 ₸</div><span class="src">instagram</span></div>
+          <div class="card"><h4>Стоматология</h4><div class="sum">850 000 ₸</div><span class="src">whatsapp</span></div>
+          <div class="card"><h4>Мебельное производство</h4><div class="sum">1 200 000 ₸</div><span class="src">звонок</span></div>
+          <div class="card"><h4>Автосервис</h4><div class="sum">340 000 ₸</div><span class="src">instagram</span></div>
         </div>
         <div class="col">
           <div class="col-title">В работе <em>2</em></div>
-          <div class="card"><h4>ИП Сериков</h4><div class="sum">560 000 ₸</div><span class="src">whatsapp</span></div>
-          <div class="card"><h4>ТОО «АгроПром»</h4><div class="sum">2 400 000 ₸</div><span class="src">звонок</span></div>
+          <div class="card"><h4>Салон красоты</h4><div class="sum">560 000 ₸</div><span class="src">whatsapp</span></div>
+          <div class="card"><h4>Оптовая торговля</h4><div class="sum">2 400 000 ₸</div><span class="src">звонок</span></div>
         </div>
         <div class="col">
           <div class="col-title">Оплачено <em>2</em></div>
-          <div class="card"><h4>ТОО «Восток»</h4><div class="sum">795 000 ₸</div><span class="src">whatsapp</span></div>
-          <div class="card"><h4>Школа «Білім»</h4><div class="sum">250 000 ₸</div><span class="src">звонок</span></div>
+          <div class="card"><h4>Недвижимость</h4><div class="sum">795 000 ₸</div><span class="src">whatsapp</span></div>
+          <div class="card"><h4>Учебный центр</h4><div class="sum">250 000 ₸</div><span class="src">звонок</span></div>
         </div>
       </div>
+    </div>
+      <p class="board-note">Пример интерфейса. Данные условные</p>
     </div>
   </div>
 </section>
