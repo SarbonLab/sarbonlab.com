@@ -218,6 +218,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   .fab{display:none}
   body{padding-bottom:78px}
 }
+
+/* ---------- Меню: бургер до 1100px ---------- */
+@media (max-width:1100px) and (min-width:641px){
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{margin-left:auto;margin-right:10px}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -229,7 +237,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
    "name": "Сколько стоит внедрение amoCRM?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Внедрение начинается от 250 000 ₸ за одну воронку с WhatsApp, переносом базы и обучением. Проекты с телефонией, интеграциями и несколькими отделами считаем после бесплатного аудита. Лицензия amoCRM оплачивается вендору отдельно, помесячно за пользователя."
+    "text": "Внедрение начинается от 250 000 ₸ за одну воронку с WhatsApp, переносом базы и обучением. Проекты с телефонией, интеграциями и несколькими отделами считаем после бесплатного аудита. Лицензия amoCRM оплачивается вендору отдельно, за каждого пользователя, подписка — от 6 месяцев."
    }
   },
   {
@@ -286,7 +294,9 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <li><a href="/#services">/услуги</a></li>
       <li><a href="/#industries">/отрасли</a></li>
       <li><a href="/#why">/почему-мы</a></li>
+      <li><a href="/#cases">/кейсы</a></li>
       <li><a href="/#steps">/этапы</a></li>
+      <li><a href="/licenzii-amocrm.html">/лицензии</a></li>
       <li><a href="/blog/">/статьи</a></li>
       <li><a href="/contacts.html">/контакты</a></li>
     </ul>
@@ -364,7 +374,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <div class="cmp-row"><span class="idx">03</span><p><b>Подключение телефонии</b> с записью звонков</p></div>
       <div class="cmp-row"><span class="idx">04</span><p><b>Настройка автоматических задач</b> и уведомлений</p></div>
       <div class="cmp-row"><span class="idx">05</span><p><b>Перенос текущей базы клиентов</b> в систему</p></div>
-      <div class="cmp-row"><span class="idx">06</span><p><b>Обучение менеджеров</b> и руководителя</p></div>
+      <div class="cmp-row"><span class="idx">06</span><p><b>Обучение менеджеров</b> и руководителя + чек-листы по работе в системе</p></div>
       <div class="cmp-row"><span class="idx">07</span><p><b>Сопровождение после запуска</b> — поддержка и доработки</p></div>
     </div>
   </div>
@@ -403,7 +413,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
     <div class="faq">
       <details>
         <summary>Сколько стоит внедрение amoCRM?</summary>
-        <div class="a">Внедрение начинается <b>от 250 000 ₸</b> за одну воронку с WhatsApp, переносом базы и обучением. Проекты с телефонией, интеграциями и несколькими отделами считаем после бесплатного аудита. Лицензия amoCRM оплачивается вендору отдельно, помесячно за пользователя.</div>
+        <div class="a">Внедрение начинается <b>от 250 000 ₸</b> за одну воронку с WhatsApp, переносом базы и обучением. Проекты с телефонией, интеграциями и несколькими отделами считаем после бесплатного аудита. Лицензия amoCRM оплачивается вендору отдельно, за каждого пользователя, подписка — от 6 месяцев.</div>
       </details>
       <details>
         <summary>Сколько времени занимает внедрение amoCRM?</summary>
@@ -442,7 +452,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <footer>
   <div class="wrap foot">
     <div>© 2026 SARBONLAB (СарбонЛаб) // внедрение CRM и автоматизация // Алматы, Казахстан</div>
-    <div><a href="tel:+77075213922">+7 707 521 39 22</a> · <a href="mailto:Sarbonlab@gmail.com">Sarbonlab@gmail.com</a> · <a href="https://www.instagram.com/sarbonlab/" target="_blank" rel="noopener">Instagram</a> · <a href="https://t.me/SarbonLab_channel" target="_blank" rel="noopener">Telegram</a> · <a href="/privacy.html">Политика</a> · <a href="/terms.html">Соглашение</a></div>
+    <div><a href="tel:+77075213922">+7 707 521 39 22</a> · <a href="mailto:Sarbonlab@gmail.com">Sarbonlab@gmail.com</a> · <a href="https://www.instagram.com/sarbonlab/" target="_blank" rel="noopener">Instagram</a> · <a href="https://t.me/SarbonLab_channel" target="_blank" rel="noopener">Telegram</a> · <a href="/privacy.html">Политика</a> · <a href="/terms.html">Соглашение</a> · <a href="/licenzii-amocrm.html">Лицензии amoCRM</a> · <a href="https://www.amocrm.ru/partners/sarbonlab" target="_blank" rel="noopener">Мы в каталоге партнёров amoCRM</a></div>
   </div>
 </footer>
 

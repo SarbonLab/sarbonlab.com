@@ -282,6 +282,31 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .extras .support-line{margin-top:10px}
 .extras .support-line span small{display:block;color:var(--ink2);font-size:13.5px;margin-top:2px}
 .extras .support-line.pack{border-color:var(--ink);border-width:1.5px}
+
+/* ---------- Цифры доверия, кейсы ---------- */
+.trust{grid-template-columns:repeat(3,1fr);margin-top:46px}
+.trust b{font-size:clamp(24px,3vw,32px);text-transform:none;letter-spacing:0;margin-bottom:6px}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:38px}
+.case-card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px 26px 24px;text-decoration:none;color:inherit;transition:border-color .15s}
+.case-card:hover{border-color:var(--ink)}
+.case-card .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green-deep);margin-bottom:10px}
+.case-card h3{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.4vw,24px);text-transform:uppercase;letter-spacing:.01em;line-height:1.2;margin-bottom:8px}
+.case-card p{font-size:15.5px;color:var(--ink2);max-width:40em}
+.case-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 18px;max-width:640px}
+.case-nums b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(24px,3vw,32px);line-height:1.1}
+.case-nums span{font-family:var(--mono);font-size:12px;color:var(--ink2)}
+.case-card .more{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--green-deep)}
+.free-line{border-left:4px solid var(--green)}
+@media (max-width:640px){.trust{grid-template-columns:1fr}}
+/* в меню главной 10 пунктов: плотнее, а ниже 1180px — бургер, кнопка WhatsApp остаётся */
+.nav-links{gap:14px}
+/* ---------- Меню: бургер до 1179px ---------- */
+@media (max-width:1179px) and (min-width:641px){
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{margin-left:auto;margin-right:10px}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -341,7 +366,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
    "name": "Нужно ли отдельно платить за лицензию amoCRM?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Да, лицензия оплачивается вендору, помесячно за каждого пользователя. Как официальный партнёр мы помогаем выбрать тариф и оформить оплату, чтобы вы не переплачивали за ненужные функции."
+    "text": "Да, лицензия оплачивается вендору за каждого пользователя, подписка — от 6 месяцев. Как официальный партнёр мы помогаем выбрать тариф и оформить оплату, чтобы вы не переплачивали за ненужные функции."
    }
   },
   {
@@ -357,7 +382,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
    "name": "Что происходит после запуска?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Не исчезаем. В каждый пакет входит сопровождение: отвечаем на вопросы, дорабатываем воронку, добавляем автоматизации по мере роста. Дальше можно продлить сопровождение помесячно."
+    "text": "Не исчезаем. Первые 14 дней после сдачи сопровождаем бесплатно: отвечаем на вопросы, дорабатываем воронку. Дальше можно продлить сопровождение помесячно."
    }
   }
  ]
@@ -382,8 +407,10 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <li><a href="#services">/услуги</a></li>
       <li><a href="#industries">/отрасли</a></li>
       <li><a href="#why">/почему-мы</a></li>
+      <li><a href="#cases">/кейсы</a></li>
       <li><a href="#steps">/этапы</a></li>
       <li><a href="#pricing">/цены</a></li>
+      <li><a href="/licenzii-amocrm.html">/лицензии</a></li>
       <li><a href="#faq">/вопросы</a></li>
       <li><a href="/blog/">/статьи</a></li>
       <li><a href="/contacts.html">/контакты</a></li>
@@ -407,7 +434,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
         <a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Хочу%20бесплатный%20аудит%20продаж" target="_blank" rel="noopener">Бесплатный аудит продаж</a>
         <a class="btn btn-ghost" href="#services">Смотреть услуги</a>
       </div>
-      <p class="partners">Официальный партнёр: <b>amoCRM</b> / <b>Wazzup</b> / <b>SIPUNI</b></p>
+      <p class="partners">Официальный партнёр: <b><a href="https://www.amocrm.ru/partners/sarbonlab" target="_blank" rel="noopener" style="color:inherit">amoCRM</a></b> / <b>Wazzup</b> / <b>SIPUNI</b></p>
     </div>
 
     <!-- Панель CRM -->
@@ -437,6 +464,13 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       </div>
     </div>
       <p class="board-note">Пример интерфейса. Данные условные</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="integr trust">
+      <div><b>7 дней</b><span>в среднем до запуска CRM в работу</span></div>
+      <div><b>1696</b><span>позиций номенклатуры перенесли в одном проекте</span></div>
+      <div><b>14 дней</b><span>бесплатного сопровождения после сдачи</span></div>
     </div>
   </div>
 </section>
@@ -635,10 +669,31 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
     <div class="sec-label">Почему SarbonLab</div>
     <h2>Характеристики подрядчика</h2>
     <div class="specs" style="margin-top:38px">
-      <div class="spec"><div class="k">статус</div><b>Официальный партнёр</b><p>amoCRM, Wazzup и SIPUNI — работаем напрямую с вендорами, помогаем с тарифами.</p></div>
+      <div class="spec"><div class="k">статус</div><b>Официальный партнёр</b><p>amoCRM, Wazzup и SIPUNI — работаем напрямую с вендорами, помогаем с тарифами.</p><p style="margin-top:10px"><a href="https://www.amocrm.ru/partners/sarbonlab" target="_blank" rel="noopener" style="color:var(--green-deep)">Проверить статус на сайте amoCRM →</a></p></div>
       <div class="spec"><div class="k">формат</div><b>Внедрение под ключ</b><p>От аудита продаж до обучения команды. Вам не нужно разбираться в настройках.</p></div>
       <div class="spec"><div class="k">после запуска</div><b>Сопровождение</b><p>Дорабатываем, отвечаем на вопросы, развиваем систему вместе с вашим бизнесом.</p></div>
       <div class="spec"><div class="k">язык общения</div><b>Язык бизнеса</b><p>Не грузим терминами. Обсуждаем заявки, сделки и деньги — а не технические детали.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- КЕЙСЫ -->
+<section id="cases">
+  <div class="wrap">
+    <div class="sec-label">Кейсы</div>
+    <h2>Что уже внедрили</h2>
+    <div class="cases">
+      <a class="case-card" href="/keys-proizvoditel-oborudovaniya.html">
+        <div class="k">кейс · производство</div>
+        <h3>Производитель оборудования, ВКО</h3>
+        <p>Отказались от интеграции с 1С за деньги клиента — и сделали лучше</p>
+        <div class="case-nums">
+          <div><b>7</b><span>воронок</span></div>
+          <div><b>10</b><span>шаблонов документов</span></div>
+          <div><b>14</b><span>рабочих дней</span></div>
+        </div>
+        <span class="more">Читать кейс →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -653,8 +708,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <div class="stage"><span class="n">ЭТАП 01 · 1 день</span><b>Консультация</b><p>Разбираем, как устроены ваши продажи и где теряются деньги.</p></div>
       <div class="stage"><span class="n">ЭТАП 02 · 1–2 дня</span><b>Предложение</b><p>Конкретный план внедрения под ваши задачи.</p></div>
       <div class="stage"><span class="n">ЭТАП 03 · 2–4 недели</span><b>Внедрение</b><p>Настраиваем систему, подключаем каналы, автоматизируем.</p></div>
-      <div class="stage"><span class="n">ЭТАП 04 · 2–3 дня</span><b>Обучение</b><p>Менеджеры и руководитель умеют работать в системе.</p></div>
-      <div class="stage"><span class="n">ЭТАП 05 · от 1 месяца</span><b>Сопровождение</b><p>Поддержка и доработки после запуска.</p></div>
+      <div class="stage"><span class="n">ЭТАП 04 · 2–3 дня</span><b>Обучение</b><p>Обучаем менеджеров и руководителя на ваших сделках, оставляем чек-листы по работе в системе.</p></div>
+      <div class="stage"><span class="n">ЭТАП 05 · от 1 месяца</span><b>Сопровождение</b><p>Первые 14 дней бесплатно, дальше — по желанию помесячно.</p></div>
     </div>
   </div>
 </section>
@@ -698,8 +753,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
           <li>amoCRM: <b>одна воронка</b> под ваш процесс</li>
           <li>WhatsApp в CRM через Wazzup</li>
           <li>Перенос базы из Excel и телефонов</li>
-          <li>Обучение команды, 1 сессия</li>
-          <li>2 недели поддержки после запуска</li>
+          <li>Обучение команды, 1 сессия + чек-листы для менеджеров и руководителя</li>
+          <li><b>14 дней бесплатного сопровождения</b> после сдачи</li>
         </ul>
         <a class="btn btn-ghost" href="https://wa.me/77075213922?text=Здравствуйте!%20Интересует%20пакет%20«Старт»" target="_blank" rel="noopener">Обсудить пакет</a>
       </div>
@@ -714,7 +769,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
           <li>Instagram и Telegram в одном окне</li>
           <li><b>Автоматизации:</b> напоминания, задачи, автоответы</li>
           <li>Отраслевая настройка: поля, документы, отчёты</li>
-          <li>Обучение, 2 сессии, и месяц сопровождения</li>
+          <li>Обучение, 2 сессии + чек-листы для менеджеров и руководителя, и месяц сопровождения</li>
         </ul>
         <a class="btn btn-green" href="https://wa.me/77075213922?text=Здравствуйте!%20Интересует%20пакет%20«Стандарт»" target="_blank" rel="noopener">Обсудить пакет</a>
       </div>
@@ -734,6 +789,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
         <a class="btn btn-ghost" href="https://wa.me/77075213922?text=Здравствуйте!%20Интересует%20пакет%20«Под%20ключ»" target="_blank" rel="noopener">Обсудить пакет</a>
       </div>
     </div>
+    <div class="support-line free-line"><span>В любом пакете: 14 дней бесплатного сопровождения после сдачи проекта. Отвечаем команде, правим то, что неудобно в работе.</span></div>
     <div class="support-line"><span>Сопровождение после проекта: ответы команде, доработки, новые автоматизации</span><b>от 60 000 ₸ / мес</b></div>
     <div class="extras">
       <div class="extras-h">Дополнительно к CRM: чтобы заявки приходили</div>
@@ -743,7 +799,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <div class="support-line"><span><b style="font-family:var(--body);font-size:16px">Запуск рекламы</b><small>Instagram и Facebook, TikTok, Google, Яндекс. Рекламный бюджет оплачивается площадке отдельно</small></span><b>от 100 000 ₸ + ведение от 150 000 ₸ / мес</b></div>
       <div class="support-line pack"><span><b style="font-family:var(--body);font-size:16px">Заявки под ключ</b><small>Лендинг + запуск рекламы + amoCRM: заявки приходят и сразу попадают в воронку</small></span><b>от 450 000 ₸</b></div>
     </div>
-    <p class="plans-note">// Лицензии amoCRM, Wazzup и SIPUNI оплачиваются вендорам отдельно, помесячно. Как партнёр помогаем выбрать тариф без переплаты.</p>
+    <p class="plans-note">// Лицензии amoCRM, Wazzup и SIPUNI оплачиваются вендорам отдельно. Как партнёр помогаем выбрать тариф без переплаты. <a href="/licenzii-amocrm.html" style="color:var(--green-deep)">Цены на лицензии amoCRM →</a></p>
   </div>
 </section>
 
@@ -780,7 +836,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       </details>
       <details>
         <summary>Нужно ли отдельно платить за лицензию amoCRM?</summary>
-        <div class="a">Да, лицензия оплачивается вендору, помесячно за каждого пользователя. Как официальный партнёр мы <b>помогаем выбрать тариф</b> и оформить оплату, чтобы вы не переплачивали за ненужные функции.</div>
+        <div class="a">Да, лицензия оплачивается вендору за каждого пользователя, подписка — от 6 месяцев. Как официальный партнёр мы <b>помогаем выбрать тариф</b> и оформить оплату, чтобы вы не переплачивали за ненужные функции. <a href="/licenzii-amocrm.html" style="color:var(--green-deep)">Цены на лицензии amoCRM →</a></div>
       </details>
       <details>
         <summary>У нас база в Excel или в другой CRM. Перенесёте?</summary>
@@ -788,7 +844,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       </details>
       <details>
         <summary>Что происходит после запуска?</summary>
-        <div class="a">Не исчезаем. В каждый пакет входит <b>сопровождение</b>: отвечаем на вопросы, дорабатываем воронку, добавляем автоматизации по мере роста. Дальше можно продлить сопровождение помесячно.</div>
+        <div class="a">Не исчезаем. Первые 14 дней после сдачи сопровождаем бесплатно: отвечаем на вопросы, дорабатываем воронку. Дальше можно продлить сопровождение помесячно.</div>
       </details>
     </div>
   </div>
@@ -816,7 +872,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <footer>
   <div class="wrap foot">
     <div>© 2026 SARBONLAB (СарбонЛаб) // внедрение CRM и автоматизация // Алматы, Казахстан</div>
-    <div><a href="tel:+77075213922">+7 707 521 39 22</a> · <a href="mailto:Sarbonlab@gmail.com">Sarbonlab@gmail.com</a> · <a href="https://www.instagram.com/sarbonlab/" target="_blank" rel="noopener">Instagram</a> · <a href="https://t.me/SarbonLab_channel" target="_blank" rel="noopener">Telegram</a> · <a href="/privacy.html">Политика</a> · <a href="/terms.html">Соглашение</a></div>
+    <div><a href="tel:+77075213922">+7 707 521 39 22</a> · <a href="mailto:Sarbonlab@gmail.com">Sarbonlab@gmail.com</a> · <a href="https://www.instagram.com/sarbonlab/" target="_blank" rel="noopener">Instagram</a> · <a href="https://t.me/SarbonLab_channel" target="_blank" rel="noopener">Telegram</a> · <a href="/privacy.html">Политика</a> · <a href="/terms.html">Соглашение</a> · <a href="/licenzii-amocrm.html">Лицензии amoCRM</a> · <a href="https://www.amocrm.ru/partners/sarbonlab" target="_blank" rel="noopener">Мы в каталоге партнёров amoCRM</a></div>
   </div>
 </footer>
 

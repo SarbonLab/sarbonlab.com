@@ -213,6 +213,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .lm .acts .btn{width:100%}
 .lm .acts a.more{font-family:var(--mono);font-size:12.5px;color:var(--ink2);text-align:center}
 @media (max-width:940px){.lm{grid-template-columns:1fr;padding:26px 22px}}
+
+/* ---------- Меню: бургер до 1100px ---------- */
+@media (max-width:1100px) and (min-width:641px){
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{margin-left:auto;margin-right:10px}
+}
 </style>
 <script type="application/ld+json">
 [
@@ -284,7 +292,9 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <li><a href="/#services">/услуги</a></li>
       <li><a href="/#industries">/отрасли</a></li>
       <li><a href="/#why">/почему-мы</a></li>
+      <li><a href="/#cases">/кейсы</a></li>
       <li><a href="/#steps">/этапы</a></li>
+      <li><a href="/licenzii-amocrm.html">/лицензии</a></li>
       <li><a href="/blog/">/статьи</a></li>
       <li><a href="/contacts.html">/контакты</a></li>
     </ul>
@@ -373,7 +383,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <footer>
   <div class="wrap foot">
     <div>© 2026 SARBONLAB (СарбонЛаб) // внедрение CRM и автоматизация // Алматы, Казахстан</div>
-    <div><a href="tel:+77075213922">+7 707 521 39 22</a> · <a href="mailto:Sarbonlab@gmail.com">Sarbonlab@gmail.com</a> · <a href="https://www.instagram.com/sarbonlab/" target="_blank" rel="noopener">Instagram</a> · <a href="https://t.me/SarbonLab_channel" target="_blank" rel="noopener">Telegram</a> · <a href="/privacy.html">Политика</a> · <a href="/terms.html">Соглашение</a></div>
+    <div><a href="tel:+77075213922">+7 707 521 39 22</a> · <a href="mailto:Sarbonlab@gmail.com">Sarbonlab@gmail.com</a> · <a href="https://www.instagram.com/sarbonlab/" target="_blank" rel="noopener">Instagram</a> · <a href="https://t.me/SarbonLab_channel" target="_blank" rel="noopener">Telegram</a> · <a href="/privacy.html">Политика</a> · <a href="/terms.html">Соглашение</a> · <a href="/licenzii-amocrm.html">Лицензии amoCRM</a> · <a href="https://www.amocrm.ru/partners/sarbonlab" target="_blank" rel="noopener">Мы в каталоге партнёров amoCRM</a></div>
   </div>
 </footer>
 
