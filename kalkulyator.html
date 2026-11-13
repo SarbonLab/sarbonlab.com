@@ -173,6 +173,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   body{padding-bottom:78px}
 }
 
+/* ---------- Меню: бургер до 1100px ---------- */
+@media (max-width:1100px) and (min-width:641px){
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{margin-left:auto;margin-right:10px}
+}
+
 /* ---------- Калькулятор ---------- */
 .calc{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:34px}
 .calc-in,.calc-out{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:28px}
@@ -190,14 +198,6 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .calc-out .btn{width:100%;margin-top:22px}
 .calc-out .note{font-size:13px;color:#9FB1BE;margin-top:14px}
 @media (max-width:940px){.calc{grid-template-columns:1fr}}
-
-/* ---------- Меню: бургер до 1100px ---------- */
-@media (max-width:1100px) and (min-width:641px){
-  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
-  .nav-links.open{display:flex}
-  .burger{display:block}
-  .nav>.btn{margin-left:auto;margin-right:10px}
-}
 </style>
 <script type="application/ld+json">
 {

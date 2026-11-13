@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Как перенести клиентскую базу из Excel в CRM без потерь</title>
-<meta name="description" content="Перенос клиентов из Excel, Google Таблиц, старой CRM и телефонов менеджеров в amoCRM: подготовка, чистка дублей, импорт и проверка. Пошагово и с частыми ошибками.">
+<title>Как перенести клиентскую базу в CRM без потерь и дублей</title>
+<meta name="description" content="Как перенести клиентскую базу из Excel, Google Таблиц, 1С и телефонов менеджеров в amoCRM без потерь и дублей: подготовка, чистка, импорт и проверка по шагам.">
 <link rel="canonical" href="https://sarbonlab.kz/blog/perenos-bazy-v-crm.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="SarbonLab">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://sarbonlab.kz/blog/perenos-bazy-v-crm.html">
-<meta property="og:title" content="Как перенести клиентскую базу из Excel в CRM без потерь">
-<meta property="og:description" content="Перенос клиентов из Excel, Google Таблиц, старой CRM и телефонов менеджеров в amoCRM: подготовка, чистка дублей, импорт и проверка. Пошагово и с частыми ошибками.">
+<meta property="og:title" content="Как перенести клиентскую базу в CRM без потерь и дублей">
+<meta property="og:description" content="Как перенести клиентскую базу из Excel, Google Таблиц, 1С и телефонов менеджеров в amoCRM без потерь и дублей: подготовка, чистка, импорт и проверка по шагам.">
 <meta property="og:image" content="https://sarbonlab.kz/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -173,6 +173,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   body{padding-bottom:78px}
 }
 
+/* ---------- Меню: бургер до 1100px ---------- */
+@media (max-width:1100px) and (min-width:641px){
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{margin-left:auto;margin-right:10px}
+}
+
 /* ---------- Статьи ---------- */
 .doc h2{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.02em;font-size:19px;margin:40px 0 14px}
 .doc a{color:var(--green-deep)}
@@ -213,24 +221,16 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .lm .acts .btn{width:100%}
 .lm .acts a.more{font-family:var(--mono);font-size:12.5px;color:var(--ink2);text-align:center}
 @media (max-width:940px){.lm{grid-template-columns:1fr;padding:26px 22px}}
-
-/* ---------- Меню: бургер до 1100px ---------- */
-@media (max-width:1100px) and (min-width:641px){
-  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
-  .nav-links.open{display:flex}
-  .burger{display:block}
-  .nav>.btn{margin-left:auto;margin-right:10px}
-}
 </style>
 <script type="application/ld+json">
 [
  {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Как перенести клиентскую базу из Excel в CRM без потерь",
-  "description": "Перенос клиентов из Excel, Google Таблиц, старой CRM и телефонов менеджеров в amoCRM: подготовка, чистка дублей, импорт и проверка. Пошагово и с частыми ошибками.",
+  "headline": "Как перенести клиентскую базу в CRM без потерь и дублей",
+  "description": "Как перенести клиентскую базу из Excel, Google Таблиц, 1С и телефонов менеджеров в amoCRM без потерь и дублей: подготовка, чистка, импорт и проверка по шагам.",
   "datePublished": "2026-09-23",
-  "dateModified": "2026-09-23",
+  "dateModified": "2026-11-14",
   "inLanguage": "ru",
   "mainEntityOfPage": "https://sarbonlab.kz/blog/perenos-bazy-v-crm.html",
   "image": "https://sarbonlab.kz/og-cover.jpg",
@@ -268,6 +268,44 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
     "@type": "ListItem",
     "position": 3,
     "name": "Перенос базы в CRM"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Как перенести клиентскую базу из Excel в amoCRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Соберите всех клиентов в одну таблицу, приведите телефоны к одному формату, уберите дубли и создайте в amoCRM нужные поля. Затем загрузите файл через встроенный импорт, сопоставив столбцы с полями. Начните с пробного файла на 10–20 строк."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Как избежать дублей при переносе базы?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Дубли ищут по телефону до импорта: отсортируйте таблицу по номеру и объедините совпадения, оставив самую полную запись. После загрузки базу можно дополнительно проверить встроенным поиском дублей в CRM."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Можно ли перенести базу из 1С или другой CRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Да. Данные выгружают в Excel или CSV, приводят к структуре новой CRM и загружают тем же импортом. Открытые сделки лучше сразу завести на нужные этапы воронки."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Сколько времени занимает перенос базы?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Для базы до нескольких тысяч клиентов перенос вместе с чисткой занимает 1–3 дня. Больше всего времени уходит на подготовку таблицы, сам импорт занимает минуты."
+    }
    }
   ]
  }
@@ -310,9 +348,9 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   <div class="wrap">
     <nav class="crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/blog/">Статьи</a> / Перенос базы в CRM</nav>
     <div class="sec-label">Статья</div>
-    <h1>Как перенести клиентскую базу из Excel в CRM без потерь</h1>
+    <h1>Как перенести клиентскую базу в CRM без потерь и дублей</h1>
     <p class="lead">Клиентская база — самое ценное, что есть у отдела продаж. Обычно она разбросана по Excel-файлам, Google Таблицам, блокнотам и телефонам менеджеров. При переходе на CRM её нужно собрать в одно место так, чтобы ничего не потерять и не завести в систему мусор. Разберём, как это сделать.</p>
-    <p class="art-meta">23 сентября 2026 · 3 мин чтения · SarbonLab, официальный партнёр amoCRM</p>
+    <p class="art-meta">23 сентября 2026 · 4 мин чтения · SarbonLab, официальный партнёр amoCRM</p>
     <div class="doc">
 <h2>Где обычно лежит база</h2>
 <ul>
@@ -352,7 +390,15 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <p><b>Переносить до настройки воронки.</b> Сначала этапы и поля, потом база. Иначе открытые сделки придётся раскладывать по этапам вручную второй раз. Как составить этапы, мы разбирали в статье <a href="/blog/voronka-prodazh-v-crm.html">«Воронка продаж в CRM»</a>.</p>
 
 <h2>Сколько это занимает</h2>
-<p>Для базы до нескольких тысяч клиентов перенос вместе с чисткой занимает 1–3 дня. Перенос базы входит в каждый наш пакет внедрения, от вас нужна только выгрузка в любом виде. Подробнее о порядке работ — в статье <a href="/blog/etapy-vnedreniya-crm.html">«Этапы внедрения CRM»</a>.</p>
+<p>Для базы до нескольких тысяч клиентов перенос вместе с чисткой занимает 1–3 дня. Перенос базы входит в каждый наш пакет внедрения, от вас нужна только выгрузка в любом виде. Если amoCRM уже работает и нужен только перенос, делаем его отдельно: 40 000 ₸, 1–2 дня (<a href="/#bystro">быстрые задачи</a>). Подробнее о порядке работ — в статье <a href="/blog/etapy-vnedreniya-crm.html">«Этапы внедрения CRM»</a>.</p>
+
+<h2>Частые вопросы</h2>
+<div class="art-faq">
+<details><summary>Как перенести клиентскую базу из Excel в amoCRM?</summary><div class="a">Соберите всех клиентов в одну таблицу, приведите телефоны к одному формату, уберите дубли и создайте в amoCRM нужные поля. Затем загрузите файл через встроенный импорт, сопоставив столбцы с полями. Начните с пробного файла на 10–20 строк.</div></details>
+<details><summary>Как избежать дублей при переносе базы?</summary><div class="a">Дубли ищут по телефону до импорта: отсортируйте таблицу по номеру и объедините совпадения, оставив самую полную запись. После загрузки базу можно дополнительно проверить встроенным поиском дублей в CRM.</div></details>
+<details><summary>Можно ли перенести базу из 1С или другой CRM?</summary><div class="a">Да. Данные выгружают в Excel или CSV, приводят к структуре новой CRM и загружают тем же импортом. Открытые сделки лучше сразу завести на нужные этапы воронки.</div></details>
+<details><summary>Сколько времени занимает перенос базы?</summary><div class="a">Для базы до нескольких тысяч клиентов перенос вместе с чисткой занимает 1–3 дня. Больше всего времени уходит на подготовку таблицы, сам импорт занимает минуты.</div></details>
+</div>
 </div>
   </div>
 </section>

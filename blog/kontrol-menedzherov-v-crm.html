@@ -173,6 +173,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   body{padding-bottom:78px}
 }
 
+/* ---------- Меню: бургер до 1100px ---------- */
+@media (max-width:1100px) and (min-width:641px){
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{margin-left:auto;margin-right:10px}
+}
+
 /* ---------- Статьи ---------- */
 .doc h2{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.02em;font-size:19px;margin:40px 0 14px}
 .doc a{color:var(--green-deep)}
@@ -213,14 +221,6 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .lm .acts .btn{width:100%}
 .lm .acts a.more{font-family:var(--mono);font-size:12.5px;color:var(--ink2);text-align:center}
 @media (max-width:940px){.lm{grid-template-columns:1fr;padding:26px 22px}}
-
-/* ---------- Меню: бургер до 1100px ---------- */
-@media (max-width:1100px) and (min-width:641px){
-  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
-  .nav-links.open{display:flex}
-  .burger{display:block}
-  .nav>.btn{margin-left:auto;margin-right:10px}
-}
 </style>
 <script type="application/ld+json">
 [
@@ -381,7 +381,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <div class="k">Читайте также</div>
       <div class="posts">
       <a class="post" href="/blog/pochemu-menedzhery-ne-rabotayut-v-crm.html"><div><h3>Почему не работают в CRM</h3><p>CRM купили, а через месяц менеджеры снова в блокнотах и личных WhatsApp. Шесть причин, почему так происходит, и что с этим делать.</p></div><span class="arr">→</span></a>
-      <a class="post" href="/blog/telefoniya-v-crm.html"><div><h3>Телефония в CRM</h3><p>Что даёт связка телефонии и CRM: автоматические сделки из звонков, записи разговоров, пропущенные под контролем. Как подключить и что нужно от вас.</p></div><span class="arr">→</span></a>
+      <a class="post" href="/blog/telefoniya-v-crm.html"><div><h3>Телефония в CRM</h3><p>Запись звонков в CRM: как подключить телефонию к amoCRM, где хранятся записи разговоров и как не терять пропущенные. Что нужно от вас и сколько это занимает.</p></div><span class="arr">→</span></a>
       <a class="post" href="/blog/voronka-prodazh-v-crm.html"><div><h3>Воронка продаж в CRM</h3><p>Как составить этапы воронки продаж: правила, частые ошибки и готовые примеры для салона, фитнеса, недвижимости, автосервиса, интернет-магазина и производства.</p></div><span class="arr">→</span></a>
       </div>
     </div>

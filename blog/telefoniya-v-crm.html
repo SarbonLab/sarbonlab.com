@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Телефония в CRM: зачем записывать звонки и как подключить</title>
-<meta name="description" content="Что даёт связка телефонии и CRM: автоматические сделки из звонков, записи разговоров, пропущенные под контролем. Как подключить и что нужно от вас.">
+<title>Запись звонков и телефония в CRM: зачем нужны и как подключить</title>
+<meta name="description" content="Запись звонков в CRM: как подключить телефонию к amoCRM, где хранятся записи разговоров и как не терять пропущенные. Что нужно от вас и сколько это занимает.">
 <link rel="canonical" href="https://sarbonlab.kz/blog/telefoniya-v-crm.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="SarbonLab">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://sarbonlab.kz/blog/telefoniya-v-crm.html">
-<meta property="og:title" content="Телефония в CRM: зачем записывать звонки и как подключить">
-<meta property="og:description" content="Что даёт связка телефонии и CRM: автоматические сделки из звонков, записи разговоров, пропущенные под контролем. Как подключить и что нужно от вас.">
+<meta property="og:title" content="Запись звонков и телефония в CRM: зачем нужны и как подключить">
+<meta property="og:description" content="Запись звонков в CRM: как подключить телефонию к amoCRM, где хранятся записи разговоров и как не терять пропущенные. Что нужно от вас и сколько это занимает.">
 <meta property="og:image" content="https://sarbonlab.kz/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -173,6 +173,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   body{padding-bottom:78px}
 }
 
+/* ---------- Меню: бургер до 1100px ---------- */
+@media (max-width:1100px) and (min-width:641px){
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{margin-left:auto;margin-right:10px}
+}
+
 /* ---------- Статьи ---------- */
 .doc h2{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.02em;font-size:19px;margin:40px 0 14px}
 .doc a{color:var(--green-deep)}
@@ -213,24 +221,16 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .lm .acts .btn{width:100%}
 .lm .acts a.more{font-family:var(--mono);font-size:12.5px;color:var(--ink2);text-align:center}
 @media (max-width:940px){.lm{grid-template-columns:1fr;padding:26px 22px}}
-
-/* ---------- Меню: бургер до 1100px ---------- */
-@media (max-width:1100px) and (min-width:641px){
-  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
-  .nav-links.open{display:flex}
-  .burger{display:block}
-  .nav>.btn{margin-left:auto;margin-right:10px}
-}
 </style>
 <script type="application/ld+json">
 [
  {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Телефония в CRM: зачем записывать звонки и как подключить",
-  "description": "Что даёт связка телефонии и CRM: автоматические сделки из звонков, записи разговоров, пропущенные под контролем. Как подключить и что нужно от вас.",
+  "headline": "Запись звонков и телефония в CRM: зачем нужны и как подключить",
+  "description": "Запись звонков в CRM: как подключить телефонию к amoCRM, где хранятся записи разговоров и как не терять пропущенные. Что нужно от вас и сколько это занимает.",
   "datePublished": "2026-09-23",
-  "dateModified": "2026-10-06",
+  "dateModified": "2026-11-14",
   "inLanguage": "ru",
   "mainEntityOfPage": "https://sarbonlab.kz/blog/telefoniya-v-crm.html",
   "image": "https://sarbonlab.kz/og-cover.jpg",
@@ -314,6 +314,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
      "@type": "Answer",
      "text": "Обычно нет: текущий номер переадресуют на виртуальную АТС или переносят к оператору телефонии. Какой вариант подойдёт, зависит от вашего оператора — проверяем на этапе подготовки."
     }
+   },
+   {
+    "@type": "Question",
+    "name": "Как включить запись звонков в amoCRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Запись ведёт подключённая телефония. После настройки интеграции записи разговоров сами прикрепляются к карточке клиента в amoCRM, отдельно включать их в CRM не нужно."
+    }
    }
   ]
  }
@@ -356,7 +364,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   <div class="wrap">
     <nav class="crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/blog/">Статьи</a> / Телефония в CRM</nav>
     <div class="sec-label">Статья</div>
-    <h1>Телефония в CRM: зачем записывать звонки и как подключить</h1>
+    <h1>Запись звонков и телефония в CRM: зачем нужны и как подключить</h1>
     <p class="lead">В мессенджерах переписка сохраняется сама, а звонок исчезает сразу после разговора. Если клиенты звонят вам хотя бы несколько раз в день, без телефонии в CRM часть заявок теряется незаметно: пропущенный звонок, забытое «перезвоню завтра», спор о том, что обещали по телефону.</p>
     <p class="art-meta">23 сентября 2026 · 3 мин чтения · SarbonLab, официальный партнёр amoCRM</p>
     <div class="doc">
@@ -374,6 +382,10 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <p><b>Обучение.</b> Лучшие звонки ваших сильных менеджеров — готовый материал для новичков. Слабые звонки показывают, где менеджер теряет клиента: не выяснил потребность, не назвал следующий шаг, не перезвонил.</p>
 <p><b>Контроль качества.</b> Руководителю не нужно слушать всё подряд. Достаточно раз в неделю прослушать несколько звонков по проигранным сделкам.</p>
 <p>Предупреждайте клиентов о записи разговора, например автоматическим сообщением в начале звонка.</p>
+
+<h2>Где хранятся записи и как их слушать</h2>
+<p>Запись делает телефония, а не сама CRM. После подключения интеграции каждая запись автоматически появляется в карточке клиента рядом с перепиской и задачами: открыли сделку, нажали на звонок и слушаете. Искать файл по дате и номеру не нужно.</p>
+<p>Срок хранения записей зависит от тарифа оператора телефонии, его стоит уточнить до подключения. Доступ настраивается правами в CRM: менеджер слышит звонки по своим сделкам, руководитель слышит звонки всего отдела.</p>
 
 <h2>Как это устроено</h2>
 <p>Для связки нужна <b>IP-телефония</b>: виртуальная АТС, которая работает через интернет. К ней подключаются ваши номера, а сама АТС соединяется с CRM готовой интеграцией. Мы работаем с сервисом <b>SIPUNI</b> и являемся его официальным партнёром, он подключается к amoCRM готовой интеграцией.</p>
@@ -398,6 +410,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <details><summary>Сколько стоит телефония для CRM?</summary><div class="a">Складывается из тарифа телефонии, который платится оператору помесячно, и разовой настройки. У нас подключение телефонии с записью звонков входит в пакет внедрения «Стандарт» от 450 000 ₸.</div></details>
 <details><summary>Можно ли звонить из CRM с мобильного телефона?</summary><div class="a">Да. Менеджер может принимать и совершать звонки через мобильное приложение телефонии или через переадресацию на обычный мобильный, а звонок всё равно попадёт в amoCRM с записью.</div></details>
 <details><summary>Нужно ли менять номер телефона?</summary><div class="a">Обычно нет: текущий номер переадресуют на виртуальную АТС или переносят к оператору телефонии. Какой вариант подойдёт, зависит от вашего оператора — проверяем на этапе подготовки.</div></details>
+<details><summary>Как включить запись звонков в amoCRM?</summary><div class="a">Запись ведёт подключённая телефония. После настройки интеграции записи разговоров сами прикрепляются к карточке клиента в amoCRM, отдельно включать их в CRM не нужно.</div></details>
 </div>
 </div>
   </div>
@@ -433,7 +446,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
     <div class="related">
       <div class="k">Читайте также</div>
       <div class="posts">
-      <a class="post" href="/blog/whatsapp-v-amocrm.html"><div><h3>WhatsApp в amoCRM</h3><p>Как вести WhatsApp прямо из amoCRM: подключение через Wazzup, обычный WhatsApp или Business API и как не получить блокировку номера.</p></div><span class="arr">→</span></a>
+      <a class="post" href="/blog/whatsapp-v-amocrm.html"><div><h3>WhatsApp в amoCRM</h3><p>Как подключить WhatsApp и WhatsApp Business к amoCRM: через Wazzup по QR-коду или Business API. Рассылки без блокировки номера, настройка за один день, цена.</p></div><span class="arr">→</span></a>
       <a class="post" href="/blog/etapy-vnedreniya-crm.html"><div><h3>Этапы внедрения CRM</h3><p>Как проходит внедрение CRM по шагам: аудит, воронка, мессенджеры и телефония, перенос базы, обучение, сопровождение. Сроки и что нужно от вас.</p></div><span class="arr">→</span></a>
       <a class="post" href="/blog/skolko-stoit-amocrm.html"><div><h3>Сколько стоит amoCRM</h3><p>Цены на лицензии amoCRM в тенге, минимальный срок оплаты, пакет для микробизнеса и стоимость внедрения. Полный бюджет на команду из 3 менеджеров.</p></div><span class="arr">→</span></a>
       </div>

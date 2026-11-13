@@ -173,6 +173,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   body{padding-bottom:78px}
 }
 
+/* ---------- Меню: бургер до 1100px ---------- */
+@media (max-width:1100px) and (min-width:641px){
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{margin-left:auto;margin-right:10px}
+}
+
 /* ---------- Статьи ---------- */
 .doc h2{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.02em;font-size:19px;margin:40px 0 14px}
 .doc a{color:var(--green-deep)}
@@ -213,14 +221,6 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .lm .acts .btn{width:100%}
 .lm .acts a.more{font-family:var(--mono);font-size:12.5px;color:var(--ink2);text-align:center}
 @media (max-width:940px){.lm{grid-template-columns:1fr;padding:26px 22px}}
-
-/* ---------- Меню: бургер до 1100px ---------- */
-@media (max-width:1100px) and (min-width:641px){
-  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
-  .nav-links.open{display:flex}
-  .burger{display:block}
-  .nav>.btn{margin-left:auto;margin-right:10px}
-}
 </style>
 <script type="application/ld+json">
 [
@@ -440,7 +440,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
       <div class="posts">
       <a class="post" href="/blog/amocrm-ili-bitrix24.html"><div><h3>amoCRM или Битрикс24</h3><p>Чем отличаются amoCRM и Битрикс24, кому подходит каждая система и как не ошибиться с выбором. Честный разбор от партнёра amoCRM.</p></div><span class="arr">→</span></a>
       <a class="post" href="/blog/etapy-vnedreniya-crm.html"><div><h3>Этапы внедрения CRM</h3><p>Как проходит внедрение CRM по шагам: аудит, воронка, мессенджеры и телефония, перенос базы, обучение, сопровождение. Сроки и что нужно от вас.</p></div><span class="arr">→</span></a>
-      <a class="post" href="/blog/whatsapp-v-amocrm.html"><div><h3>WhatsApp в amoCRM</h3><p>Как вести WhatsApp прямо из amoCRM: подключение через Wazzup, обычный WhatsApp или Business API и как не получить блокировку номера.</p></div><span class="arr">→</span></a>
+      <a class="post" href="/blog/whatsapp-v-amocrm.html"><div><h3>WhatsApp в amoCRM</h3><p>Как подключить WhatsApp и WhatsApp Business к amoCRM: через Wazzup по QR-коду или Business API. Рассылки без блокировки номера, настройка за один день, цена.</p></div><span class="arr">→</span></a>
       </div>
     </div>
   </div>

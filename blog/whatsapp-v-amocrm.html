@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Как подключить WhatsApp к amoCRM: способы, риски и настройка</title>
-<meta name="description" content="Как вести WhatsApp прямо из amoCRM: подключение через Wazzup, обычный WhatsApp или Business API и как не получить блокировку номера.">
+<title>Как подключить WhatsApp к amoCRM: способы, рассылки и настройка</title>
+<meta name="description" content="Как подключить WhatsApp и WhatsApp Business к amoCRM: через Wazzup по QR-коду или Business API. Рассылки без блокировки номера, настройка за один день, цена.">
 <link rel="canonical" href="https://sarbonlab.kz/blog/whatsapp-v-amocrm.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="SarbonLab">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://sarbonlab.kz/blog/whatsapp-v-amocrm.html">
-<meta property="og:title" content="Как подключить WhatsApp к amoCRM: способы, риски и настройка">
-<meta property="og:description" content="Как вести WhatsApp прямо из amoCRM: подключение через Wazzup, обычный WhatsApp или Business API и как не получить блокировку номера.">
+<meta property="og:title" content="Как подключить WhatsApp к amoCRM: способы, рассылки и настройка">
+<meta property="og:description" content="Как подключить WhatsApp и WhatsApp Business к amoCRM: через Wazzup по QR-коду или Business API. Рассылки без блокировки номера, настройка за один день, цена.">
 <meta property="og:image" content="https://sarbonlab.kz/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -173,6 +173,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   body{padding-bottom:78px}
 }
 
+/* ---------- Меню: бургер до 1100px ---------- */
+@media (max-width:1100px) and (min-width:641px){
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav>.btn{margin-left:auto;margin-right:10px}
+}
+
 /* ---------- Статьи ---------- */
 .doc h2{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.02em;font-size:19px;margin:40px 0 14px}
 .doc a{color:var(--green-deep)}
@@ -213,24 +221,16 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .lm .acts .btn{width:100%}
 .lm .acts a.more{font-family:var(--mono);font-size:12.5px;color:var(--ink2);text-align:center}
 @media (max-width:940px){.lm{grid-template-columns:1fr;padding:26px 22px}}
-
-/* ---------- Меню: бургер до 1100px ---------- */
-@media (max-width:1100px) and (min-width:641px){
-  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 20px;gap:16px}
-  .nav-links.open{display:flex}
-  .burger{display:block}
-  .nav>.btn{margin-left:auto;margin-right:10px}
-}
 </style>
 <script type="application/ld+json">
 [
  {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Как подключить WhatsApp к amoCRM: способы, риски и настройка",
-  "description": "Как вести WhatsApp прямо из amoCRM: подключение через Wazzup, обычный WhatsApp или Business API и как не получить блокировку номера.",
+  "headline": "Как подключить WhatsApp к amoCRM: способы, рассылки и настройка",
+  "description": "Как подключить WhatsApp и WhatsApp Business к amoCRM: через Wazzup по QR-коду или Business API. Рассылки без блокировки номера, настройка за один день, цена.",
   "datePublished": "2026-09-23",
-  "dateModified": "2026-10-06",
+  "dateModified": "2026-11-14",
   "inLanguage": "ru",
   "mainEntityOfPage": "https://sarbonlab.kz/blog/whatsapp-v-amocrm.html",
   "image": "https://sarbonlab.kz/og-cover.jpg",
@@ -314,6 +314,22 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
      "@type": "Answer",
      "text": "Да, через Wazzup можно подключить несколько номеров и распределять сообщения с каждого по своим менеджерам или воронкам."
     }
+   },
+   {
+    "@type": "Question",
+    "name": "Можно ли делать рассылку в WhatsApp из amoCRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Да. Сообщение можно отправить группе клиентов из CRM с подстановкой имени, ответы попадут в карточки. По своим клиентам и небольшими порциями это работает с обычного номера. Для массовых уведомлений нужен WhatsApp Business API с шаблонами, одобренными Meta."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Подходит ли WhatsApp Business для подключения к amoCRM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Да. И обычный WhatsApp, и WhatsApp Business подключаются одинаково, по QR-коду. Номер, каталог и приветствие в приложении остаются как были."
+    }
    }
   ]
  }
@@ -356,7 +372,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
   <div class="wrap">
     <nav class="crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / <a href="/blog/">Статьи</a> / WhatsApp в amoCRM</nav>
     <div class="sec-label">Статья</div>
-    <h1>Как подключить WhatsApp к amoCRM: способы, риски и настройка</h1>
+    <h1>Как подключить WhatsApp к amoCRM: способы, рассылки и настройка</h1>
     <p class="lead">В Казахстане большая часть заявок малого бизнеса приходит в WhatsApp. Пока переписка живёт в личных телефонах менеджеров, руководитель её не видит, а при увольнении сотрудника она уходит вместе с ним. Разберём, как перенести WhatsApp в amoCRM.</p>
     <p class="art-meta">23 сентября 2026 · 3 мин чтения · SarbonLab, официальный партнёр amoCRM</p>
     <div class="doc">
@@ -372,7 +388,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <h2>Два способа подключения</h2>
 <p>Для связки WhatsApp и amoCRM чаще всего используют сервис <b><a href="https://wazzup24.ru/?utm_p=sskx6y" target="_blank" rel="noopener" style="color:inherit">Wazzup</a></b>. Мы его официальный партнёр. Через него доступны два варианта.</p>
 <p><b>Обычный WhatsApp или WhatsApp Business.</b> Номер подключается по QR-коду, примерно как WhatsApp Web на компьютере. Настраивается за один день, работает с вашим текущим номером, клиенты ничего не замечают. Подходит большинству малых компаний.</p>
-<p><b>WhatsApp Business API.</b> Официальный канал от Meta для бизнеса. Нужна верификация компании, первые сообщения клиенту отправляются только по одобренным шаблонам, плата берётся за переписки. Подходит, когда нужны массовые уведомления, несколько десятков менеджеров на одном номере или жёсткие требования к надёжности.</p>
+<p><b>WhatsApp Business API.</b> Официальный канал от Meta для бизнеса. Нужна верификация компании, первые сообщения клиенту отправляются только по одобренным шаблонам, за шаблонные сообщения Meta берёт плату. Подходит, когда нужны массовые уведомления, несколько десятков менеджеров на одном номере или жёсткие требования к надёжности.</p>
 
 <h2>Про блокировки честно</h2>
 <p>WhatsApp блокирует номера не за подключение к CRM, а за поведение, похожее на спам: массовые рассылки незнакомым людям, много жалоб, резкий всплеск исходящих сообщений с нового номера. Те же правила действуют и без CRM, с обычного телефона.</p>
@@ -384,6 +400,13 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <li>для массовых уведомлений используйте WhatsApp Business API.</li>
 </ul>
 
+<h2>Обычный WhatsApp или WhatsApp Business: что подключать</h2>
+<p>К amoCRM подключаются оба приложения, способ один: QR-код. Если у компании уже есть номер в WhatsApp Business с каталогом и приветствием, менять его не нужно. Если менеджеры пишут клиентам с личных номеров, заведите один рабочий номер и подключите его. Тогда переписка принадлежит компании, а не сотруднику.</p>
+
+<h2>Рассылка в WhatsApp из amoCRM</h2>
+<p>Из amoCRM можно написать сразу группе клиентов: например, всем, кто покупал полгода назад, или всем, у кого сделка зависла после коммерческого предложения. Сообщение уходит с подстановкой имени, а ответ клиента попадает в его карточку.</p>
+<p>Границы такие. Рассылка по своим клиентам небольшими порциями с обычного номера работает. Массовая рассылка по чужой или купленной базе почти наверняка закончится блокировкой номера. Для регулярных уведомлений на сотни и тысячи адресатов нужен WhatsApp Business API: там сообщения идут по шаблонам, которые заранее одобряет Meta.</p>
+
 <h2>Как проходит настройка</h2>
 <ul>
 <li><b>Подключаем номер</b> и проверяем, что сообщения попадают в нужную воронку.</li>
@@ -392,7 +415,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <li><b>Подключаем Instagram и Telegram</b>, если клиенты пишут и туда, всё в одном окне.</li>
 <li><b>Обучаем команду</b> работать из CRM, а не из телефона.</li>
 </ul>
-<p>Подключение WhatsApp входит в каждый наш пакет внедрения. Если CRM у вас уже есть, подключим отдельно. Подробнее на странице <a href="/whatsapp.html">«WhatsApp в CRM»</a>.</p>
+<p>Подключение WhatsApp входит в каждый наш пакет внедрения. Если amoCRM у вас уже есть, подключаем WhatsApp отдельно под ключ: 50 000 ₸, один день (<a href="/#bystro">быстрые задачи</a>). Подробнее на странице <a href="/whatsapp.html">«WhatsApp в CRM»</a>.</p>
 
 <h2>Частые вопросы</h2>
 <div class="art-faq">
@@ -401,6 +424,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 <details><summary>Сколько стоит подключение WhatsApp к amoCRM?</summary><div class="a">Подписка Wazzup оплачивается помесячно по тарифу сервиса, плюс разовая настройка. Подключение WhatsApp входит в каждый наш пакет внедрения от 250 000 ₸; если amoCRM уже есть, подключим отдельно.</div></details>
 <details><summary>Заблокируют ли номер после подключения к CRM?</summary><div class="a">Само подключение к CRM не причина блокировки. WhatsApp блокирует за спам: массовые рассылки незнакомым людям и жалобы. Пишите первыми только тем, кто сам оставлял контакт.</div></details>
 <details><summary>Можно ли подключить несколько номеров WhatsApp?</summary><div class="a">Да, через Wazzup можно подключить несколько номеров и распределять сообщения с каждого по своим менеджерам или воронкам.</div></details>
+<details><summary>Можно ли делать рассылку в WhatsApp из amoCRM?</summary><div class="a">Да. Сообщение можно отправить группе клиентов из CRM с подстановкой имени, ответы попадут в карточки. По своим клиентам и небольшими порциями это работает с обычного номера. Для массовых уведомлений нужен WhatsApp Business API с шаблонами, одобренными Meta.</div></details>
+<details><summary>Подходит ли WhatsApp Business для подключения к amoCRM?</summary><div class="a">Да. И обычный WhatsApp, и WhatsApp Business подключаются одинаково, по QR-коду. Номер, каталог и приветствие в приложении остаются как были.</div></details>
 </div>
 </div>
   </div>
