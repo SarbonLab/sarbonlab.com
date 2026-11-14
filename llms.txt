@@ -36,6 +36,8 @@
 - [CRM для клиники и стоматологии](https://sarbonlab.kz/crm-dlya-kliniki.html)
 - [CRM для языковой школы и курсов](https://sarbonlab.kz/crm-dlya-shkoly.html)
 - [CRM для автосалона и дилерского центра](https://sarbonlab.kz/crm-dlya-avtosalona.html)
+- [CRM для автомойки и детейлинга](https://sarbonlab.kz/crm-dlya-avtomoyki.html)
+- [CRM для стоматологии](https://sarbonlab.kz/crm-dlya-stomatologii.html)
 
 ## Статьи
 
@@ -51,6 +53,7 @@
 - [Почему менеджеры не работают в CRM](https://sarbonlab.kz/blog/pochemu-menedzhery-ne-rabotayut-v-crm.html)
 - [Этапы внедрения CRM](https://sarbonlab.kz/blog/etapy-vnedreniya-crm.html)
 - [Программа для автосервиса или CRM: что выбрать СТО](https://sarbonlab.kz/blog/programma-dlya-avtoservisa.html)
+- [Программа для учёта клиентов и записи: что выбрать малому бизнесу](https://sarbonlab.kz/blog/programma-dlya-ucheta-klientov.html)
 - [Чек-лист: 10 признаков, что бизнес теряет заявки](https://sarbonlab.kz/checklist.html)
 - [Калькулятор потерянных заявок](https://sarbonlab.kz/kalkulyator.html): сколько выручки теряет отдел продаж
 
