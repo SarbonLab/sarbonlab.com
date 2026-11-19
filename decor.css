@@ -1,83 +1,76 @@
-/* Декор сайта: абстрактные фоны, сгенерированные в Gemini (19.11.2026).
-   Подключается на все страницы скриптом sarbonlab-tools/decor_1119.py. Только оформление, без текста и логики. */
+/* Декор сайта: абстрактные фоны и анимации, сгенерированные в Gemini (19.11.2026).
+   Подключается на все страницы скриптом sarbonlab-tools/decor_1119.py. Только оформление, без текста и логики.
+   Картинки лежат в полном разрешении; движение — сдвигом без масштабирования, чтобы линии оставались чёткими. */
 
 /* лёгкая точечная сетка «миллиметровки» на фоне страницы */
 body{background-image:radial-gradient(#D3DDE4 1px,transparent 1.2px);background-size:26px 26px;background-position:13px 13px}
 
-/* первый экран: контурные линии справа, медленно плывут */
-.hero{position:relative;overflow:hidden;isolation:isolate;background:var(--paper)}
-.hero::before{content:"";position:absolute;top:-8%;bottom:-8%;right:-6%;left:22%;z-index:-1;pointer-events:none;
-  background:url(/decor/hero-light-1920.webp) right center/cover no-repeat;
-  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 46%);mask-image:linear-gradient(90deg,transparent 0,#000 46%);
-  animation:decorDrift 46s ease-in-out infinite alternate;will-change:transform}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;z-index:-1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(238,242,244,0),var(--paper))}
-@keyframes decorDrift{from{transform:translate3d(0,0,0) scale(1.03)}to{transform:translate3d(-3%,2%,0) scale(1.12)}}
+@keyframes decorDrift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-2.5%,1.5%,0)}}
+@keyframes decorSway{from{transform:translate3d(-1.5%,0,0)}to{transform:translate3d(1.5%,0,0)}}
+@keyframes decorSwayFlip{from{transform:translate3d(1.5%,0,0) scaleX(-1)}to{transform:translate3d(-1.5%,0,0) scaleX(-1)}}
+@keyframes decorFlow{from{background-position:0 0}to{background-position:480px 0}}
 
-/* тёмный блок призыва: те же линии на тёмном, поверх — видео-петля (decor.js) */
-.cta-box{isolation:isolate}
-.cta-box::after{content:"";position:absolute;top:-10%;bottom:-10%;left:-5%;right:-5%;z-index:-2;pointer-events:none;
-  background:url(/decor/band-dark-1920.webp) right center/cover no-repeat;
-  animation:decorDrift 38s ease-in-out infinite alternate;will-change:transform}
-.decor-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
-.decor-video.on{opacity:1}
+/* ---------- первый экран: контурные линии справа ---------- */
+.hero{position:relative;overflow:hidden;isolation:isolate;background:var(--paper)}
+.hero::before,.hero::after{content:"";position:absolute;top:-8%;bottom:-8%;right:-6%;left:22%;z-index:-1;pointer-events:none;will-change:transform}
+.hero::before{background:url(/decor/hero-light-2752.webp) right center/cover no-repeat;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 46%);mask-image:linear-gradient(90deg,transparent 0,#000 46%);
+  animation:decorDrift 46s ease-in-out infinite alternate}
+/* свет, бегущий по зелёным линиям: полосы градиента видны только сквозь маску этих линий */
+.hero::after{-webkit-mask:url(/decor/hero-glow-2752.webp) right center/cover no-repeat;mask:url(/decor/hero-glow-2752.webp) right center/cover no-repeat;
+  background:repeating-linear-gradient(115deg,rgba(0,196,112,0) 0,rgba(0,196,112,0) 150px,rgba(0,196,112,.95) 217px,rgba(0,196,112,0) 285px,rgba(0,196,112,0) 435px) 0 0/480px 100% repeat-x;
+  animation:decorDrift 46s ease-in-out infinite alternate,decorFlow 7s linear infinite}
 
 /* страницы без первого экрана (лицензии, статьи, контакты): те же линии в правом верхнем углу */
 .pg-top,main>section:first-child:not(.hero){position:relative;isolation:isolate}
 .pg-top::before,main>section:first-child:not(.hero)::before{content:"";position:absolute;top:0;right:0;width:min(58%,820px);height:min(100%,520px);z-index:-1;pointer-events:none;
-  background:url(/decor/hero-light-1920.webp) right top/cover no-repeat;opacity:.85;
+  background:url(/decor/hero-light-2752.webp) right top/cover no-repeat;opacity:.85;
   -webkit-mask-image:radial-gradient(120% 100% at 100% 0,#000 30%,transparent 72%);mask-image:radial-gradient(120% 100% at 100% 0,#000 30%,transparent 72%)}
 
-/* волна из точек: под этапами работ, под ценами и над подвалом */
-#steps,#compose,#pricing,.lm-sec:last-of-type{position:relative;isolation:isolate}
-#steps::before,#compose::before,#pricing::before{content:"";position:absolute;left:0;right:0;bottom:0;height:min(100%,460px);z-index:-1;pointer-events:none;
-  background:url(/decor/wave-light-1920.webp) center bottom/cover no-repeat;
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 55%);mask-image:linear-gradient(180deg,transparent 0,#000 55%);
-  animation:decorSway 32s ease-in-out infinite alternate;will-change:transform}
-#pricing::before{transform:scaleX(-1);animation-name:decorSwayFlip}
-@keyframes decorSway{from{transform:translate3d(-1.5%,0,0) scale(1.04)}to{transform:translate3d(1.5%,0,0) scale(1.04)}}
-@keyframes decorSwayFlip{from{transform:translate3d(1.5%,0,0) scale(-1.04,1.04)}to{transform:translate3d(-1.5%,0,0) scale(-1.04,1.04)}}
-#steps,#compose,#pricing{overflow:hidden}
-
-/* отраслевой список и вопросы: линии слева, зеркально первому экрану */
+/* отраслевой список и вопросы: линии в левом верхнем углу, зеркально первому экрану */
 #industries,#faq{position:relative;isolation:isolate;overflow:hidden}
 #industries::before,#faq::before{content:"";position:absolute;top:0;left:0;width:min(38%,540px);height:min(100%,620px);z-index:-1;pointer-events:none;
-  background:url(/decor/hero-light-1920.webp) right top/1150px auto no-repeat;transform:scaleX(-1);opacity:.6;
+  background:url(/decor/hero-light-2752.webp) right top/1150px auto no-repeat;transform:scaleX(-1);opacity:.6;
   -webkit-mask-image:radial-gradient(115% 100% at 100% 0,#000 22%,transparent 68%);mask-image:radial-gradient(115% 100% at 100% 0,#000 22%,transparent 68%)}
 
-/* тёмные панели: сеть узлов справа, поверх — видео-петля (decor.js) */
+/* ---------- волна из точек: под этапами работ, составом внедрения, ценами и в подвале ---------- */
+#steps,#compose,#pricing{position:relative;isolation:isolate;overflow:hidden}
+#steps::before,#compose::before,#pricing::before{content:"";position:absolute;left:-3%;right:-3%;bottom:0;height:min(100%,460px);z-index:-1;pointer-events:none;
+  background:url(/decor/wave-light-2200.webp) center bottom/cover no-repeat;
+  animation:decorSway 32s ease-in-out infinite alternate;will-change:transform}
+#pricing::before{animation-name:decorSwayFlip}
+footer{position:relative;isolation:isolate;overflow:hidden}
+footer::before{content:"";position:absolute;left:0;right:0;bottom:0;height:260px;z-index:-1;pointer-events:none;
+  background:url(/decor/wave-light-2200.webp) center bottom/cover no-repeat;opacity:.8}
+
+/* ---------- тёмные блоки ---------- */
+/* призыв: линии на тёмном, поверх — видео-петля (decor.js) */
+.cta-box{isolation:isolate}
+.cta-box::after{content:"";position:absolute;top:-10%;bottom:-10%;left:-5%;right:-5%;z-index:-2;pointer-events:none;
+  background:url(/decor/band-dark-2752.webp) right center/cover no-repeat;
+  animation:decorDrift 38s ease-in-out infinite alternate;will-change:transform}
+/* панели: сеть узлов справа, поверх — видео-петля */
 .log-wrap,.fit-main{position:relative;isolation:isolate;overflow:hidden}
 .log-wrap{overflow-x:auto}
 .log-wrap::after,.fit-main::after{content:"";position:absolute;top:0;bottom:0;right:0;width:min(70%,760px);z-index:-2;pointer-events:none;
   background:url(/decor/net-dark-1920.webp) right center/cover no-repeat;opacity:.9;
   -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 60%);mask-image:linear-gradient(90deg,transparent 0,#000 60%)}
+
+.decor-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;z-index:-1;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
+.decor-video.on{opacity:1}
 .log-wrap .decor-video,.fit-main .decor-video{left:auto;right:0;width:min(70%,760px);
   -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 60%);mask-image:linear-gradient(90deg,transparent 0,#000 60%)}
 
-/* подвал: волна из точек внизу страницы */
-footer{position:relative;isolation:isolate;overflow:hidden}
-footer::before{content:"";position:absolute;left:0;right:0;bottom:0;height:260px;z-index:-1;pointer-events:none;
-  background:url(/decor/wave-light-1920.webp) center bottom/cover no-repeat;opacity:.8;
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 70%);mask-image:linear-gradient(180deg,transparent 0,#000 70%)}
-
-/* первый экран на компьютере: поверх картинки — видео с плывущими точками (decor.js) */
-.hero .decor-video{left:22%;top:-8%;width:84%;height:116%;object-position:right center;mix-blend-mode:darken;
-  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 46%);mask-image:linear-gradient(90deg,transparent 0,#000 46%)}
-.hero::before{transition:opacity 1.2s ease}
-.hero.decor-playing::before{opacity:0}
-
 @media (max-width:760px){
   /* на телефоне линии тоньше и бледнее и уходят вверх-вправо, чтобы не спорить с текстом */
-  .hero::before{left:0;right:0;top:0;bottom:auto;height:70%;opacity:.5;
-    background:url(/decor/hero-light-1000.webp) right -60px top -30px/760px auto no-repeat;
+  .hero::before,.hero::after{left:0;right:0;top:0;bottom:auto;height:70%}
+  .hero::before{opacity:.5;background:url(/decor/hero-light-1400.webp) right -60px top -30px/760px auto no-repeat;
     -webkit-mask-image:linear-gradient(200deg,#000 25%,transparent 72%);mask-image:linear-gradient(200deg,#000 25%,transparent 72%)}
-  .cta-box::after{background-image:url(/decor/band-dark-1000.webp);opacity:.5}
-  .pg-top::before,main>section:first-child:not(.hero)::before{width:100%;height:300px;opacity:.45;background-image:url(/decor/hero-light-1000.webp)}
-  #steps::before,#compose::before,#pricing::before,footer::before{background-image:url(/decor/wave-light-1000.webp);height:240px}
+  .hero::after{opacity:.6;-webkit-mask:url(/decor/hero-glow-1400.webp) right -60px top -30px/760px auto no-repeat;mask:url(/decor/hero-glow-1400.webp) right -60px top -30px/760px auto no-repeat}
+  .pg-top::before,main>section:first-child:not(.hero)::before{width:100%;height:300px;opacity:.45;background-image:url(/decor/hero-light-1400.webp)}
   #industries::before,#faq::before{display:none}
+  #steps::before,#compose::before,#pricing::before,footer::before{background-image:url(/decor/wave-light-1400.webp);height:240px}
+  .cta-box::after{background-image:url(/decor/band-dark-1400.webp);opacity:.5}
+  .cta-box .decor-video.on{opacity:.5}
   .log-wrap::after,.fit-main::after{background-image:url(/decor/net-dark-1000.webp);width:100%;opacity:.28}
-}
-@media (prefers-reduced-motion:reduce){
-  .hero::before,.cta-box::after,#steps::before,#compose::before,#pricing::before{animation:none}
-  .decor-video{display:none}
 }
