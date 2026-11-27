@@ -298,6 +298,17 @@ footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);f
 .case-nums b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(24px,3vw,32px);line-height:1.1}
 .case-nums span{font-family:var(--mono);font-size:12px;color:var(--ink2)}
 .case-card .more{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--green-deep)}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cert{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px 22px 20px;display:flex;flex-direction:column}
+.cert-img{display:flex;align-items:center;justify-content:center;aspect-ratio:1100/778;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--paper);margin-bottom:18px;text-decoration:none;color:var(--ink)}
+.cert-img img{width:100%;height:100%;object-fit:contain;display:block}
+.cert-img .badge-img{width:auto;height:auto;max-width:62%}
+.cert-img .wordmark{font-family:var(--display);font-weight:600;font-size:clamp(24px,3vw,32px);letter-spacing:.01em}
+.cert .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green-deep);margin-bottom:10px}
+.cert b{display:block;font-size:17px;margin-bottom:6px}
+.cert p{font-size:15px;color:var(--ink2)}
+.cert .more{margin-top:auto;padding-top:14px;font-family:var(--mono);font-size:13px;font-weight:500;color:var(--green-deep)}
+@media (max-width:940px){.certs{grid-template-columns:1fr}.cert-img{max-width:460px}}
 .free-line{border-left:4px solid var(--green)}
 @media (max-width:640px){.trust{grid-template-columns:1fr}}
 /* в меню главной 10 пунктов: плотнее, а ниже 1180px — бургер, кнопка WhatsApp остаётся */
@@ -715,6 +726,38 @@ a.support-line:hover{border-color:var(--ink)}
       <div class="spec"><div class="k">формат</div><b>Внедрение под ключ</b><p>От аудита продаж до обучения команды. Вам не нужно разбираться в настройках.</p></div>
       <div class="spec"><div class="k">после запуска</div><b>Сопровождение</b><p>Дорабатываем, отвечаем на вопросы, развиваем систему вместе с вашим бизнесом.</p></div>
       <div class="spec"><div class="k">язык общения</div><b>Язык бизнеса</b><p>Не грузим терминами. Обсуждаем заявки, сделки и деньги — а не технические детали.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- СЕРТИФИКАТЫ -->
+<section id="certs">
+  <div class="wrap">
+    <div class="sec-label">Документы</div>
+    <h2>Партнёрские статусы и сертификаты</h2>
+    <p class="sec-sub">Работаем с вендорами по партнёрским программам. Каждый статус можно проверить — по сертификату или на сайте вендора.</p>
+    <div class="certs">
+      <div class="cert">
+        <a class="cert-img" href="/files/sertifikat-bitrix24-biznes-partner.pdf" target="_blank" rel="noopener" title="Открыть сертификат партнёра Битрикс24"><img src="/files/sertifikat-bitrix24-biznes-partner.webp" width="1100" height="778" alt="Сертификат: SarbonLab — бизнес-партнёр Битрикс24" loading="lazy"></a>
+        <div class="k">Битрикс24</div>
+        <b>Бизнес-партнёр</b>
+        <p>Сертификат 1С-Битрикс, действует с 25.11.2026. Пройдены курсы вендора: базовый курс партнёра, продажи Битрикс24, работа с заявками клиентов.</p>
+        <a class="more" href="/files/sertifikat-bitrix24-biznes-partner.pdf" target="_blank" rel="noopener">Открыть сертификат (PDF) →</a>
+      </div>
+      <div class="cert">
+        <a class="cert-img" href="https://www.amocrm.ru/partners/sarbonlab" target="_blank" rel="noopener" title="Карточка SarbonLab на сайте amoCRM"><span class="wordmark">amoCRM</span></a>
+        <div class="k">amoCRM</div>
+        <b>Официальный партнёр</b>
+        <p>Карточка SarbonLab опубликована в каталоге партнёров на сайте amoCRM.</p>
+        <a class="more" href="https://www.amocrm.ru/partners/sarbonlab" target="_blank" rel="noopener">Проверить на сайте amoCRM →</a>
+      </div>
+      <div class="cert">
+        <a class="cert-img" href="/kommo.html" title="Kommo setup"><img class="badge-img" src="/files/kommo-partner-badge.svg" width="254" height="96" alt="Kommo partner" loading="lazy"></a>
+        <div class="k">Kommo</div>
+        <b>Сертифицированный партнёр</b>
+        <p>Сертификация Kommo пройдена 24.11.2026. Kommo — международная версия amoCRM.</p>
+        <a class="more" href="/kommo.html">Подробнее о Kommo →</a>
+      </div>
     </div>
   </div>
 </section>
