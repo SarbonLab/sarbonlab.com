@@ -43,7 +43,7 @@
 
 ## Статьи
 
-- [amoCRM или Битрикс24: что выбрать малому бизнесу в Казахстане](https://sarbonlab.kz/blog/amocrm-ili-bitrix24.html)
+- [amoCRM или Битрикс24: 6 вопросов, чтобы выбрать CRM за 10 минут](https://sarbonlab.kz/blog/amocrm-ili-bitrix24.html)
 - [Сколько стоит amoCRM в Казахстане](https://sarbonlab.kz/blog/skolko-stoit-amocrm.html)
 - [Как подключить WhatsApp к amoCRM](https://sarbonlab.kz/blog/whatsapp-v-amocrm.html)
 - [Заявки с Krisha.kz в amoCRM](https://sarbonlab.kz/blog/zayavki-s-krishi-v-amocrm.html)
